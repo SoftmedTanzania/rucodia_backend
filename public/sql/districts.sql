@@ -1,0 +1,16 @@
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(1, UUID(), 'Biharamulo', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(2, UUID(), 'Bukoba Mji', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(3, UUID(), 'Bukoba Vijijini', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(4, UUID(), 'Karagwe', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(5, UUID(), 'Kyerwa', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(6, UUID(), 'Missenyi', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(7, UUID(), 'Muleba', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(8, UUID(), 'Ngara', 1, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(9, UUID(), 'Buhigwe', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(10, UUID(), 'Kakonko', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(11, UUID(), 'Kasulu Mji', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(12, UUID(), 'Kasulu Vijijini', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(13, UUID(), 'Kibondo', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(14, UUID(), 'Kigoma Mjini', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(15, UUID(), 'Kigoma Vijijini', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(16, UUID(), 'Uvinza', 2, NOW());

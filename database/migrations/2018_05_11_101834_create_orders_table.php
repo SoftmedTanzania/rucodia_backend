@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->integer('quantity');
             $table->integer('batch');
             $table->string('status')->unsigned();
-            $table->foreign('status')->references('id')->on('status');
+            $table->foreign('statuses')->references('id')->on('statuses');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('dealer_id')->unsigned();

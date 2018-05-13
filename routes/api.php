@@ -17,8 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('users', 'UserController');
-Route::resource('levels', 'LevelController');
-Route::resource('units', 'UnitController');
-Route::resource('categories', 'CategoryController');
-Route::resource('products', 'ProductController');
+Route::get('/logout', function () {
+    return Auth::logout();
+    // return 'success';
+});
+
+Route::resource('users', 'UserController')->middleware('auth.basic.once');
+Route::resource('levels', 'LevelController')->middleware('auth.basic.once');
+Route::resource('units', 'UnitController')->middleware('auth.basic.once');
+Route::resource('categories', 'CategoryController')->middleware('auth.basic.once');
+Route::resource('products', 'ProductController')->middleware('auth.basic.once');

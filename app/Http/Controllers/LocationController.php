@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Location;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\Location as LocationResource;
 use Illuminate\Support\Str;
@@ -37,13 +38,14 @@ class LocationController extends Controller
         $location->latitude = $request['latitude'];
         $location->longitude = $request['longitude'];
         $location->name = $request['name'];
-        $location->created_by = Config::get('apiuser');
+        $location->created_by = Config::get('apiuser')->id();
         $location->save();
         return response()->json([
             'acton' => 'create',
             'status' => 'OK',
             'entity' => $location->uuid,
-            'type' => 'location'
+            'type' => 'location',
+            'user' => Config::get('apiuser')
         ], 201);
     }
 
@@ -53,23 +55,24 @@ class LocationController extends Controller
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function show(Location $location)
+    public function show($id)
     {
         // Individual location details
-        $location = Location::find($location);
+        $location = Location::find($id);
         // Check if location is not in the DB
-        if ($location === null) {
+        if ($location === NULL) {
             return response()->json([
                 'action' => 'show',
                 'status' => 'FAIL',
                 'entity' => NULL,
-                'type' => 'location'
+                'type' => 'location',
+                'user' => Config::get('apiuser')
             ], 404);
         }
         else {
         // List the details of a specific location
         LocationResource::WithoutWrapping();
-        return new LocationResource(Location::find($location));
+        return new LocationResource(Location::find($id));
         }
     }
 
@@ -80,21 +83,21 @@ class LocationController extends Controller
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $location)
+    public function update(Request $request, $id)
     {
         // Update the resource with the addressed location
-        $location = Location::find($location)->first();
+        $location = Location::find($id);
         $location->latitude = $request['latitude'];
         $location->longitude = $request['longitude'];
         $location->name = $request['name'];
-        $location->updated_by = Config::get('apiuser');
+        $location->update(['updated_by' => Config::get('apiuser')]);
         $location->save();
         return response()->json([
             'action' => 'update',
             'status' => 'OK',
             'entity' => $location->uuid,
             'type' => 'location',
-            'user' => Config::get('apiuser'),
+            'user' => Config::get('apiuser')
         ], 200);
 
     }
@@ -105,18 +108,19 @@ class LocationController extends Controller
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Location $location)
+    public function destroy($id)
     {
         // Delete a specific location by locationID (Soft-Deletes)
-        $location = Location::find($location);
-        $location->deleted_by = Config::get('apiuser');
-        $location->save();
+        $location = Location::findOrFail($id);
+        $location->update(['deleted_by' => Config::get('apiuser')]);
         $location->delete();
         return response()->json([
             'action' => 'delete',
             'status' => 'OK',
             'entity' => $location->uuid,
-            'type' => 'location'
+            'type' => 'location',
+            'user' => Config::get('apiuser')
         ], 200);
+        // return $location;
     }
 }

@@ -68,7 +68,8 @@ class UserController extends Controller
             'action' => 'create',
             'status' => 'OK',
             'entity' => $user->uuid,
-            'type' => 'user'
+            'type' => 'user',
+            'user' => Config::get('apiuser')
         ], 201);
     }
 
@@ -87,7 +88,8 @@ class UserController extends Controller
                 'action' => 'show',
                 'status' => 'FAIL',
                 'entity' => NULL,
-                'type' => 'user'
+                'type' => 'user',
+                'user' => Config::get('apiuser')
             ], 404);
         }
         else {
@@ -136,7 +138,8 @@ class UserController extends Controller
             'action' => 'update',
             'status' => 'OK',
             'entity' => $user->uuid,
-            'type' => 'user'
+            'type' => 'user',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 
@@ -150,14 +153,14 @@ class UserController extends Controller
     {
         // Delete a specific User by ID (Soft-Deletes)
         $user = User::find($id);
-        $user->deleted_by = Config::get('apiuser');
-        $user->save();
+        $user->update(['deleted_by' => Config::get('apiuser')]);
         $user->delete();
         return response()->json([
             'action' => 'delete',
             'status' => 'OK',
             'entity' => $user->uuid,
-            'type' => 'user'
+            'type' => 'user',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 }

@@ -43,7 +43,7 @@ class LevelController extends Controller
     {
         // Insert a new level from the payload
         $level = new Level;
-        $level->uuid = (string) Str::uuid()->string;
+        $level->uuid = (string) Str::uuid();
         $level->name = $request['name'];
         $level->description = $request['description'];
         $level->created_by = Config::get('apiuser');
@@ -87,7 +87,7 @@ class LevelController extends Controller
      * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
      */
-    public function edit(Level $level)
+    public function edit(Level $id)
     {
         //
     }
@@ -96,13 +96,13 @@ class LevelController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Level  $level
+     * @param  \App\Level  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Level $level)
     {
         // Update the resource with the addressed level
-        $level = Level::find($level)->first();
+        $level = Level::find($id)->first();
         $level->name = $request['name'];
         $level->description = $request['description'];
         $level->updated_by = Config::get('apiuser');
@@ -121,12 +121,11 @@ class LevelController extends Controller
      * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Level $level)
+    public function destroy($id)
     {
         // Delete a specific level by levelID (Soft-Deletes)
-        $level = Level::find($level)->first();
-        $level->deleted_by = Config::get('apiuser');
-        $level->save();
+        $level = Level::find($id);
+        $level->update(['deleted_by' => Config::get('apiuser')]);
         $level->delete();
         return response()->json([
             'action' => 'delete',

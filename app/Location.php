@@ -24,7 +24,7 @@ class Location extends Model
      * @var array
      */
     protected $fillable = [
-        'uuid', 'latitude', 'longitude', 'name',
+        'uuid', 'latitude', 'longitude', 'name', 'created_by', 'updated_by', 'deleted_by',
     ];
 
 

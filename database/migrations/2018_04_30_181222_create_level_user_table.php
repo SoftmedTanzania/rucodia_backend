@@ -20,9 +20,9 @@ class CreateLevelUserTable extends Migration
             $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('created_by')->nullable($value = true)->default('System');
-            $table->string('updated_by')->nullable();
-            $table->string('deleted_by')->nullable();
+            $table->integer('created_by')->nullable($value = true)->default(0);
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletesTz();
         });

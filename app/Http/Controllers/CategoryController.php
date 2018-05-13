@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Category as CategoryResource;
 use Illuminate\Support\Str;
 use Response;
+use Illuminate\Support\Facades\Config;
 
 class CategoryController extends Controller
 {
@@ -45,7 +46,7 @@ class CategoryController extends Controller
         $category->uuid = (string) Str::uuid()->string;
         $category->name = $request['name'];
         $category->description = $request['description'];
-        $category->created_by = 'SystemAPI';
+        $category->created_by = Config::get('apiuser');
         $category->save();
         return response()->json([
             'acton' => 'create',
@@ -104,8 +105,7 @@ class CategoryController extends Controller
         $category = Category::find($category)->first();
         $category->name = $request['name'];
         $category->description = $request['description'];
-        $category->updated_by = 'SystemAPI';
-        $category->updated_at = date('Y-m-d H:i:s');
+        $category->updated_by = Config::get('apiuser');
         $category->save();
         return response()->json([
             'action' => 'update',
@@ -125,6 +125,8 @@ class CategoryController extends Controller
     {
         // Delete a specific category by categoryID (Soft-Deletes)
         $category = Category::find($category)->first();
+        $category->deleted_by = Config::get('apiuser');
+        $category->save();
         $category->delete();
         return response()->json([
             'action' => 'delete',

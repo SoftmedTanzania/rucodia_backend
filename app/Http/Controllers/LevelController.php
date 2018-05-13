@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Level;
 use Illuminate\Http\Request;
 use App\Http\Resources\Level as LevelResource;
-// use App\Http\Resources\LevelCollection;
 use Illuminate\Support\Str;
 use Response;
+use Illuminate\Support\Facades\Config;
 
 class LevelController extends Controller
 {
@@ -46,7 +46,7 @@ class LevelController extends Controller
         $level->uuid = (string) Str::uuid()->string;
         $level->name = $request['name'];
         $level->description = $request['description'];
-        $level->created_by = 'SystemAPI';
+        $level->created_by = Config::get('apiuser');
         $level->save();
         return response()->json([
             'acton' => 'create',
@@ -105,8 +105,7 @@ class LevelController extends Controller
         $level = Level::find($level)->first();
         $level->name = $request['name'];
         $level->description = $request['description'];
-        $level->updated_by = 'SystemAPI';
-        $level->updated_at = date('Y-m-d H:i:s');
+        $level->updated_by = Config::get('apiuser');
         $level->save();
         return response()->json([
             'action' => 'update',
@@ -126,6 +125,8 @@ class LevelController extends Controller
     {
         // Delete a specific level by levelID (Soft-Deletes)
         $level = Level::find($level)->first();
+        $level->deleted_by = Config::get('apiuser');
+        $level->save();
         $level->delete();
         return response()->json([
             'action' => 'delete',

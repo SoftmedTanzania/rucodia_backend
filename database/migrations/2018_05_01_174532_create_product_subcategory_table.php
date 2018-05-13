@@ -20,9 +20,9 @@ class CreateProductSubcategoryTable extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('subcategory_id')->unsigned();
             $table->foreign('subcategory_id')->references('id')->on('subcategories');
-            $table->string('created_by')->nullable($value = true)->default('System');;
-            $table->string('updated_by')->nullable();
-            $table->string('deleted_by')->nullable();
+            $table->integer('created_by')->nullable($value = true)->default(0);;
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletesTz();
         });

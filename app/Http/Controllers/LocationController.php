@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Location as LocationResource;
 use Illuminate\Support\Str;
 use Response;
+use Illuminate\Support\Facades\Config;
 
 class LocationController extends Controller
 {
@@ -23,16 +24,6 @@ class LocationController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -46,7 +37,7 @@ class LocationController extends Controller
         $location->latitude = $request['latitude'];
         $location->longitude = $request['longitude'];
         $location->name = $request['name'];
-        $location->created_by = 'SystemAPI';
+        $location->created_by = Config::get('apiuser');
         $location->save();
         return response()->json([
             'acton' => 'create',
@@ -83,39 +74,29 @@ class LocationController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Location  $location
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Location $location)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Location $location)
+    public function update(Request $request, $location)
     {
         // Update the resource with the addressed location
         $location = Location::find($location)->first();
         $location->latitude = $request['latitude'];
         $location->longitude = $request['longitude'];
         $location->name = $request['name'];
-        $location->updated_by = 'SystemAPI';
-        $location->updated_at = date('Y-m-d H:i:s');
+        $location->updated_by = Config::get('apiuser');
         $location->save();
         return response()->json([
             'action' => 'update',
             'status' => 'OK',
             'entity' => $location->uuid,
-            'type' => 'location'
+            'type' => 'location',
+            'user' => Config::get('apiuser'),
         ], 200);
+
     }
 
     /**
@@ -128,6 +109,8 @@ class LocationController extends Controller
     {
         // Delete a specific location by locationID (Soft-Deletes)
         $location = Location::find($location);
+        $location->deleted_by = Config::get('apiuser');
+        $location->save();
         $location->delete();
         return response()->json([
             'action' => 'delete',

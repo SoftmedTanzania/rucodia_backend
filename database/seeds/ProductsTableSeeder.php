@@ -33,7 +33,7 @@ class ProductsTableSeeder extends Seeder
             $product->name = 'Katumani 2018H';
             $product->price = 15000;
             $product->description = 'Mahindi yanayokua kwa wiki 9.';
-            $product->created_by = 'System';
+            $product->created_by =0;
             $product->created_at = date('Y-m-d H:i:s');
             $product->save();
             $product->units()->attach($kg_unit, array('uuid' => (string) Str::uuid()));
@@ -44,7 +44,7 @@ class ProductsTableSeeder extends Seeder
             $product->name = 'Mlingano 2018H';
             $product->price = 13500;
             $product->description = 'Mahindi yanayokua kwa wiki 7.';
-            $product->created_by = 'System';
+            $product->created_by =0;
             $product->created_at = date('Y-m-d H:i:s');
             $product->save();
             $product->units()->attach($kg_unit, array('uuid' => (string) Str::uuid()));
@@ -55,7 +55,7 @@ class ProductsTableSeeder extends Seeder
             $product->name = 'Ilonga RH1';
             $product->price = 25000;
             $product->description = 'Maharage mekundu ya Mpwapwa yanastahmili ukame.';
-            $product->created_by = 'System';
+            $product->created_by =0;
             $product->created_at = date('Y-m-d H:i:s');
             $product->save();
             $product->units()->attach($kg_unit, array('uuid' => (string) Str::uuid()));
@@ -66,7 +66,7 @@ class ProductsTableSeeder extends Seeder
             $product->name = 'Solo Viper';
             $product->price = 92000;
             $product->description = 'Mashine ya kupulizia na kunyunyizia dawa shambani.';
-            $product->created_by = 'System';
+            $product->created_by =0;
             $product->created_at = date('Y-m-d H:i:s');
             $product->save();
             $product->units()->attach($piece_unit, array('uuid' => (string) Str::uuid()));
@@ -77,7 +77,7 @@ class ProductsTableSeeder extends Seeder
             $product->name = 'Thiorolox';
             $product->price = 7800;
             $product->description = 'Sumu ya Thiodan ya AgroCull.';
-            $product->created_by = 'System';
+            $product->created_by =0;
             $product->created_at = date('Y-m-d H:i:s');
             $product->save();
             $product->units()->attach($lt_unit, array('uuid' => (string) Str::uuid()));

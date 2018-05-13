@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder
         $user->email = str_random(10).'@gmail.com';
         $user->username = 'admin';
         $user->password = bcrypt('admin');
-        $user->created_by = 'System';
+        $user->created_by = 0;
         $user->created_at = date('Y-m-d H:i:s');
         $user->save();
         $user->levels()->attach($admin_level, array('uuid' => (string) Str::uuid()));
@@ -51,7 +51,7 @@ class UsersTableSeeder extends Seeder
         $user->email = 'kizomanizo@gmail.com';
         $user->username = 'kizito';
         $user->password = bcrypt('kizito');
-        $user->created_by = 'System';
+        $user->created_by = 0;
         $user->created_at = date('Y-m-d H:i:s');
         $user->save();
         $user->levels()->attach($admin_level, array('uuid' => (string) Str::uuid()));
@@ -66,7 +66,7 @@ class UsersTableSeeder extends Seeder
         $user->email = str_random(10).'@gmail.com';
         $user->username = 'supplier';
         $user->password = bcrypt('supplier');
-        $user->created_by = 'System';
+        $user->created_by = 0;
         $user->created_at = date('Y-m-d H:i:s');
         $user->save();
         $user->levels()->attach($supplier_level, array('uuid' => (string) Str::uuid()));
@@ -81,7 +81,7 @@ class UsersTableSeeder extends Seeder
         $user->email = str_random(10).'@gmail.com';
         $user->username = 'dealer';
         $user->password = bcrypt('dealer');
-        $user->created_by = 'System';
+        $user->created_by = 0;
         $user->created_at = date('Y-m-d H:i:s');
         $user->save();
         $user->levels()->attach($agrodealer_level, array('uuid' => (string) Str::uuid()));
@@ -97,7 +97,7 @@ class UsersTableSeeder extends Seeder
         $user->email = str_random(10).'@gmail.com';
         $user->username = 'farmer';
         $user->password = bcrypt('farmer');
-        $user->created_by = 'System';
+        $user->created_by = 0;
         $user->created_at = date('Y-m-d H:i:s');
         $user->save();
         $user->levels()->attach($farmer_level, array('uuid' => (string) Str::uuid()));

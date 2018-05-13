@@ -17,7 +17,7 @@ class LevelsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Admin',
             'description' => 'Seeded system administrator level',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 
@@ -26,7 +26,7 @@ class LevelsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Supplier',
             'description' => 'Seeded supplier level',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
             ]);
         
@@ -35,7 +35,7 @@ class LevelsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Agrodealer',
             'description' => 'Seeded agrodealer level',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
             ]);
 
@@ -44,7 +44,7 @@ class LevelsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Farmer',
             'description' => 'Seeded farmer level',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
             ]);
 

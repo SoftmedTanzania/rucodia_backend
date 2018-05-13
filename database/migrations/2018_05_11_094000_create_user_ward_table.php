@@ -20,9 +20,9 @@ class CreateUserWardTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('ward_id')->unsigned();
             $table->foreign('ward_id')->references('id')->on('wards');
-            $table->string('created_by')->nullable()->default('System');
-            $table->string('updated_by')->nullable();
-            $table->string('deleted_by')->nullable();
+            $table->integer('created_by')->nullable()->default(0);
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletesTz();
         });

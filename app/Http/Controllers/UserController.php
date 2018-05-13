@@ -8,11 +8,11 @@ use App\Level;
 use App\Location;
 use App\Ward;
 use App\Http\Resources\User as UserResource;
-// use App\Http\Resources\UserCollection;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Response;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Config;
 
 class UserController extends Controller
 {
@@ -59,7 +59,7 @@ class UserController extends Controller
         $user->email = $request['email'];
         $user->username = $request['username'];
         $user->password = Hash::make($request['password']);
-        $user->created_by = 'SystemAPI';
+        $user->created_by = Config::get('apiuser');
         $user->save();
         $user->levels()->attach($level->id, array('level_id' => $level->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
         $user->locations()->attach($location->id, array('location_id' => $location->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
@@ -124,8 +124,7 @@ class UserController extends Controller
         $user->email = $request['email'];
         $user->username = $request['username'];
         $user->password = Hash::make($request['password']);
-        $user->updated_by = 'SystemAPI';
-        $user->updated_at = date('Y-m-d H:i:s');
+        $user->updated_by = Config::get('apiuser');
         $user->levels()->sync($level->id);
         $user->levels()->updateExistingPivot($level->id, array('uuid' => $level_uuid, 'id' => $level_id));
         $user->locations()->sync($location->id);
@@ -151,6 +150,8 @@ class UserController extends Controller
     {
         // Delete a specific User by ID (Soft-Deletes)
         $user = User::find($id);
+        $user->deleted_by = Config::get('apiuser');
+        $user->save();
         $user->delete();
         return response()->json([
             'action' => 'delete',

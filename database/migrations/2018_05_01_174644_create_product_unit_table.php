@@ -20,9 +20,9 @@ class CreateProductUnitTable extends Migration
             $table->foreign('unit_id')->references('id')->on('units');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
-            $table->string('created_by')->nullable($value = true)->default('System');;
-            $table->string('updated_by')->nullable();
-            $table->string('deleted_by')->nullable();
+            $table->integer('created_by')->nullable($value = true)->default(0);;
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletesTz();
         });

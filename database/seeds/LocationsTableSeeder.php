@@ -17,8 +17,7 @@ class LocationsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'latitude' => -4.573916,
             'longitude' => 30.096946,
-            'name' => 'Home',
-            'created_by' => 'System',
+            'name' => 'Kasulu Agrovets',
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 
@@ -27,8 +26,7 @@ class LocationsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'latitude' => -4.518000,
             'longitude' => 30.045000,
-            'name' => 'Shop',
-            'created_by' => 'System',
+            'name' => 'Nyuki Traders',
             'created_at' => date('Y-m-d H:i:s'),
             ]);
         
@@ -37,8 +35,7 @@ class LocationsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'latitude' => -3.583117,
             'longitude' => 30.724251,
-            'name' => 'Store',
-            'created_by' => 'System',
+            'name' => 'Kasuku Store',
             'created_at' => date('Y-m-d H:i:s'),
             ]);
 
@@ -47,8 +44,16 @@ class LocationsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'latitude' => -4.825949,
             'longitude' => 29.657873,
-            'name' => 'Warehouse',
-            'created_by' => 'System',
+            'name' => 'Mkulima Shop',
+            'created_at' => date('Y-m-d H:i:s'),
+            ]);
+
+        // Fifth sample location
+        DB::table('locations')->insert([
+            'uuid' => (string) Str::uuid(),
+            'latitude' => -4.825467,
+            'longitude' => 29.651003,
+            'name' => 'Mkulima Shop',
             'created_at' => date('Y-m-d H:i:s'),
             ]);
     }

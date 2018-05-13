@@ -20,9 +20,9 @@ class CreateCategoryProductTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
-            $table->string('created_by');
-            $table->string('updated_by')->nullable();
-            $table->string('deleted_by')->nullable();
+            $table->integer('created_by')->nullable()->default(0);
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletesTz();
         });

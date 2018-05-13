@@ -8,6 +8,7 @@ use App\Unit;
 use Illuminate\Http\Request;
 use App\Http\Resources\Product as ProductResource;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Config;
 
 class ProductController extends Controller
 {
@@ -39,7 +40,7 @@ class ProductController extends Controller
                 $product->name = $request['firstname'];
                 $product->price = $request['price'];
                 $product->description = $request['description'];
-                $product->created_by = 'SystemAPI';
+                $product->created_by = Config::get('apiuser');
                 $product->save();
                 $product->subcategories()->attach($subcategory->id, array('subcategory_id' => $subcategory->id, 'product_id' => $product->id, 'uuid' => (string) Str::uuid()));
                 $product->units()->attach($unit->id, array('unit_id' => $unit->id, 'product_id' => $product->id, 'uuid' => (string) Str::uuid()));
@@ -97,8 +98,7 @@ class ProductController extends Controller
         $product->name = $request['name'];
         $product->price = $request['price'];
         $product->description = $request['description'];
-        $product->updated_by = 'SystemAPI';
-        $product->updated_at = date('Y-m-d H:i:s');
+        $product->updated_by = Config::get('apiuser');
         $product->subcategories()->sync($subcategory->id);
         $product->subcategories()->updateExistingPivot($subcategory->id, array('uuid' => $subcategory_uuid, 'id' => $subcategory_id));
         $product->units()->sync($unit->id);
@@ -123,6 +123,8 @@ class ProductController extends Controller
     {
         // Delete a specific Product by ID (Soft-Deletes)
         $product = Product::find($id);
+        $product->deleted_by = Config::get('apiuser');
+        $product->save();
         $product->delete();
         return response()->json([
             'action' => 'delete',

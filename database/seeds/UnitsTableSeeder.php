@@ -17,7 +17,7 @@ class UnitsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Kg',
             'description' => 'Kilograms',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 
@@ -25,7 +25,7 @@ class UnitsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Lt',
             'description' => 'Litres',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 
@@ -33,7 +33,7 @@ class UnitsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Can',
             'description' => 'Cans',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
         
@@ -41,7 +41,7 @@ class UnitsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Bag',
             'description' => 'Bags',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
         
@@ -49,7 +49,7 @@ class UnitsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Ton',
             'description' => 'Tons',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
         
@@ -57,7 +57,7 @@ class UnitsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Cutling',
             'description' => 'Cutlings',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
         
@@ -65,7 +65,7 @@ class UnitsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'name' => 'Piece',
             'description' => 'Pieces',
-            'created_by' => 'System',
+            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 

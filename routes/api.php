@@ -41,3 +41,5 @@ Route::get('districts/{district}/wards', 'DistrictController@districtWards')->mi
 Route::resource('wards', 'WardController')->middleware('auth.basic.once');
 
 Route::get('auth', 'UserController@auth')->middleware('auth.basic.once');
+
+Route::resource('transactions', 'TransactionController')->middleware('auth.basic.once');

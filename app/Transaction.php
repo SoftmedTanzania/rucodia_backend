@@ -34,7 +34,7 @@ class Transaction extends Model
      * 
      * @return \Illuminate\Http\Response
      */
-    public function users()
+    public function user()
     {
         return $this
             ->belongsTo('App\User');
@@ -45,7 +45,7 @@ class Transaction extends Model
      * 
      * @return \Illuminate\Http\Response
      */
-    public function products()
+    public function product()
     {
         return $this
             ->belongsTo('App\Product');
@@ -56,7 +56,7 @@ class Transaction extends Model
      * 
      * @return \Illuminate\Http\Response
      */
-    public function statuses()
+    public function status()
     {
         return $this
             ->belongsTo('App\Status');

@@ -23,7 +23,9 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        //
+        // List all the users in a collection
+        TransactionResource::WithoutWrapping();
+        return TransactionResource::collection(Transaction::with('transactiontype')->with('user')->with('product')->with('status')->get());
     }
 
 
@@ -36,29 +38,57 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
         // Get all the details for User creation
-        $level = User::where('name', $request['level'])->first();
-        $location = Product::where('name', $request['location'])->first();
-        $location = Ward::where('name', $request['ward'])->first();
-        $user = new User;
-        $user->uuid = (string) Str::uuid();
-        $user->firstname = $request['firstname'];
-        $user->middlename = $request['middlename'];
-        $user->surname = $request['surname'];
-        $user->email = $request['email'];
-        $user->username = $request['username'];
-        $user->password = Hash::make($request['password']);
-        $user->created_by = Config::get('apiuser');
-        $user->save();
-        $user->levels()->attach($level->id, array('level_id' => $level->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
-        $user->locations()->attach($location->id, array('location_id' => $location->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
-        $user->wards()->attach($ward->id, array('ward_id' => $ward->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
+        // $transactiontype = Transactiontype::where('id', $request['transactiontype_id'])->first();
+        // $user = User::where('id', $request['user_id'])->first();
+        // $product = Product::where('id', $request['product_id'])->first();
+        // $status = Status::where('id', $request['status_id'])->first();
+        $transaction = new Transaction;
+        $transaction->uuid = (string) Str::uuid();
+        $transaction->amount = $request['amount'];
+        $transaction->price = $request['price'];
+        $transaction->user_id = $request['user_id'];
+        $transaction->transactiontype_id = $request['transactiontype_id'];
+        $transaction->product_id = $request['product_id'];
+        $transaction->status_id = $request['status_id'];
+        $transaction->created_by = Config::get('apiuser');
+        $transaction->save();
+        // $transaction->transactiontype()
+        //     ->attach($transactiontype->id, array(
+        //         'transactiontype_id' => $transactiontype->id,
+        //         'transaction_id' => $transaction->id,
+        //         'uuid' => (string) Str::uuid()
+        //     )
+        // );
+        // $transaction->user()
+        //     ->attach($user->id, array(
+        //         'user_id' => $user->id,
+        //         'transaction_id' => $transaction->id,
+        //         'uuid' => (string) Str::uuid()
+        //     )
+        // );
+        // $transaction->product()
+        //     ->attach($product->id, array(
+        //         'product_id' => $product->id,
+        //         'transaction_id' => $transaction->id,
+        //         'uuid' => (string) Str::uuid()
+        //     )
+        // );
+        // $transaction->status()
+        //     ->attach($status->id, array(
+        //         'status_id' => $status->id,
+        //         'transaction_id' => $transaction->id,
+        //         'uuid' => (string) Str::uuid()
+        //     )
+        // );
         return response()->json([
             'action' => 'create',
             'status' => 'OK',
-            'entity' => $user->uuid,
-            'type' => 'user',
+            'entity' => $transaction->uuid,
+            'type' => 'transaction',
             'user' => Config::get('apiuser')
         ], 201);
+
+        // return $transaction;
     }
 
     /**

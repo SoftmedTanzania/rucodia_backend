@@ -12,7 +12,9 @@ class Subcategory extends Model
      * @var array
      */
     protected $fillable = [
-        'uuid', 'name', 'description',
+        'uuid',
+        'name',
+        'description',
     ];
 
     /**
@@ -20,6 +22,17 @@ class Subcategory extends Model
      */
     public function products()
     {
-        return $this->belongsToMany('App\Product')->withTimestamps()->withPivot('uuid');
+        return $this
+            ->belongsToMany('App\Product')
+            ->withTimestamps()
+            ->withPivot('uuid');
+    }
+
+    public function category()
+    {
+        return $this
+            ->belongsToMany('App\Category')
+            ->withTimestamps()
+            ->withPivot('uuid');
     }
 }

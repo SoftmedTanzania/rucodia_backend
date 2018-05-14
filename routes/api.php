@@ -27,6 +27,7 @@ Route::apiResource('levels', 'LevelController')->middleware('auth.basic.once');
 Route::apiResource('locations', 'LocationController')->middleware('auth.basic.once');
 Route::apiResource('units', 'UnitController')->middleware('auth.basic.once');
 Route::apiResource('categories', 'CategoryController')->middleware('auth.basic.once');
+Route::apiResource('subcategories', 'SubcategoryController')->middleware('auth.basic.once');
 Route::apiResource('products', 'ProductController')->middleware('auth.basic.once');
 Route::apiResource('orders', 'OrderController')->middleware('auth.basic.once');
 

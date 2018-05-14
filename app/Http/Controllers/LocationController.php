@@ -55,10 +55,10 @@ class LocationController extends Controller
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Level $location)
     {
         // Individual location details
-        $location = Location::find($id);
+        $location = Location::find($location);
         // Check if location is not in the DB
         if ($location === NULL) {
             return response()->json([
@@ -72,7 +72,7 @@ class LocationController extends Controller
         else {
         // List the details of a specific location
         LocationResource::WithoutWrapping();
-        return new LocationResource(Location::find($id));
+        return new LocationResource(Location::find($location));
         }
     }
 
@@ -83,10 +83,10 @@ class LocationController extends Controller
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $location)
     {
         // Update the resource with the addressed location
-        $location = Location::find($id);
+        $location = Location::find($location);
         $location->latitude = $request['latitude'];
         $location->longitude = $request['longitude'];
         $location->name = $request['name'];
@@ -108,10 +108,10 @@ class LocationController extends Controller
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Level $location)
     {
         // Delete a specific location by locationID (Soft-Deletes)
-        $location = Location::findOrFail($id);
+        $location = Location::findOrFail($location);
         $location->update(['deleted_by' => Config::get('apiuser')]);
         $location->delete();
         return response()->json([

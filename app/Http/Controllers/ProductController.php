@@ -48,7 +48,8 @@ class ProductController extends Controller
                     'action' => 'create',
                     'status' => 'OK',
                     'entity' => $product->uuid,
-                    'type' => 'product'
+                    'type' => 'product',
+                    'user' => Config::get('apiuser')
                 ], 201);
     }
 
@@ -67,7 +68,8 @@ class ProductController extends Controller
                 'action' => 'show',
                 'status' => 'FAIL',
                 'entity' => NULL,
-                'type' => 'product'
+                'type' => 'product',
+            'user' => Config::get('apiuser')
             ], 404);
         }
         else {
@@ -108,9 +110,9 @@ class ProductController extends Controller
             'action' => 'update',
             'status' => 'OK',
             'entity' => $product->uuid,
-            'type' => 'product'
+            'type' => 'product',
+            'user' => Config::get('apiuser')
         ], 200);
-        // return $uid;
     }
 
     /**
@@ -119,18 +121,18 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
         // Delete a specific Product by ID (Soft-Deletes)
-        $product = Product::find($id);
-        $product->deleted_by = Config::get('apiuser');
-        $product->save();
+        $product = Product::find($product);
+        $product->update(['deleted_by' => Config::get('apiuser')]);
         $product->delete();
         return response()->json([
             'action' => 'delete',
             'status' => 'OK',
             'entity' => $product->uuid,
-            'type' => 'product'
+            'type' => 'product',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 }

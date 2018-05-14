@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->string('uuid');
             $table->integer('quantity');
+            $table->integer('delivered')->nullabe();
             $table->integer('batch');
             $table->integer('statuses')->unsigned();
             $table->foreign('statuses')->references('id')->on('statuses');

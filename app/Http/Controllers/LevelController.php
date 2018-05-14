@@ -52,7 +52,8 @@ class LevelController extends Controller
             'acton' => 'create',
             'status' => 'OK',
             'entity' => $level->uuid,
-            'type' => 'level'
+            'type' => 'level',
+            'user' => Config::get('apiuser')
         ], 201);
     }
 
@@ -62,34 +63,24 @@ class LevelController extends Controller
      * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
      */
-    public function show(Level $level)
+    public function show($id)
     {
-        $level = Level::find($level);
+        $level = Level::find($id);
         // Check if level is not in the DB
         if ($level === null) {
             return response()->json([
                 'action' => 'show',
                 'status' => 'FAIL',
                 'entity' => NULL,
-                'type' => 'level'
+                'type' => 'level',
+                'user' => Config::get('apiuser')
             ], 404);
         }
         else {
         // List the details of a specific level
         LevelResource::WithoutWrapping();
-        return new LevelResource(Level::find($level));
+        return new LevelResource(Level::find($id));
         }
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Level  $level
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Level $id)
-    {
-        //
     }
 
     /**
@@ -99,7 +90,7 @@ class LevelController extends Controller
      * @param  \App\Level  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Level $level)
+    public function update(Request $request, $id)
     {
         // Update the resource with the addressed level
         $level = Level::find($id)->first();
@@ -111,7 +102,8 @@ class LevelController extends Controller
             'action' => 'update',
             'status' => 'OK',
             'entity' => $level->uuid,
-            'type' => 'level'
+            'type' => 'level',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 
@@ -131,7 +123,8 @@ class LevelController extends Controller
             'action' => 'delete',
             'status' => 'OK',
             'entity' => $level->uuid,
-            'type' => 'level'
+            'type' => 'level',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 }

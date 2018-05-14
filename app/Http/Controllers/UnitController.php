@@ -52,7 +52,8 @@ class UnitController extends Controller
             'acton' => 'create',
             'status' => 'OK',
             'entity' => $unit->uuid,
-            'type' => 'unit'
+            'type' => 'unit',
+            'user' => Config::get('apiuser')
         ], 201);
     }
 
@@ -71,7 +72,8 @@ class UnitController extends Controller
                 'action' => 'show',
                 'status' => 'FAIL',
                 'entity' => NULL,
-                'type' => 'unit'
+                'type' => 'unit',
+                'user' => Config::get('apiuser')
             ], 404);
         }
         else {
@@ -112,7 +114,8 @@ class UnitController extends Controller
             'action' => 'update',
             'status' => 'OK',
             'entity' => $unit->uuid,
-            'type' => 'unit'
+            'type' => 'unit',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 
@@ -126,14 +129,14 @@ class UnitController extends Controller
     {
         // Delete a specific unit by unitID (Soft-Deletes)
         $unit = Unit::find($unit)->first();
-        $unit->deleted_by = Config::get('apiuser');
-        $unit->save();
+        $unit->update(['deleted_by' => Config::get('apiuser')]);
         $unit->delete();
         return response()->json([
             'action' => 'delete',
             'status' => 'OK',
             'entity' => $unit->uuid,
-            'type' => 'unit'
+            'type' => 'unit',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 }

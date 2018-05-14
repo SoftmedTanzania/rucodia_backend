@@ -11,6 +11,14 @@ class Order extends Model
      */
     public function users()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User')->withTimestamps();
+    }
+
+    /**
+     * Get the product for specific order.
+     */
+    public function products()
+    {
+        return $this->belongsTo('App\Product')->withTimestamps();
     }
 }

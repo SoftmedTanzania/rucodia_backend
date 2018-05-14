@@ -28,3 +28,4 @@ Route::resource('locations', 'LocationController')->middleware('auth.basic.once'
 Route::resource('units', 'UnitController')->middleware('auth.basic.once');
 Route::resource('categories', 'CategoryController')->middleware('auth.basic.once');
 Route::resource('products', 'ProductController')->middleware('auth.basic.once');
+Route::resource('orders', 'OrderController')->middleware('auth.basic.once');

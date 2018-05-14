@@ -52,7 +52,8 @@ class CategoryController extends Controller
             'acton' => 'create',
             'status' => 'OK',
             'entity' => $category->uuid,
-            'type' => 'category'
+            'type' => 'category',
+            'user' => Config::get('apiuser')
         ], 201);
     }
 
@@ -71,7 +72,8 @@ class CategoryController extends Controller
                 'action' => 'show',
                 'status' => 'FAIL',
                 'entity' => NULL,
-                'type' => 'category'
+                'type' => 'category',
+                'user' => Config::get('apiuser')
             ], 404);
         }
         else {
@@ -111,7 +113,8 @@ class CategoryController extends Controller
             'action' => 'update',
             'status' => 'OK',
             'entity' => $category->uuid,
-            'type' => 'category'
+            'type' => 'category',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 
@@ -125,14 +128,14 @@ class CategoryController extends Controller
     {
         // Delete a specific category by categoryID (Soft-Deletes)
         $category = Category::find($category)->first();
-        $category->deleted_by = Config::get('apiuser');
-        $category->save();
+        $category->update(['deleted_by' => Config::get('apiuser')]);
         $category->delete();
         return response()->json([
             'action' => 'delete',
             'status' => 'OK',
             'entity' => $category->uuid,
-            'type' => 'category'
+            'type' => 'category',
+            'user' => Config::get('apiuser')
         ], 200);
     }
 }

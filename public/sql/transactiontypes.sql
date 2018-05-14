@@ -1,0 +1,2 @@
+INSERT INTO transactiontypes (id, uuid, name, description, created_at) VALUES(1, UUID(), 'stock', 'Additional stock to the inventory.', NOW());
+INSERT INTO transactiontypes (id, uuid, name, description, created_at) VALUES(2, UUID(), 'sale', 'Reduction of stock from the inventory.', NOW());

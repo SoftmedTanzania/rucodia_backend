@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TransactionsTableSeeder extends Seeder
+class TransactiontypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +13,7 @@ class TransactionsTableSeeder extends Seeder
     {
         // Seed this table from an SQL file
         DB::disableQueryLog();
-        $path = public_path('sql/transactions.sql');
+        $path = public_path('sql/transactiontypes.sql');
         DB::unprepared(file_get_contents($path));
         $this->command->info('Transactions table seeded!');
     }

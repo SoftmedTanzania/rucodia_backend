@@ -1,0 +1,2 @@
+INSERT INTO transactions (id, name, description, created_at) VALUES(0, 'stock', 'Additional stock to the inventory.', NOW());
+INSERT INTO transactions (id, name, description, created_at) VALUES(1, 'sale', 'Reduction of stock from the inventory.', NOW());

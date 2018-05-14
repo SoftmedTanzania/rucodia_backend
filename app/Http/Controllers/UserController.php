@@ -163,4 +163,15 @@ class UserController extends Controller
             'user' => Config::get('apiuser')
         ], 200);
     }
+
+    /**
+     * Get the auth page then sen back user details
+     * 
+     * @return \Ilumminate\Http\Response
+     */
+    public function auth()
+    {
+        $user = User::find(Config::get('apiuser'));
+        return response()->json($user);
+    }
 }

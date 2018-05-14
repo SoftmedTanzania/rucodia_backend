@@ -5,8 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Level;
-use App\Location;
+
 
 /**
  * User Model
@@ -85,5 +84,13 @@ class User extends Authenticatable
     {
         return $this->
             hasMany('App\Order');
+    }
+
+    /**
+     * Get the ward for this user.
+     */
+    public function wards()
+    {
+        return $this->belongsToMany('App\Ward');
     }
 }

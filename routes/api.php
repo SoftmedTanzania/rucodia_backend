@@ -22,19 +22,21 @@ Route::get('/logout', function () {
     // return 'success';
 });
 
-Route::resource('users', 'UserController')->middleware('auth.basic.once');
-Route::resource('levels', 'LevelController')->middleware('auth.basic.once');
-Route::resource('locations', 'LocationController')->middleware('auth.basic.once');
-Route::resource('units', 'UnitController')->middleware('auth.basic.once');
-Route::resource('categories', 'CategoryController')->middleware('auth.basic.once');
-Route::resource('products', 'ProductController')->middleware('auth.basic.once');
-Route::resource('orders', 'OrderController')->middleware('auth.basic.once');
+Route::apiResource('users', 'UserController')->middleware('auth.basic.once');
+Route::apiResource('levels', 'LevelController')->middleware('auth.basic.once');
+Route::apiResource('locations', 'LocationController')->middleware('auth.basic.once');
+Route::apiResource('units', 'UnitController')->middleware('auth.basic.once');
+Route::apiResource('categories', 'CategoryController')->middleware('auth.basic.once');
+Route::apiResource('products', 'ProductController')->middleware('auth.basic.once');
+Route::apiResource('orders', 'OrderController')->middleware('auth.basic.once');
 
-Route::resource('regions', 'RegionController')->middleware('auth.basic.once');
+Route::apiResource('regions', 'RegionController')->middleware('auth.basic.once');
 Route::get('regions/{region}/districts', 'RegionController@regionDistricts')->middleware('auth.basic.once');
 Route::get('regions/{region}/districts/wards', 'RegionController@regionDistrictsWards')->middleware('auth.basic.once');
 
-Route::resource('districts', 'DistrictController')->middleware('auth.basic.once');
+Route::apiResource('districts', 'DistrictController')->middleware('auth.basic.once');
 Route::get('districts/{district}/wards', 'DistrictController@districtWards')->middleware('auth.basic.once');
 
 Route::resource('wards', 'WardController')->middleware('auth.basic.once');
+
+Route::get('auth', 'UserController@auth')->middleware('auth.basic.once');

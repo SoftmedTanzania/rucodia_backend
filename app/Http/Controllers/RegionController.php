@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Region;
 use Illuminate\Http\Request;
+use Response;
+use App\Http\Resources\Region as RegionResource;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Config;
 
 class RegionController extends Controller
 {
@@ -14,17 +18,9 @@ class RegionController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        // List all the Regions in a collection
+        RegionResource::WithoutWrapping();
+        return RegionResource::collection(Region::with('discticts')->get());
     }
 
     /**
@@ -35,7 +31,19 @@ class RegionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Insert a new region from the payload
+        $region = new Region;
+        $region->uuid = (string) Str::uuid()->string;
+        $region->name = $request['name'];
+        $region->created_by = Config::get('apiuser');
+        $region->save();
+        return response()->json([
+            'acton' => 'create',
+            'status' => 'OK',
+            'entity' => $region->uuid,
+            'type' => 'region',
+            'user' => Config::get('apiuser')
+        ], 201);
     }
 
     /**
@@ -44,20 +52,24 @@ class RegionController extends Controller
      * @param  \App\Region  $region
      * @return \Illuminate\Http\Response
      */
-    public function show(Region $region)
+    public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Region  $region
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Region $region)
-    {
-        //
+        $region = Region::find($id);
+        // Check if region is not in the DB
+        if ($region === null) {
+            return response()->json([
+                'action' => 'show',
+                'status' => 'FAIL',
+                'entity' => NULL,
+                'type' => 'region',
+                'user' => Config::get('apiuser')
+            ], 404);
+        }
+        else {
+        // List the details of a specific region
+        RegionResource::WithoutWrapping();
+        return new RegionResource(Region::with('districts')->find($id));
+        }
     }
 
     /**
@@ -67,9 +79,20 @@ class RegionController extends Controller
      * @param  \App\Region  $region
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Region $region)
+    public function update(Request $request, $id)
     {
-        //
+        // Update the resource with the addressed region
+        $region = Region::find($id)->first();
+        $region->name = $request['name'];
+        $region->updated_by = Config::get('apiuser');
+        $region->save();
+        return response()->json([
+            'action' => 'update',
+            'status' => 'OK',
+            'entity' => $region->uuid,
+            'type' => 'region',
+            'user' => Config::get('apiuser')
+        ], 200);
     }
 
     /**
@@ -78,8 +101,18 @@ class RegionController extends Controller
      * @param  \App\Region  $region
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Region $region)
+    public function destroy(Region $id)
     {
-        //
+        // Delete a specific region by regionID (Soft-Deletes)
+        $region = Region::find($id)->first();
+        $region->update(['deleted_by' => Config::get('apiuser')]);
+        $region->delete();
+        return response()->json([
+            'action' => 'delete',
+            'status' => 'OK',
+            'entity' => $region->uuid,
+            'type' => 'region',
+            'user' => Config::get('apiuser')
+        ], 200);
     }
 }

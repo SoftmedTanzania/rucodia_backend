@@ -24,16 +24,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -63,9 +53,9 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        $category = Category::find($category);
+        $category = Category::find($id);
         // Check if category is not in the DB
         if ($category === null) {
             return response()->json([
@@ -79,19 +69,8 @@ class CategoryController extends Controller
         else {
         // List the details of a specific category
         CategoryResource::WithoutWrapping();
-        return new CategoryResource(Category::with('subcategories')->find($category));
+        return new CategoryResource(Category::with('subcategories')->find($id));
         }
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Category $category)
-    {
-        //
     }
 
     /**
@@ -101,10 +80,10 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
         // Update the resource with the addressed category
-        $category = Category::find($category)->first();
+        $category = Category::find($id)->first();
         $category->name = $request['name'];
         $category->description = $request['description'];
         $category->updated_by = Config::get('apiuser');

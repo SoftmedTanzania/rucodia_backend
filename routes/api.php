@@ -41,6 +41,7 @@ Route::get('districts/{district}/wards', 'DistrictController@districtWards')->mi
 Route::apiResource('wards', 'WardController')->middleware('auth.basic.once');
 
 Route::get('auth', 'UserController@auth')->middleware('auth.basic.once');
+Route::get('users/{id}/balance', 'UserController@userBalance')->middleware('auth.basic.once');
 
 Route::apiResource('transactions', 'TransactionController')->middleware('auth.basic.once');
 Route::apiResource('transactiontypes', 'TransactiontypeController')->middleware('auth.basic.once');

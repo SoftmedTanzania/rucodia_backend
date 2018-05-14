@@ -7,6 +7,7 @@ use App\User;
 use App\Level;
 use App\Location;
 use App\Ward;
+use App\Balance;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -173,5 +174,19 @@ class UserController extends Controller
     {
         $user = User::find(Config::get('apiuser'));
         return response()->json($user);
+    }
+
+    public function userBalance($id)
+    {
+        $user = User::find($id);
+        $balance = Balance::where('user_id', $id)->sum('count');
+            return response()->json([
+                'action' => 'delete',
+                'status' => 'OK',
+                'entity' => $user->uuid,
+                'type' => 'user',
+                'user' => Config::get('apiuser'),
+                'balance' => $balance
+            ], 200);
     }
 }

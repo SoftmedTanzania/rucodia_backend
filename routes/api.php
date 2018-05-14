@@ -29,4 +29,12 @@ Route::resource('units', 'UnitController')->middleware('auth.basic.once');
 Route::resource('categories', 'CategoryController')->middleware('auth.basic.once');
 Route::resource('products', 'ProductController')->middleware('auth.basic.once');
 Route::resource('orders', 'OrderController')->middleware('auth.basic.once');
+
 Route::resource('regions', 'RegionController')->middleware('auth.basic.once');
+Route::get('regions/{region}/districts', 'RegionController@regionDistricts')->middleware('auth.basic.once');
+Route::get('regions/{region}/districts/wards', 'RegionController@regionDistrictsWards')->middleware('auth.basic.once');
+
+Route::resource('districts', 'DistrictController')->middleware('auth.basic.once');
+Route::get('districts/{district}/wards', 'DistrictController@districtWards')->middleware('auth.basic.once');
+
+Route::resource('wards', 'WardController')->middleware('auth.basic.once');

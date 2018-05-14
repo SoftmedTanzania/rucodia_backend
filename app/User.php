@@ -77,13 +77,13 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the district that owns the ward.
+     * Get the orders that this User owns
      * 
      * @return \Illuminate\Http\Response
      */
-    public function wards()
+    public function orders()
     {
         return $this->
-            belongsToMany('App\Ward');
+            hasMany('App\Order');
     }
 }

@@ -52,7 +52,7 @@ class UserController extends Controller
         $location = Location::where('name', $request['location'])->first();
         $location = Ward::where('name', $request['ward'])->first();
         $user = new User;
-        $user->uuid = (string) Str::uuid()->string;
+        $user->uuid = (string) Str::uuid();
         $user->firstname = $request['firstname'];
         $user->middlename = $request['middlename'];
         $user->surname = $request['surname'];

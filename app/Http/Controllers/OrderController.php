@@ -22,7 +22,7 @@ class OrderController extends Controller
     {
         // List all the Orders in a collection
         OrderResource::WithoutWrapping();
-        return OrderResource::collection(Order::with('users')->with('products')->get());
+        return OrderResource::collection(Order::with('dealer')->with('supplier')->with('product')->get());
     }
 
 
@@ -36,10 +36,10 @@ class OrderController extends Controller
     {
         // Get all the details for Order creation
         $order = new Order;
-        $order->uuid = (string) Str::uuid()->string;
-        $order->quantity = $request['quantity'];
+        $order->uuid = (string) Str::uuid();
+        $order->ordered = $request['ordered'];
         $order->batch = $request['batch'];
-        $order->status = 1;
+        $order->status_id = 1;
         $order->product_id = $request['product_id'];
         $order->dealer_id = $request['dealer_id'];
         $order->supplier_id = $request['supplier_id'];
@@ -76,7 +76,7 @@ class OrderController extends Controller
         else {
         // List the details of a specific order
         OrderResource::WithoutWrapping();
-        return new OrderResource(Order::with('users')->with('products')->find($id));
+        return new OrderResource(Order::with('dealer')->with('supplier')->with('product')->find($id));
         }
     }
 
@@ -92,7 +92,7 @@ class OrderController extends Controller
     {
         // Update the resource with the addressed ID
         $order = Order::find($id);
-        $order->quantity = $request['quantity'];
+        $order->ordered = $request['ordered'];
         $order->delivered = $request['delivered'];
         $order->status = $request['status'];
         $order->updated_by = Config::get('apiuser');

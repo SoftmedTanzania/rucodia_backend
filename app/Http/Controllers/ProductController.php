@@ -32,25 +32,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-                // Get all the details for Product creation
-                $subcategory = Subcategory::where('name', $request['subcategory'])->first();
-                $unit = Unit::where('name', $request['unit'])->first();
-                $product = new Product;
-                $product->uuid = (string) Str::uuid()->string;
-                $product->name = $request['firstname'];
-                $product->price = $request['price'];
-                $product->description = $request['description'];
-                $product->created_by = Config::get('apiuser');
-                $product->save();
-                $product->subcategories()->attach($subcategory->id, array('subcategory_id' => $subcategory->id, 'product_id' => $product->id, 'uuid' => (string) Str::uuid()));
-                $product->units()->attach($unit->id, array('unit_id' => $unit->id, 'product_id' => $product->id, 'uuid' => (string) Str::uuid()));
-                return response()->json([
-                    'action' => 'create',
-                    'status' => 'OK',
-                    'entity' => $product->uuid,
-                    'type' => 'product',
-                    'user' => Config::get('apiuser')
-                ], 201);
+        // Get all the details for Product creation
+        $subcategory = Subcategory::where('name', $request['subcategory'])->first();
+        $unit = Unit::where('name', $request['unit'])->first();
+        $product = new Product;
+        $product->uuid = (string) Str::uuid();
+        $product->name = $request['firstname'];
+        $product->price = $request['price'];
+        $product->description = $request['description'];
+        $product->created_by = Config::get('apiuser');
+        $product->save();
+        $product->subcategories()->attach($subcategory->id, array('subcategory_id' => $subcategory->id, 'product_id' => $product->id, 'uuid' => (string) Str::uuid()));
+        $product->units()->attach($unit->id, array('unit_id' => $unit->id, 'product_id' => $product->id, 'uuid' => (string) Str::uuid()));
+        return response()->json([
+            'action' => 'create',
+            'status' => 'OK',
+            'entity' => $product->uuid,
+            'type' => 'product',
+            'user' => Config::get('apiuser')
+        ], 201);
     }
 
     /**

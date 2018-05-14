@@ -33,7 +33,7 @@ class CategoryController extends Controller
     {
         // Insert a new category from the payload
         $category = new Category;
-        $category->uuid = (string) Str::uuid()->string;
+        $category->uuid = (string) Str::uuid();
         $category->name = $request['name'];
         $category->description = $request['description'];
         $category->created_by = Config::get('apiuser');

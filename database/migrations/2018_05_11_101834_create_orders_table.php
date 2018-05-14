@@ -16,11 +16,11 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('uuid');
-            $table->integer('quantity');
-            $table->integer('delivered')->nullabe();
-            $table->integer('batch');
-            $table->integer('statuses')->unsigned();
-            $table->foreign('statuses')->references('id')->on('statuses');
+            $table->integer('ordered');
+            $table->integer('delivered')->nullabe()->default(0);
+            $table->string('batch');
+            $table->integer('status_id')->unsigned();
+            $table->foreign('status_id')->references('id')->on('statuses');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('dealer_id')->unsigned();

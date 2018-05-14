@@ -7,18 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     /**
-     * Get the user for specific order.
+     * Get the dealer for specific order.
      */
-    public function users()
+    public function dealer()
     {
-        return $this->belongsTo('App\User')->withTimestamps();
+        return $this->belongsTo('App\User', 'dealer_id', 'id');
+    }
+
+    /**
+     * Get the supplier for specific order.
+     */
+    public function supplier()
+    {
+        return $this->belongsTo('App\User', 'supplier_id', 'id');
     }
 
     /**
      * Get the product for specific order.
      */
-    public function products()
+    public function product()
     {
-        return $this->belongsTo('App\Product')->withTimestamps();
+        return $this->belongsTo('App\Product', 'product_id', 'id');
     }
 }

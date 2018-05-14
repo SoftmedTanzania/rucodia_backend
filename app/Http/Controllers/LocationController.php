@@ -34,7 +34,7 @@ class LocationController extends Controller
     {
         // Insert a new location from the payload
         $location = new Location;
-        $location->uuid = (string) Str::uuid()->string;
+        $location->uuid = (string) Str::uuid();
         $location->latitude = $request['latitude'];
         $location->longitude = $request['longitude'];
         $location->name = $request['name'];

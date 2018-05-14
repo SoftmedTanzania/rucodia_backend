@@ -20,7 +20,7 @@ class RegionController extends Controller
     {
         // List all the Regions in a collection
         RegionResource::WithoutWrapping();
-        return RegionResource::collection(Region::with('discticts')->get());
+        return RegionResource::collection(Region::get());
     }
 
     /**
@@ -33,7 +33,7 @@ class RegionController extends Controller
     {
         // Insert a new region from the payload
         $region = new Region;
-        $region->uuid = (string) Str::uuid()->string;
+        $region->uuid = (string) Str::uuid();
         $region->name = $request['name'];
         $region->created_by = Config::get('apiuser');
         $region->save();
@@ -68,7 +68,7 @@ class RegionController extends Controller
         else {
         // List the details of a specific region
         RegionResource::WithoutWrapping();
-        return new RegionResource(Region::with('districts')->find($id));
+        return new RegionResource(Region::find($id));
         }
     }
 
@@ -101,7 +101,7 @@ class RegionController extends Controller
      * @param  \App\Region  $region
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Region $id)
+    public function destroy($id)
     {
         // Delete a specific region by regionID (Soft-Deletes)
         $region = Region::find($id)->first();
@@ -114,5 +114,55 @@ class RegionController extends Controller
             'type' => 'region',
             'user' => Config::get('apiuser')
         ], 200);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function regionDistricts($id)
+    {
+        $region = Region::find($id);
+        // Check if region is not in the DB
+        if ($region === null) {
+            return response()->json([
+                'action' => 'show',
+                'status' => 'FAIL',
+                'entity' => NULL,
+                'type' => 'region',
+                'user' => Config::get('apiuser')
+            ], 404);
+        }
+        else {
+        // List the details of a specific region
+        RegionResource::WithoutWrapping();
+        return new RegionResource(Region::with('districts')->find($id));
+        }
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function regionDistrictsWards($id)
+    {
+        $region = Region::find($id);
+        // Check if region is not in the DB
+        if ($region === null) {
+            return response()->json([
+                'action' => 'show',
+                'status' => 'FAIL',
+                'entity' => NULL,
+                'type' => 'region',
+                'user' => Config::get('apiuser')
+            ], 404);
+        }
+        else {
+        // List the details of a specific region
+        RegionResource::WithoutWrapping();
+        return new RegionResource(Region::with('districts.wards')->find($id));
+        }
     }
 }

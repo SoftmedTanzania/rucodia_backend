@@ -43,7 +43,7 @@ class UnitController extends Controller
     {
         // Insert a new unit from the payload
         $unit = new Unit;
-        $unit->uuid = (string) Str::uuid()->string;
+        $unit->uuid = (string) Str::uuid();
         $unit->name = $request['name'];
         $unit->description = $request['description'];
         $unit->created_by = Config::get('apiuser');

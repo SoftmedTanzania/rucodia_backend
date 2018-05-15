@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Region extends Model
 {
     /**
+     * Fields that can be mass assignable
+     * 
+     * @return mixed
+     */
+    protected $fillable = [
+        'uuid', 'name', 'deleted_by',
+    ];
+    
+    /**
      * Get the districts for the region.
      */
     public function districts()

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Order;
 use App\Subcategory;
@@ -14,6 +14,8 @@ use App\Http\Resources\Order as OrderResource;
 class OrderController extends Controller
 {
     /**
+     * List Orders
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -27,6 +29,8 @@ class OrderController extends Controller
 
 
     /**
+     * Add Order
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -55,6 +59,8 @@ class OrderController extends Controller
     }
 
     /**
+     * Show  Order
+     * 
      * Display the specified resource.
      *
      * @param  \App\Order  $order
@@ -82,6 +88,8 @@ class OrderController extends Controller
 
 
     /**
+     * Update Order
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -107,6 +115,8 @@ class OrderController extends Controller
     }
 
     /**
+     * Delete Order
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Order  $order

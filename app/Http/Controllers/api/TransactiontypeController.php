@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Transactiontype;
 use Illuminate\Http\Request;
@@ -9,7 +9,9 @@ use App\Http\Resources\Transactiontype as TransactiontypeResource;
 class TransactiontypeController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Show Transaction Types
+     * 
+     * Display a listing of the types of transactions.
      *
      * @return \Illuminate\Http\Response
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\District;
 use Illuminate\Http\Request;
@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Config;
 class DistrictController extends Controller
 {
     /**
+     * List Districts
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -24,6 +26,8 @@ class DistrictController extends Controller
     }
 
     /**
+     * Add District
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -48,6 +52,8 @@ class DistrictController extends Controller
     }
 
     /**
+     * Show District
+     * 
      * Display the specified resource.
      *
      * @param  \App\District  $district
@@ -74,6 +80,8 @@ class DistrictController extends Controller
     }
 
     /**
+     * Update District
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -98,6 +106,8 @@ class DistrictController extends Controller
     }
 
     /**
+     * Delete District
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\District  $district

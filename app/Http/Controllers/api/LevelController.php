@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Level;
 use Illuminate\Http\Request;
@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Config;
 class LevelController extends Controller
 {
     /**
+     * List Levels
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -23,17 +25,10 @@ class LevelController extends Controller
         return LevelResource::collection(Level::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
+     * Add Level
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -58,6 +53,8 @@ class LevelController extends Controller
     }
 
     /**
+     * Show Level
+     * 
      * Display the specified resource.
      *
      * @param  \App\Level  $level
@@ -84,6 +81,8 @@ class LevelController extends Controller
     }
 
     /**
+     * Update Level
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -108,6 +107,8 @@ class LevelController extends Controller
     }
 
     /**
+     * Delete Level
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Level  $level

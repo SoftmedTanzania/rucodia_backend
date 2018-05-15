@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class District extends Model
 {
     /**
+     * Fields that can be mass assignable
+     * 
+     * @return mixed
+     */
+    protected $fillable = [
+        'uuid', 'name', 'deleted_by',
+    ];
+    
+    /**
      * Get the wards for the district.
      */
     public function wards()

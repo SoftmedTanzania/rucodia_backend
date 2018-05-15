@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Show API Documentation page application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function apidocs()
+    {
+        return view('apidocs');
+    }
 }

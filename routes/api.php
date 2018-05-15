@@ -22,26 +22,28 @@ Route::get('/logout', function () {
     // return 'success';
 });
 
-Route::apiResource('users', 'UserController')->middleware('auth.basic.once');
-Route::apiResource('levels', 'LevelController')->middleware('auth.basic.once');
-Route::apiResource('locations', 'LocationController')->middleware('auth.basic.once');
-Route::apiResource('units', 'UnitController')->middleware('auth.basic.once');
-Route::apiResource('categories', 'CategoryController')->middleware('auth.basic.once');
-Route::apiResource('subcategories', 'SubcategoryController')->middleware('auth.basic.once');
-Route::apiResource('products', 'ProductController')->middleware('auth.basic.once');
-Route::apiResource('orders', 'OrderController')->middleware('auth.basic.once');
-
-Route::apiResource('regions', 'RegionController')->middleware('auth.basic.once');
-Route::get('regions/{region}/districts', 'RegionController@regionDistricts')->middleware('auth.basic.once');
-Route::get('regions/{region}/districts/wards', 'RegionController@regionDistrictsWards')->middleware('auth.basic.once');
-
-Route::apiResource('districts', 'DistrictController')->middleware('auth.basic.once');
-Route::get('districts/{district}/wards', 'DistrictController@districtWards')->middleware('auth.basic.once');
-
-Route::apiResource('wards', 'WardController')->middleware('auth.basic.once');
-
-Route::get('auth', 'UserController@auth')->middleware('auth.basic.once');
-Route::get('users/{id}/balance', 'UserController@userBalance')->middleware('auth.basic.once');
-
-Route::apiResource('transactions', 'TransactionController')->middleware('auth.basic.once');
-Route::apiResource('transactiontypes', 'TransactiontypeController')->middleware('auth.basic.once');
+Route::group(
+    array(
+        'namespace' => 'api',
+        'prefix' => 'v1',
+        'middleware' => ['auth.basic.once']),
+        function () {
+            Route::apiResource('users', 'UserController');
+            Route::apiResource('levels', 'LevelController');
+            Route::apiResource('locations', 'LocationController');
+            Route::apiResource('units', 'UnitController');
+            Route::apiResource('categories', 'CategoryController');
+            Route::apiResource('subcategories', 'SubcategoryController');
+            Route::apiResource('products', 'ProductController');
+            Route::apiResource('orders', 'OrderController');
+            Route::apiResource('regions', 'RegionController');
+            Route::apiResource('districts', 'DistrictController');
+            Route::apiResource('wards', 'WardController');
+            Route::apiResource('transactions', 'TransactionController');
+            Route::apiResource('transactiontypes', 'TransactiontypeController');
+            Route::get('auth', 'UserController@auth');
+            Route::get('regions/{region}/districts', 'RegionController@regionDistricts');
+            Route::get('regions/{region}/districts/wards', 'RegionController@regionDistrictsWards');
+            Route::get('districts/{district}/wards', 'DistrictController@districtWards');
+            Route::get('user/{user_id}/product/{product_id}/balance', 'UserController@userBalance');
+    });

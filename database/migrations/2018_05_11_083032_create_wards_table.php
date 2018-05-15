@@ -18,7 +18,7 @@ class CreateWardsTable extends Migration
             $table->string('uuid');
             $table->string('name');
             $table->integer('district_id')->unsigned();
-            $table->foreign('district_id')->references('id')->on('districts');
+            $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');
             $table->integer('created_by')->nullable($value = true)->default(0);
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();

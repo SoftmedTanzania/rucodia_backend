@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Region;
 use Illuminate\Http\Request;
@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Config;
 class RegionController extends Controller
 {
     /**
+     * List Regions
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -24,6 +26,8 @@ class RegionController extends Controller
     }
 
     /**
+     * Add Region
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -47,6 +51,8 @@ class RegionController extends Controller
     }
 
     /**
+     * Show Region
+     * 
      * Display the specified resource.
      *
      * @param  \App\Region  $region
@@ -73,6 +79,8 @@ class RegionController extends Controller
     }
 
     /**
+     * Update Region
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -96,6 +104,8 @@ class RegionController extends Controller
     }
 
     /**
+     * Delete Region
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Region  $region
@@ -117,7 +127,9 @@ class RegionController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Show Region Districts
+     * 
+     * Display the districts of the region.
      *
      * @return \Illuminate\Http\Response
      */
@@ -142,7 +154,8 @@ class RegionController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Show Region Wards
+     * Display wards of a region listed by districts.
      *
      * @return \Illuminate\Http\Response
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -15,6 +15,8 @@ use App\Http\Resources\Subcategory as SubcategoryResource;
 class SubcategoryController extends Controller
 {
     /**
+     * List Subcategories
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -28,6 +30,8 @@ class SubcategoryController extends Controller
 
 
     /**
+     * Add Subcategory
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -60,6 +64,8 @@ class SubcategoryController extends Controller
     }
 
     /**
+     * Show Subcategory
+     * 
      * Display the specified resource.
      *
      * @param  int  $id
@@ -86,6 +92,8 @@ class SubcategoryController extends Controller
     }
 
     /**
+     * Update Subcategory
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -116,6 +124,8 @@ class SubcategoryController extends Controller
     }
 
     /**
+     * Delete Subcategory
+     * 
      * Remove the specified resource from storage.
      *
      * @param  int  $id

@@ -17,9 +17,9 @@ class CreateUserWardTable extends Migration
             $table->increments('id');
             $table->string('uuid');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('ward_id')->unsigned();
-            $table->foreign('ward_id')->references('id')->on('wards');
+            $table->foreign('ward_id')->references('id')->on('wards')->onDelete('cascade');
             $table->integer('created_by')->nullable()->default(0);
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();

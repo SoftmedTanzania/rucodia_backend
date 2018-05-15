@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Product;
 use App\Subcategory;
@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Config;
 class ProductController extends Controller
 {
     /**
+     * List Products
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -25,6 +27,8 @@ class ProductController extends Controller
     }
 
     /**
+     * Add  Product
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -54,6 +58,8 @@ class ProductController extends Controller
     }
 
     /**
+     * Show Product
+     * 
      * Display the specified resource.
      *
      * @param  int  $id
@@ -80,6 +86,8 @@ class ProductController extends Controller
     }
 
     /**
+     * Update Product
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -116,6 +124,8 @@ class ProductController extends Controller
     }
 
     /**
+     * Delete Product
+     * 
      * Remove the specified resource from storage.
      *
      * @param  int  $id

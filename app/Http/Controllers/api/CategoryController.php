@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Category;
 use Illuminate\Http\Request;
@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Config;
 class CategoryController extends Controller
 {
     /**
+     * List Categories
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -24,6 +26,8 @@ class CategoryController extends Controller
     }
 
     /**
+     * Add Category
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -48,6 +52,8 @@ class CategoryController extends Controller
     }
 
     /**
+     * Show Category
+     * 
      * Display the specified resource.
      *
      * @param  \App\Category  $category
@@ -74,6 +80,8 @@ class CategoryController extends Controller
     }
 
     /**
+     * Update Category
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -98,6 +106,8 @@ class CategoryController extends Controller
     }
 
     /**
+     * Delete Category
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Category  $category

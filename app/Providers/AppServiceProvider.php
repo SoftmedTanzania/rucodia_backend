@@ -21,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
         if (isset($_SERVER['PHP_AUTH_USER'])) {
             Config::set('apiuser', User::where('username', $_SERVER['PHP_AUTH_USER'])->first()->id);
         }
+        
+        $this->app->register(\Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class);
     }
 
     /**
@@ -32,4 +34,5 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+
 }

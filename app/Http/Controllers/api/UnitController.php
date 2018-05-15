@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Unit;
 use Illuminate\Http\Request;
@@ -12,7 +12,9 @@ use Response;
 class UnitController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * List Units
+     * 
+     * Display a listing of all product units.
      *
      * @return \Illuminate\Http\Response
      */
@@ -23,17 +25,10 @@ class UnitController extends Controller
         return UnitResource::collection(Unit::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
+     * Add Unit
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -58,6 +53,8 @@ class UnitController extends Controller
     }
 
     /**
+     * Show Unit
+     * 
      * Display the specified resource.
      *
      * @param  \App\Unit  $unit
@@ -83,18 +80,10 @@ class UnitController extends Controller
         }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Unit  $unit
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Unit $unit)
-    {
-        //
-    }
 
     /**
+     * Update Unit
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -120,6 +109,8 @@ class UnitController extends Controller
     }
 
     /**
+     * Delete Unit
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Unit  $unit

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use App\User;
@@ -8,6 +8,7 @@ use App\Level;
 use App\Location;
 use App\Ward;
 use App\Balance;
+use App\Transaction;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -29,7 +30,9 @@ class UserController extends Controller
 
     
     /**
-     * JSON listing of the user resource.
+     * List Users
+     * 
+     * JSON List of all users.
      *
      * @return \Illuminate\Http\Response
      */
@@ -41,6 +44,8 @@ class UserController extends Controller
     }
 
     /**
+     * Add User
+     * 
      * Store a newly created user resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -75,7 +80,9 @@ class UserController extends Controller
     }
 
     /**
-     * JSON output of specified user resource.
+     * Update User
+     * 
+     * Edit an existing User details.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -101,6 +108,8 @@ class UserController extends Controller
     }
 
     /**
+     * Update User
+     * 
      * Update the specified user resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -145,6 +154,8 @@ class UserController extends Controller
     }
 
     /**
+     * Delete User
+     * 
      * Remove the specified user resource from storage.
      *
      * @param  int  $id
@@ -165,8 +176,9 @@ class UserController extends Controller
         ], 200);
     }
 
-    /**
-     * Get the auth page then sen back user details
+    /**Show Auth Details
+     * 
+     * Get the auth page then send back user details
      * 
      * @return \Ilumminate\Http\Response
      */
@@ -176,17 +188,26 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    public function userBalance($id)
+    /**
+     * Show Product Balances
+     * 
+     * Show a specific user's balance for a specific product
+     * 
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function userBalance($user_id, $product_id)
     {
-        $user = User::find($id);
-        $balance = Balance::where('user_id', $id)->sum('count');
+        $user = User::find($user_id);
+        $balance = Balance::where('user_id', $user_id)->where('product_id', $product_id)->sum('count');
             return response()->json([
-                'action' => 'delete',
+                'action' => 'balance',
                 'status' => 'OK',
                 'entity' => $user->uuid,
                 'type' => 'user',
-                'user' => Config::get('apiuser'),
-                'balance' => $balance
+                'balance' => $balance,
+                'price' => Transaction::where('user_id', $user_id)->where('product_id', $product_id)->orderBy('id', 'desc')->first(),
+                'user' => Config::get('apiuser')
             ], 200);
     }
 }

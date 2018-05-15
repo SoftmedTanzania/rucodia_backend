@@ -18,7 +18,7 @@ class CreateDistrictsTable extends Migration
             $table->string('uuid');
             $table->string('name');
             $table->integer('region_id')->unsigned();
-            $table->foreign('region_id')->references('id')->on('regions');
+            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade');
             $table->integer('created_by')->nullable($value = true)->default(0);
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();

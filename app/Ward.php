@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Ward extends Model
 {
     /**
+     * Fields that can be mass assignable
+     * 
+     * @return mixed
+     */
+    protected $fillable = [
+        'uuid', 'name', 'deleted_by',
+    ];
+    
+    /**
      * Get the users for the ward.
      */
     public function users()

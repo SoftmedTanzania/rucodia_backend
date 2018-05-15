@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Transaction;
 use App\Product;
@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Config;
 class TransactionController extends Controller
 {
     /**
+     * List Transactions
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -28,6 +30,8 @@ class TransactionController extends Controller
 
 
     /**
+     * Add Transaction
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -38,9 +42,14 @@ class TransactionController extends Controller
         $transaction = new Transaction;
         $transaction->uuid = (string) Str::uuid();
         $transaction->amount = $request['amount'];
-        $transaction->price = $request['price'];
-        $transaction->user_id = $request['user_id'];
+        if($request['transactiontype_id']===2) {
+            $transaction->price = $request['price'];
+        }
+        else {
+            $transaction->price = $request['user_id'];
+        }
         $transaction->transactiontype_id = $request['transactiontype_id'];
+        $transaction->user_id = $request['user_id'];
         $transaction->product_id = $request['product_id'];
         $transaction->status_id = $request['status_id'];
         $transaction->created_by = Config::get('apiuser');
@@ -48,13 +57,11 @@ class TransactionController extends Controller
         // $balance = Balance::find($transaction->user_id);
         $balance = new Balance;
         $balance->uuid = (string) Str::uuid();
-        $balance->buying_price = (Product::find($transaction->product_id)->price)*$transaction->amount;
+        // $balance->buying_price = (Product::find($transaction->product_id)->price)*$transaction->amount;
         if ($transaction->transactiontype_id===1) {
-            $balance->selling_price = $transaction->price;
             $balance->count = $transaction->amount;
         }
         else {
-            $balance->selling_price = ($transaction->price)*-1;
             $balance->count = ($transaction->amount)*-1;
         }      
         $balance->user_id = $transaction->user_id;
@@ -69,10 +76,12 @@ class TransactionController extends Controller
             'type' => 'transaction',
             'user' => Config::get('apiuser')
         ], 201);
-        // return $balance;
+        // return $transaction->price;
     }
 
     /**
+     * Show Transaction
+     * 
      * Display the specified resource.
      *
      * @param  \App\Transaction  $transaction
@@ -84,6 +93,8 @@ class TransactionController extends Controller
     }
 
     /**
+     * Update Transaction
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -107,12 +118,14 @@ class TransactionController extends Controller
     }
 
     /**
+     * Delete Transaction
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Transaction  $transaction
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Transaction $transaction)
+    public function destroy(Transaction $id)
     {
         // Delete a specific Transaction by ID (Soft-Deletes)
         $transaction = Transaction::find($id);

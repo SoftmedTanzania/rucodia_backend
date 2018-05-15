@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Ward;
 use Illuminate\Http\Request;
@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Config;
 class WardController extends Controller
 {
     /**
+     * List Wards
+     * 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -24,6 +26,8 @@ class WardController extends Controller
     }
 
     /**
+     * Add Ward
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -48,6 +52,8 @@ class WardController extends Controller
     }
 
     /**
+     * Show Ward
+     * 
      * Display the specified resource.
      *
      * @param  \App\Ward  $ward
@@ -74,6 +80,8 @@ class WardController extends Controller
     }
 
     /**
+     * Update Ward
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -98,6 +106,8 @@ class WardController extends Controller
     }
 
     /**
+     * Delete Ward
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Ward  $ward

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Location;
 use App\User;
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Config;
 class LocationController extends Controller
 {
     /**
+     * List Locations
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -25,6 +26,8 @@ class LocationController extends Controller
     }
 
     /**
+     * Add Location
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -50,15 +53,16 @@ class LocationController extends Controller
     }
 
     /**
+     * Show  Location
      * Display the specified resource.
      *
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function show(Level $location)
+    public function show(Location $id)
     {
         // Individual location details
-        $location = Location::find($location);
+        $location = Location::find($id);
         // Check if location is not in the DB
         if ($location === NULL) {
             return response()->json([
@@ -72,11 +76,13 @@ class LocationController extends Controller
         else {
         // List the details of a specific location
         LocationResource::WithoutWrapping();
-        return new LocationResource(Location::find($location));
+        return new LocationResource(Location::find($id));
         }
     }
 
     /**
+     * Update Location
+     * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -103,15 +109,17 @@ class LocationController extends Controller
     }
 
     /**
+     * Delete Location
+     * 
      * Remove the specified resource from storage.
      *
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Level $location)
+    public function destroy(Location $d)
     {
         // Delete a specific location by locationID (Soft-Deletes)
-        $location = Location::findOrFail($location);
+        $location = Location::findOrFail($d);
         $location->update(['deleted_by' => Config::get('apiuser')]);
         $location->delete();
         return response()->json([

@@ -7,7 +7,6 @@ use App\User;
 use App\Level;
 use App\Location;
 use App\Ward;
-use App\Balance;
 use App\Transaction;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Hash;
@@ -191,7 +190,7 @@ class UserController extends Controller
     /**
      * Show Product Balances
      * 
-     * Show a specific user's balance for a specific product
+     * Specific user product details such as Totals, Cash, Balances and Profit.
      * 
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -199,14 +198,22 @@ class UserController extends Controller
     public function userBalance($user_id, $product_id)
     {
         $user = User::find($user_id);
-        $balance = Balance::where('user_id', $user_id)->where('product_id', $product_id)->sum('count');
+        $totalBought = Transaction::where('user_id', $user_id)->where('product_id', $product_id)->where('transactiontype_id', 1)->sum('amount');
+        $totalSold = Transaction::where('user_id', $user_id)->where('product_id', $product_id)->where('transactiontype_id', 2)->sum('amount');
+        $cashSpent = DB::table('transactions')->selectRaw('SUM(price * amount) AS price')->where('user_id', $user_id)->where('product_id', $product_id)->where('transactiontype_id', 1)->value('price');
+        $cashReceived = DB::table('transactions')->selectRaw('SUM(price * amount) AS price')->where('user_id', $user_id)->where('product_id', $product_id)->where('transactiontype_id', 2)->value('price');
+        $profit = $cashReceived - $cashSpent;
             return response()->json([
                 'action' => 'balance',
                 'status' => 'OK',
                 'entity' => $user->uuid,
                 'type' => 'user',
-                'balance' => $balance,
-                'price' => Transaction::where('user_id', $user_id)->where('product_id', $product_id)->orderBy('id', 'desc')->first(),
+                'Total Bought' => $totalBought,
+                'Total Sold' => $totalSold,
+                'Cash Spent' => $cashSpent,
+                'Cash Received' => $cashReceived,
+                'balance' => $totalBought - $totalSold,
+                'profit' => $profit,
                 'user' => Config::get('apiuser')
             ], 200);
     }

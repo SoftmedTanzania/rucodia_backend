@@ -54,71 +54,71 @@ $.ajax(settings).done(function (response) {
 [
     {
         "id": 1,
-        "uuid": "296d3850-04c9-496c-806b-ecc3e0b84c4a",
+        "uuid": "18e2162b-e2da-4d32-b32c-3b998213e29a",
         "firstname": "System",
         "middlename": "Initial",
         "surname": "Admin",
-        "email": "S2hbHzK67l@gmail.com",
+        "email": "b4oJKDb8Ll@gmail.com",
         "username": "admin",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-15 12:22:32",
-        "updated_at": "2018-05-15 12:22:32",
+        "created_at": "2018-05-16 21:49:08",
+        "updated_at": "2018-05-16 21:49:08",
         "deleted_at": null,
         "levels": [
             {
                 "id": 1,
-                "uuid": "cdd10d45-a94f-4db4-9948-b4e475940341",
+                "uuid": "c669ac18-5dbe-4287-8361-8d703112ae65",
                 "name": "Admin",
                 "description": "Seeded system administrator level",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:31",
+                "created_at": "2018-05-16 21:49:07",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 1,
                     "level_id": 1,
-                    "created_at": "2018-05-15 12:22:32",
-                    "updated_at": "2018-05-15 12:22:32",
-                    "uuid": "d44f88cf-5417-4a1d-9dc6-14579ac43fd9"
+                    "created_at": "2018-05-16 21:49:08",
+                    "updated_at": "2018-05-16 21:49:08",
+                    "uuid": "5705776a-2e34-494d-9c55-f2d4f0531c3f"
                 }
             }
         ],
         "locations": [
             {
                 "id": 3,
-                "uuid": "8c9e0bba-833d-411c-8297-aa6d1d1d18ea",
+                "uuid": "f72b30ec-83af-4f99-aa89-d1a7026fde72",
                 "name": "Kasuku Store",
                 "latitude": "-3.583117",
                 "longitude": "30.724251",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:08",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 1,
                     "location_id": 3,
-                    "created_at": "2018-05-15 12:22:32",
-                    "updated_at": "2018-05-15 12:22:32",
-                    "uuid": "f9dbdd36-112c-4cf2-b89f-ddd168558c08"
+                    "created_at": "2018-05-16 21:49:08",
+                    "updated_at": "2018-05-16 21:49:08",
+                    "uuid": "0ab7ad98-3b21-40e9-b1dd-d9c0266d9e4f"
                 }
             }
         ],
         "wards": [
             {
                 "id": 3,
-                "uuid": "afd9e69e-583a-11e8-960f-d4258bf8ac27",
+                "uuid": "f9380ae1-5952-11e8-8615-d4258bf8ac27",
                 "name": "Kabindi",
                 "district_id": 1,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 15:22:38",
+                "created_at": "2018-05-17 00:49:13",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
@@ -130,7 +130,7 @@ $.ajax(settings).done(function (response) {
     },
     {
         "id": 2,
-        "uuid": "69ca71c2-bced-4192-a0fb-c09e7c471c68",
+        "uuid": "77d82057-b571-48bb-9497-6e8996a45469",
         "firstname": "Kizito",
         "middlename": "Stanslaus",
         "surname": "Mrema",
@@ -139,62 +139,62 @@ $.ajax(settings).done(function (response) {
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-15 12:22:32",
-        "updated_at": "2018-05-15 12:22:32",
+        "created_at": "2018-05-16 21:49:09",
+        "updated_at": "2018-05-16 21:49:09",
         "deleted_at": null,
         "levels": [
             {
                 "id": 1,
-                "uuid": "cdd10d45-a94f-4db4-9948-b4e475940341",
+                "uuid": "c669ac18-5dbe-4287-8361-8d703112ae65",
                 "name": "Admin",
                 "description": "Seeded system administrator level",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:31",
+                "created_at": "2018-05-16 21:49:07",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 2,
                     "level_id": 1,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "a39e7436-259b-41d9-8ad1-d35d1d9c9d75"
+                    "created_at": "2018-05-16 21:49:09",
+                    "updated_at": "2018-05-16 21:49:09",
+                    "uuid": "701df28b-74a2-4ea9-ad2f-710413d84ba4"
                 }
             }
         ],
         "locations": [
             {
                 "id": 3,
-                "uuid": "8c9e0bba-833d-411c-8297-aa6d1d1d18ea",
+                "uuid": "f72b30ec-83af-4f99-aa89-d1a7026fde72",
                 "name": "Kasuku Store",
                 "latitude": "-3.583117",
                 "longitude": "30.724251",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:08",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 2,
                     "location_id": 3,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "4a3d1d56-2b35-41da-85af-bd198a9ed4d4"
+                    "created_at": "2018-05-16 21:49:09",
+                    "updated_at": "2018-05-16 21:49:09",
+                    "uuid": "feebfe9f-54ab-4a52-91ac-5ef4bb586e1a"
                 }
             }
         ],
         "wards": [
             {
                 "id": 3,
-                "uuid": "afd9e69e-583a-11e8-960f-d4258bf8ac27",
+                "uuid": "f9380ae1-5952-11e8-8615-d4258bf8ac27",
                 "name": "Kabindi",
                 "district_id": 1,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 15:22:38",
+                "created_at": "2018-05-17 00:49:13",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
@@ -206,71 +206,71 @@ $.ajax(settings).done(function (response) {
     },
     {
         "id": 3,
-        "uuid": "01cde1f0-ee2d-43a8-98f8-aceaf24ab627",
+        "uuid": "79f1c7c1-d997-4976-a6cc-1786c66075fb",
         "firstname": "Supplier",
         "middlename": "Initial",
         "surname": "User",
-        "email": "pKfYdt56yA@gmail.com",
+        "email": "M5xPDTkz7H@gmail.com",
         "username": "supplier",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-15 12:22:33",
-        "updated_at": "2018-05-15 12:22:33",
+        "created_at": "2018-05-16 21:49:09",
+        "updated_at": "2018-05-16 21:49:09",
         "deleted_at": null,
         "levels": [
             {
                 "id": 2,
-                "uuid": "07811b07-7a08-4ff1-a457-358c4d5d2adf",
+                "uuid": "841a7dcc-31ae-4a0d-88c0-e42c3abcec39",
                 "name": "Supplier",
                 "description": "Seeded supplier level",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:07",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 3,
                     "level_id": 2,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "3d28d3ad-da87-49d7-8631-d5e2da82f7fe"
+                    "created_at": "2018-05-16 21:49:09",
+                    "updated_at": "2018-05-16 21:49:09",
+                    "uuid": "723a746f-68c3-4924-93c5-2c3da7c32423"
                 }
             }
         ],
         "locations": [
             {
                 "id": 1,
-                "uuid": "2380ac4e-a77a-4fb1-aafa-be814ba2f552",
+                "uuid": "442ede18-7338-4039-98da-7820480e5864",
                 "name": "Kasulu Agrovets",
                 "latitude": "-4.573916",
                 "longitude": "30.096946",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:07",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 3,
                     "location_id": 1,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "d833350e-e1d6-4ded-b4ea-996ad204e094"
+                    "created_at": "2018-05-16 21:49:09",
+                    "updated_at": "2018-05-16 21:49:09",
+                    "uuid": "dff4f747-0b9e-4c37-aabf-ee835d5e796d"
                 }
             }
         ],
         "wards": [
             {
                 "id": 3,
-                "uuid": "afd9e69e-583a-11e8-960f-d4258bf8ac27",
+                "uuid": "f9380ae1-5952-11e8-8615-d4258bf8ac27",
                 "name": "Kabindi",
                 "district_id": 1,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 15:22:38",
+                "created_at": "2018-05-17 00:49:13",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
@@ -282,71 +282,71 @@ $.ajax(settings).done(function (response) {
     },
     {
         "id": 4,
-        "uuid": "953b4483-e2cb-4df4-b063-1e7669086277",
+        "uuid": "7d85581a-7ade-4467-8713-043703a058d1",
         "firstname": "Dealer",
         "middlename": "Initial",
         "surname": "Dealer",
-        "email": "6jhIXaFzSj@gmail.com",
+        "email": "hbkn756wFR@gmail.com",
         "username": "dealer",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-15 12:22:33",
-        "updated_at": "2018-05-15 12:22:33",
+        "created_at": "2018-05-16 21:49:09",
+        "updated_at": "2018-05-16 21:49:09",
         "deleted_at": null,
         "levels": [
             {
                 "id": 3,
-                "uuid": "7a998771-7496-473f-aa8f-d46f2c1b1e74",
+                "uuid": "152c9539-4f2f-417a-a356-7ea8372409ff",
                 "name": "Agrodealer",
                 "description": "Seeded agrodealer level",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:07",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 4,
                     "level_id": 3,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "d42c28d6-6ca0-457d-9743-5137c9423e9d"
+                    "created_at": "2018-05-16 21:49:09",
+                    "updated_at": "2018-05-16 21:49:09",
+                    "uuid": "2cd01361-7ed8-455c-8378-49e71ad88ca6"
                 }
             }
         ],
         "locations": [
             {
                 "id": 2,
-                "uuid": "f7aaa030-dfbc-4b85-9063-d9595b0f1054",
+                "uuid": "7793ce8f-1b77-4892-85d4-322bd4664835",
                 "name": "Nyuki Traders",
                 "latitude": "-4.518",
                 "longitude": "30.045",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:08",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 4,
                     "location_id": 2,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "cd65c872-a3d0-4582-b26c-470aa3d72065"
+                    "created_at": "2018-05-16 21:49:09",
+                    "updated_at": "2018-05-16 21:49:09",
+                    "uuid": "6239d7ea-0a21-401d-a9de-696fbc30d094"
                 }
             }
         ],
         "wards": [
             {
                 "id": 1,
-                "uuid": "afc398be-583a-11e8-960f-d4258bf8ac27",
+                "uuid": "f91c8db5-5952-11e8-8615-d4258bf8ac27",
                 "name": "Biharamulo Mjini",
                 "district_id": 1,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 15:22:37",
+                "created_at": "2018-05-17 00:49:13",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
@@ -358,71 +358,71 @@ $.ajax(settings).done(function (response) {
     },
     {
         "id": 5,
-        "uuid": "b45878c7-802a-45ec-8749-8cc73d624523",
+        "uuid": "b00c4b10-82f8-4ef6-95e6-780cfd09163f",
         "firstname": "Farmer",
         "middlename": "Initial",
         "surname": "Farmer",
-        "email": "roko1GCwez@gmail.com",
+        "email": "UNtwhfptrC@gmail.com",
         "username": "farmer",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-15 12:22:33",
-        "updated_at": "2018-05-15 12:22:33",
+        "created_at": "2018-05-16 21:49:10",
+        "updated_at": "2018-05-16 21:49:10",
         "deleted_at": null,
         "levels": [
             {
                 "id": 4,
-                "uuid": "b524dead-4446-4704-b055-b204ac8d1b3e",
+                "uuid": "59bb6df0-4ef2-4cfc-9747-370d6d03f02b",
                 "name": "Farmer",
                 "description": "Seeded farmer level",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:07",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 5,
                     "level_id": 4,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "d4908b0a-64f7-40b0-9dd0-557160da165b"
+                    "created_at": "2018-05-16 21:49:10",
+                    "updated_at": "2018-05-16 21:49:10",
+                    "uuid": "7cf6139e-9a16-4903-9e3c-5d4b28fb7e16"
                 }
             }
         ],
         "locations": [
             {
                 "id": 1,
-                "uuid": "2380ac4e-a77a-4fb1-aafa-be814ba2f552",
+                "uuid": "442ede18-7338-4039-98da-7820480e5864",
                 "name": "Kasulu Agrovets",
                 "latitude": "-4.573916",
                 "longitude": "30.096946",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 12:22:32",
+                "created_at": "2018-05-16 21:49:07",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 5,
                     "location_id": 1,
-                    "created_at": "2018-05-15 12:22:33",
-                    "updated_at": "2018-05-15 12:22:33",
-                    "uuid": "d8ae74de-41bd-47ca-b456-367fd854373b"
+                    "created_at": "2018-05-16 21:49:10",
+                    "updated_at": "2018-05-16 21:49:10",
+                    "uuid": "8c3ad5dd-210e-4c04-bfe0-f16ea22c2282"
                 }
             }
         ],
         "wards": [
             {
                 "id": 1,
-                "uuid": "afc398be-583a-11e8-960f-d4258bf8ac27",
+                "uuid": "f91c8db5-5952-11e8-8615-d4258bf8ac27",
                 "name": "Biharamulo Mjini",
                 "district_id": 1,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-15 15:22:37",
+                "created_at": "2018-05-17 00:49:13",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
@@ -510,16 +510,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -956,16 +1019,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -1365,16 +1491,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -1810,16 +1999,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -2218,16 +2470,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -2664,16 +2979,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -3073,16 +3451,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -3519,16 +3960,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -3928,16 +4432,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -4374,16 +4941,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -4783,16 +5413,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -5229,16 +5922,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -5638,16 +6394,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -6084,16 +6903,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -6493,16 +7375,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -6939,16 +7884,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -7348,16 +8356,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -7794,16 +8865,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -8203,16 +9337,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -8649,16 +9846,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -9058,16 +10318,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -9504,16 +10827,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -9913,16 +11299,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -10359,16 +11808,79 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 122,
+    "message": "Invalid credentials.",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\UnauthorizedHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+    "line": 338,
     "trace": [
         {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php",
+            "line": 295,
+            "function": "failedBasicResponse",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php",
+            "line": 292,
+            "function": "onceBasic",
+            "class": "Illuminate\\Auth\\SessionGuard",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php",
+            "line": 221,
+            "function": "__call",
+            "class": "Illuminate\\Auth\\AuthManager",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\app\\Http\\Middleware\\AuthenticateOnceWithBasicAuth.php",
+            "line": 19,
+            "function": "__callStatic",
+            "class": "Illuminate\\Support\\Facades\\Facade",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 149,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 52,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -12668,7 +14180,7 @@ $.ajax(settings).done(function (response) {
 <!-- START_fdb4907a6da218135e82b394a7b30abf -->
 ## Show Product Balances
 
-Show a specific user's balance for a specific product
+Specific user product details such as Totals, Cash, Balances and Profit.
 
 > Example request:
 

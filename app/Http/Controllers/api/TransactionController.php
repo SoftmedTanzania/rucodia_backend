@@ -39,17 +39,22 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        $productPrice = Product::where('id', $request['product_id'])->first()->price;
-        $stockPrice = $productPrice*$request['amount'];
+        // $productPrice = Product::where('id', $request['product_id'])->first()->price;
+        // $stockPrice = $productPrice * $request['amount'];
+        // $sellingPrice = $request['price'] * $request['amount'];
         $transaction = new Transaction;
+        // $balance = new Balance;
         $transaction->uuid = (string) Str::uuid();
         $transaction->amount = $request['amount'];
-        if($request['transactiontype_id']===2) {
-            $transaction->price = $request['price'];
-        }
-        else {
-            $transaction->price = $stockPrice;
-        }
+        $transaction->price = $request['price'];
+        // if($request['transactiontype_id']===2) {
+        //     $balance->price = $sellingPrice;
+        //     $balance->transactiontype_id = $request['transactiontype_id'];
+        // }
+        // else {
+        //     $balance->price = $stockPrice;
+        //     $balance->transactiontype_id = $request['transactiontype_id'];
+        // }
         $transaction->transactiontype_id = $request['transactiontype_id'];
         $transaction->user_id = $request['user_id'];
         $transaction->product_id = $request['product_id'];
@@ -57,20 +62,15 @@ class TransactionController extends Controller
         $transaction->created_by = Config::get('apiuser');
         $transaction->save();
         // $balance = Balance::find($transaction->user_id);
-        $balance = new Balance;
-        $balance->uuid = (string) Str::uuid();
-        // $balance->buying_price = (Product::find($transaction->product_id)->price)*$transaction->amount;
-        if ($transaction->transactiontype_id===1) {
-            $balance->count = $transaction->amount;
-        }
-        else {
-            $balance->count = ($transaction->amount)*-1;
-        }      
-        $balance->user_id = $transaction->user_id;
-        $balance->product_id = $transaction->product_id;
-        $balance->transaction_id = $transaction->id;
-        $balance->created_by = Config::get('apiuser');
-        $balance->save();
+        // $balance->uuid = (string) Str::uuid();
+        // $balance->count = $transaction->amount;
+        // $balance->price = $transaction->price;
+        // $balance->transactiontype_id = $transaction->transactiontype_id;
+        // $balance->user_id = $transaction->user_id;
+        // $balance->product_id = $transaction->product_id;
+        // $balance->transaction_id = $transaction->id;
+        // $balance->created_by = Config::get('apiuser');
+        // $balance->save();
         return response()->json([
             'action' => 'create',
             'status' => 'OK',

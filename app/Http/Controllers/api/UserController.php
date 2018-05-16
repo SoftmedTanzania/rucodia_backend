@@ -184,7 +184,7 @@ class UserController extends Controller
      */
     public function auth()
     {
-        $user = User::find(Config::get('apiuser'));
+        $user = User::find(Config::get('apiuser'))->with('levels')->with('locations')->with('wards')->first();
         return response()->json($user);
     }
 

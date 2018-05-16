@@ -39,6 +39,8 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
+        $productPrice = Product::where('id', $request['product_id'])->first()->price;
+        $stockPrice = $productPrice*$request['amount'];
         $transaction = new Transaction;
         $transaction->uuid = (string) Str::uuid();
         $transaction->amount = $request['amount'];
@@ -46,7 +48,7 @@ class TransactionController extends Controller
             $transaction->price = $request['price'];
         }
         else {
-            $transaction->price = $request['user_id'];
+            $transaction->price = $stockPrice;
         }
         $transaction->transactiontype_id = $request['transactiontype_id'];
         $transaction->user_id = $request['user_id'];

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\District;
 
 class Ward extends Model
 {
@@ -29,7 +30,6 @@ class Ward extends Model
     public function district()
     {
         return $this->belongsTo('App\District')
-            ->withTimestamps()
-            ->withPivot('uuid');
+            ->withTimestamps();
     }
 }

@@ -206,19 +206,19 @@ class UserController extends Controller
             ->where('product_id', $product_id)
             ->where('transactiontype_id', 2)
             ->sum('amount');
-        $cashSpent = DB::table('transactions')
+        $expenditure = DB::table('transactions')
             ->selectRaw('SUM(price * amount) AS price')
             ->where('user_id', $user_id)
             ->where('product_id', $product_id)
             ->where('transactiontype_id', 1)
             ->value('price');
-        $cashReceived = DB::table('transactions')
+        $revenues = DB::table('transactions')
             ->selectRaw('SUM(price * amount) AS price')
             ->where('user_id', $user_id)
             ->where('product_id', $product_id)
             ->where('transactiontype_id', 2)
             ->value('price');
-        $profit = $cashReceived - $cashSpent;
+        $profit = $revenues - $expenditure;
         $balance = $totalBought - $totalSold;
             return response()->json([
                 'action' => 'balance',
@@ -226,11 +226,11 @@ class UserController extends Controller
                 'entity' => $user->uuid,
                 'type' => 'user',
                 'product' => (int)$product_id,
-                'totalBought' => (int)$totalBought,
-                'totalSold' => (int)$totalSold,
-                'cashSpent' => (int)$cashSpent,
-                'cashReceived' => (int)$cashReceived,
+                'bought' => (int)$totalBought,
+                'sold' => (int)$totalSold,
                 'balance' => $balance,
+                'expenditure' => (int)$expenditure,
+                'revenues' => (int)$revenues,
                 'profit' => $profit,
                 'user' => Config::get('apiuser')
             ], 200);

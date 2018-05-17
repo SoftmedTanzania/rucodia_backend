@@ -235,4 +235,5 @@ class UserController extends Controller
                 'user' => Config::get('apiuser')
             ], 200);
     }
+
 }

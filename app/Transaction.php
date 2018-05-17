@@ -17,7 +17,24 @@ class Transaction extends Model
     protected $fillable = [
         'uuid', 'price', 'amount', 'user_id', 'transactiontype_id', 'product_id', 'status_id',
     ];
-    
+
+    /**
+    * The storage format of the model's date columns.
+    *
+    * @var string
+    */
+    // protected $dateFormat = 'U';
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'created_at' => ('timestamp'),
+        'updated_at' => ('timestamp'),
+    ];
+
     /**
      * Get the type to which the transaction belongs.
      * 

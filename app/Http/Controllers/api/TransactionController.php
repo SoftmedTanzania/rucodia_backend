@@ -39,38 +39,16 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        // $productPrice = Product::where('id', $request['product_id'])->first()->price;
-        // $stockPrice = $productPrice * $request['amount'];
-        // $sellingPrice = $request['price'] * $request['amount'];
         $transaction = new Transaction;
-        // $balance = new Balance;
         $transaction->uuid = (string) Str::uuid();
         $transaction->amount = $request['amount'];
         $transaction->price = $request['price'];
-        // if($request['transactiontype_id']===2) {
-        //     $balance->price = $sellingPrice;
-        //     $balance->transactiontype_id = $request['transactiontype_id'];
-        // }
-        // else {
-        //     $balance->price = $stockPrice;
-        //     $balance->transactiontype_id = $request['transactiontype_id'];
-        // }
         $transaction->transactiontype_id = $request['transactiontype_id'];
         $transaction->user_id = $request['user_id'];
         $transaction->product_id = $request['product_id'];
         $transaction->status_id = $request['status_id'];
         $transaction->created_by = Config::get('apiuser');
         $transaction->save();
-        // $balance = Balance::find($transaction->user_id);
-        // $balance->uuid = (string) Str::uuid();
-        // $balance->count = $transaction->amount;
-        // $balance->price = $transaction->price;
-        // $balance->transactiontype_id = $transaction->transactiontype_id;
-        // $balance->user_id = $transaction->user_id;
-        // $balance->product_id = $transaction->product_id;
-        // $balance->transaction_id = $transaction->id;
-        // $balance->created_by = Config::get('apiuser');
-        // $balance->save();
         return response()->json([
             'action' => 'create',
             'status' => 'OK',
@@ -78,7 +56,6 @@ class TransactionController extends Controller
             'type' => 'transaction',
             'user' => Config::get('apiuser')
         ], 201);
-        // return $transaction->price;
     }
 
     /**
@@ -91,7 +68,10 @@ class TransactionController extends Controller
      */
     public function show(Transaction $transaction)
     {
-        //
+        // List all the users in a collection
+        TransactionResource::WithoutWrapping();
+        // return new UserResource(User::with('levels')->with('locations')->with('wards')->find($id));
+        return new TransactionResource(Transaction::with('transactiontype')->with('user')->with('product')->with('status')->find($transaction));
     }
 
     /**
@@ -141,4 +121,20 @@ class TransactionController extends Controller
             'user' => Config::get('apiuser')
         ], 200);
     }
+
+    /**
+    * User's Transactions
+    * 
+    * JSON List of specific user's transactions.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function userTransactions($user)
+    {
+        // List all the transactions for a user
+        TransactionResource::WithoutWrapping();
+        return new TransactionResource(Transaction::where('user_id', $user)->with('transactiontype')->with('user')->with('product')->with('status')->get());
+    }
+
 }

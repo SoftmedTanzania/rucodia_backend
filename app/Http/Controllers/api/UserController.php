@@ -236,4 +236,42 @@ class UserController extends Controller
             ], 200);
     }
 
+    /**
+     * Show Product Balances
+     * 
+     * Specific user product details such as Totals, Cash, Balances and Profit.
+     * 
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function userBalances($user)
+    {
+        $user = User::find($user);
+        $products = Transaction::where('user_id', $user->id)
+            ->addSelect(
+                DB::raw('
+                    product_id,
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount END) as signed) AS product_bought,
+                    CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount END) as signed) AS product_sold,
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount WHEN 2 THEN -amount END) AS SIGNED) AS product_balance,
+                    COUNT(CASE transactiontype_id WHEN 1 THEN id END) AS product_purchases,
+                    COUNT(CASE transactiontype_id WHEN 2 THEN id END) AS product_sales,
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * price END) as signed) AS product_expenditure,
+                    CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount * price END) as signed) AS product_revenue,
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * -price WHEN 2 THEN amount * price END) as signed) AS product_profit
+                    '))
+            ->groupBy('product_id')
+            ->get();
+
+            return response()->json([
+                'action' => 'user_products',
+                'status' => 'OK',
+                'entity' => $user->uuid,
+                'type' => 'user',
+                'products' => $products,
+                'user' => Config::get('apiuser')
+            ], 200);
+    }
+
+
 }

@@ -46,5 +46,6 @@ Route::group(
             Route::get('regions/{region}/districts/wards', 'RegionController@regionDistrictsWards');
             Route::get('districts/{district}/wards', 'DistrictController@districtWards');
             Route::get('user/{user_id}/product/{product_id}/balance', 'UserController@userBalance');
+            Route::get('users/{user}/products', 'UserController@userBalances');
             Route::get('users/{user}/transactions', 'TransactionController@userTransactions');
     });

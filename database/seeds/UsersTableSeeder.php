@@ -15,18 +15,19 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        
         $admin_level = Level::where('name', 'admin')->first();
 	    $supplier_level  = Level::where('name', 'supplier')->first();
         $agrodealer_level = Level::where('name', 'agrodealer')->first();
         $farmer_level = Level::where('name', 'farmer')->first();
-
+        
         $kasulu_location = Location::where('id', 1)->first();
 	    $kasuluRural_location  = Location::where('id', 1)->first();
         $kibondo_location = Location::where('id', 2)->first();
         $kigomaRural_location = Location::where('id', 3)->first();
-
-
-
+        
+        
+        
         // Create the first sample user named admin
         $user = new User();
         $user->uuid = (string) Str::uuid();
@@ -41,7 +42,7 @@ class UsersTableSeeder extends Seeder
         $user->save();
         $user->levels()->attach($admin_level, array('uuid' => (string) Str::uuid()));
         $user->locations()->attach($kigomaRural_location, array('uuid' => (string) Str::uuid()));
-
+        
         // Create the second sample user named kizito
         $user = new User();
         $user->uuid = (string) Str::uuid();
@@ -56,7 +57,7 @@ class UsersTableSeeder extends Seeder
         $user->save();
         $user->levels()->attach($admin_level, array('uuid' => (string) Str::uuid()));
         $user->locations()->attach($kigomaRural_location, array('uuid' => (string) Str::uuid()));
-
+        
         // Create the first sample user named supplier
         $user = new User();
         $user->uuid = (string) Str::uuid();
@@ -71,7 +72,7 @@ class UsersTableSeeder extends Seeder
         $user->save();
         $user->levels()->attach($supplier_level, array('uuid' => (string) Str::uuid()));
         $user->locations()->attach($kasulu_location, array('uuid' => (string) Str::uuid()));
-
+        
         // Create the first sample user named agrodealer
         $user = new User();
         $user->uuid = (string) Str::uuid();
@@ -86,8 +87,8 @@ class UsersTableSeeder extends Seeder
         $user->save();
         $user->levels()->attach($agrodealer_level, array('uuid' => (string) Str::uuid()));
         $user->locations()->attach($kibondo_location, array('uuid' => (string) Str::uuid()));
-            
-
+        
+        
         // Create the first sample user named farmer
         $user = new User();
         $user->uuid = (string) Str::uuid();
@@ -102,5 +103,8 @@ class UsersTableSeeder extends Seeder
         $user->save();
         $user->levels()->attach($farmer_level, array('uuid' => (string) Str::uuid()));
         $user->locations()->attach($kasuluRural_location, array('uuid' => (string) Str::uuid()));
+
+        $users = factory(App\User::class, 30)->create();
+        $this->command->info('User table seeded!');
     }
 }

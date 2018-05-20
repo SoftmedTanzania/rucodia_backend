@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
             DistrictsTableSeeder::class,
             WardsTableSeeder::class,
             UserWardTableSeeder::class,
+            LevelUserTableSeeder::class,
+            LocationUserTableSeeder::class,
             StatusesTableSeeder::class,
             TransactiontypesTableSeeder::class,
         ]);

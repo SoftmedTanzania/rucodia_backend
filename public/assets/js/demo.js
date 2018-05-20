@@ -1,4 +1,4 @@
-type = ['','info','success','warning','danger'];
+type = ['','success','warning','info','danger'];
 
 
 demo = {
@@ -19,18 +19,18 @@ demo = {
     initChartist: function(){
 
         var dataSales = {
-          labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
+          labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
           series: [
-             [287, 385, 490, 562, 594, 626, 698, 895, 952],
-            [67, 152, 193, 240, 387, 435, 535, 642, 744],
-            [23, 113, 67, 108, 190, 239, 307, 410, 410]
+            [287, 385, 490, 562, 750],
+            [67, 152, 193, 240, 280]
+            // [23, 113, 67, 108, 190]
           ]
         };
 
         var optionsSales = {
           lineSmooth: false,
           low: 0,
-          high: 1000,
+          high: 800,
           showArea: true,
           height: "245px",
           axisX: {
@@ -105,8 +105,8 @@ demo = {
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
 
         Chartist.Pie('#chartPreferences', {
-          labels: ['62%','32%','6%'],
-          series: [62, 32, 6]
+          labels: ['62%','32%'],
+          series: [62, 32]
         });
     },
 
@@ -242,8 +242,8 @@ demo = {
 
     //      pie chart
         Chartist.Pie('#chartPreferences', {
-          labels: ['62%','32%','6%'],
-          series: [62, 32, 6]
+          labels: ['62%','32%'],
+          series: [62, 32]
         });
 
     //      bar chart

@@ -13,18 +13,15 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
-    static $user, $status;
+$factory->define(App\Location::class, function (Faker $faker) {
+    static $user;
 
     return [
-    	'uuid' => $faker->uuid,
-        'firstname' => $faker->firstName,
-        'middlename' => $faker->firstNameMale,
-        'surname' => $faker->lastName,
-        'email' => $faker->email,
-        'username' => $faker->userName,
-        'password' => $faker->password,
+        'uuid' => $faker->uuid,
+        'name' => $faker->streetName,
+    	'latitude' => $faker->latitude($min = -5, $max = -1),
+    	'longitude' => $faker->longitude($min = -27, $max = 31),
         'created_by' => $user ?: $user = 1,
-        'created_at' => $faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = date_default_timezone_get())
+        'created_at' => $faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = date_default_timezone_get()),
     ];
 });

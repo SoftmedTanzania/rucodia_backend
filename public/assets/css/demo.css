@@ -68,3 +68,66 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+
+.ct-series-a .ct-area {
+    fill: #7AC29A;
+}
+/* Use this selector to override the line style on a given series */
+.ct-series-a .ct-line {
+	/* Set the colour of this series line */
+	stroke: #7AC29A;
+	/* Control the thikness of your lines */
+	stroke-width: 4px;
+	/* Create a dashed line with a pattern */
+	/* stroke-dasharray: 10px 20px; */
+  }
+  
+  /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+  .ct-series-a .ct-point {
+	/* Colour of your points */
+	stroke: #7AC29A;
+	/* Size of your points */
+	stroke-width: 10px;
+	/* Make your points appear as squares */
+	stroke-linecap: circle;
+  }
+
+  .ct-series-b .ct-area {
+    fill: #9c9996;
+}
+
+  .ct-series-b .ct-line {
+	/* Set the colour of this series line */
+	stroke: #9c9996;
+	/* Control the thikness of your lines */
+	stroke-width: 4px;
+	/* Create a dashed line with a pattern */
+	/* stroke-dasharray: 10px 20px; */
+  }
+  
+  /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+  .ct-series-b .ct-point {
+	/* Colour of your points */
+	stroke: #9c9996;
+	/* Size of your points */
+	stroke-width: 10px;
+	/* Make your points appear as squares */
+	stroke-linecap: circle;
+  }
+
+  /* Pie charts consist of solid slices where you can use this selector to override the default style. */
+.ct-series-a .ct-slice-pie {
+	/* fill of the pie slieces */
+	fill: #7AC29A;
+	/* give your pie slices some outline or separate them visually by using the background color here */
+	stroke: white;
+	/* outline width */
+	stroke-width: 4px;
+  }
+
+  .ct-series-b .ct-slice-pie {
+	fill: #9c9996;
+	stroke: white;
+	stroke-width: 4px;
+  }
+

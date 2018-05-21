@@ -104,7 +104,7 @@ class UsersTableSeeder extends Seeder
         $user->levels()->attach($farmer_level, array('uuid' => (string) Str::uuid()));
         $user->locations()->attach($kasuluRural_location, array('uuid' => (string) Str::uuid()));
 
-        $users = factory(App\User::class, 30)->create();
-        $this->command->info('User table seeded!');
+        // $users = factory(App\User::class, 30)->create();
+        // $this->command->info('User table seeded!');
     }
 }

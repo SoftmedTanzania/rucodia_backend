@@ -82,8 +82,7 @@ class User extends Authenticatable
      */
     public function orders()
     {
-        return $this->
-            hasMany('App\Order');
+        return $this->hasMany('App\Order');
     }
 
     /**
@@ -91,6 +90,19 @@ class User extends Authenticatable
      */
     public function wards()
     {
-        return $this->belongsToMany('App\Ward');
+        return $this
+            ->belongsToMany('App\Ward')
+            ->withTimestamps()
+            ->withPivot('uuid');
+    }
+
+    /**
+     * Get the orders that this User owns
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function transactions()
+    {
+        return $this->hasMany('App\Transaction');
     }
 }

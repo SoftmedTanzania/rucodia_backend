@@ -29,7 +29,6 @@ class Ward extends Model
      */
     public function district()
     {
-        return $this->belongsTo('App\District')
-            ->withTimestamps();
+        return $this->belongsTo('App\District');
     }
 }

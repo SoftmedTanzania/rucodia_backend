@@ -12,7 +12,7 @@ class LevelUserTableSeeder extends Seeder
     public function run()
     {
         // Seed using model factories
-        $users = factory(App\Level_User::class, 30)->create();
-        $this->command->info('Level user table seeded!');
+        // $users = factory(App\Level_User::class, 30)->create();
+        // $this->command->info('Level user table seeded!');
     }
 }

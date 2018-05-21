@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('content')
+
 <div class="row">
     <div class="col-md-12">
         <div class="card card-plain">
@@ -36,14 +37,19 @@
                                         {{ $level->name }}
                                     @endforeach
                                 </td>
-                                <td>View</td>
+                                <td><a href="{{ url('/users/'.$user->id) }}">View</a></td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
 
             </div>
-            {{ $users->links() }}
+            <div class="col-xs-9">
+                {{ $users->links() }}
+            </div>
+            <div class="col-xs-3 text-right">
+                <a href="{{ url('users/create') }}" class="btn btn-success btn-circle" title="Add More"><i class="fa fa-plus"></i></a>
+            </div>
         </div>
     </div>
 </div>

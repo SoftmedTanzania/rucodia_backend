@@ -12,7 +12,7 @@ class LocationUserTableSeeder extends Seeder
     public function run()
     {
         // Seed using model factories
-        $users = factory(App\Location_User::class, 30)->create();
-        $this->command->info('Location user table seeded!');
+        // $users = factory(App\Location_User::class, 30)->create();
+        // $this->command->info('Location user table seeded!');
     }
 }

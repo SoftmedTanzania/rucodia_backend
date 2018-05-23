@@ -14,6 +14,7 @@ use Illuminate\Support\Str;
 use Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -273,5 +274,16 @@ class UserController extends Controller
             ], 200);
     }
 
-
+    /**
+     * Add User
+     * 
+     * Store a newly created user resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function sms(Request $request)
+    {
+        Storage::put('sms.txt', $request);
+    }
 }

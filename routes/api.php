@@ -48,5 +48,5 @@ Route::group(
             Route::get('user/{user_id}/product/{product_id}/balance', 'UserController@userBalance');
             Route::get('users/{user}/products', 'UserController@userBalances');
             Route::get('users/{user}/transactions', 'TransactionController@userTransactions');
-            Route::post('sms', 'UserController@sms');
+            Route::post('sms', 'UserController@sms')->name('sms.store');
     });

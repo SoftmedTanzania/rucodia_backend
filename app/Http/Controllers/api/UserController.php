@@ -284,7 +284,7 @@ class UserController extends Controller
      */
     public function sms(Request $request)
     {
-        Storage::put('sms.txt', $request);
+        // Storage::put('sms.txt', $request);
         return $request;
     }
 }

@@ -285,12 +285,6 @@ class UserController extends Controller
     public function sms(Request $request)
     {
         Storage::put('sms.txt', $request);
-        return response()->json([
-            'action' => 'sms',
-            'status' => 'OK',
-            'entity' => $request,
-            'type' => 'sms',
-            'user' => Config::get('apiuser')
-        ], 200);
+        return $request;
     }
 }

@@ -290,15 +290,52 @@ class UserController extends Controller
         $sms = new Sms;
         $sms->uuid = (string) Str::uuid();
         $sms->urn = $request->input('input.urn');
-        $sms->text = $request->input('input.text');
+        $sms->text = strtolower($request->input('input.text'));
         $sms->save();
-        return response()->json([
-            'action' => 'sms',
-            'status' => 'OK',
-            'entity' => $sms->uuid,
-            'type' => 'sms',
-            'user' => Config::get('apiuser')
-        ], 200);
+        $text_array = explode(' ', $sms->text);
+        if (str_word_count($sms->text) == 3) {
+            $district = $text_array[2];
+            $product = $text_array[1];
+            $agrodealers = DB::select(DB::raw ("
+                select distinct users.firstname as name, MAX(transactions.price) as price from transactions 
+                inner join users on users.id = transactions.user_id 
+                inner join products on products.id = transactions.product_id 
+                inner join transactiontypes on transactiontypes.id = 1 
+                inner join product_subcategory on product_subcategory.product_id = products.id
+                inner join subcategories on product_subcategory.subcategory_id = subcategories.id
+                inner join user_ward on user_ward.user_id = users.id 
+                inner join wards on wards.id = user_ward.ward_id
+                inner join districts on wards.district_id = districts.id
+                where districts.name like 'Kasulu Mji'
+                group by users.firstname;
+            "));
+            // return response()->json([
+            //     'district' => $district,
+            //     'product' => $product,
+            //     'action' => 'sms',
+            //     'status' => 'OK',
+            //     'entity' => $sms->uuid,
+            //     'type' => 'sms',
+            //     'text' => $agrodealers,
+            //     'user' => Config::get('apiuser')
+            // ], 200);
+            $agrodealers = json_decode(json_encode($agrodealers), true);
+            $result = array();
+            foreach($agrodealers as $key=> $val)
+            {
+            $result[] = $val['name'].':'.$val['price'];
+            }
+
+            return response()->json([
+                    'urn' => $sms->urn,
+                    'text'=> implode(', ', $result)
+                ], 200);
+        }
+        else {
+            return response()->json([
+                'error' => 'SMS haiko sawa, tafadhali tuma sms kama hii, BEI BIDHAA WILAYA mfano, BEI MAHINDI KASULU'
+            ]);
+        }
         
     }
 }

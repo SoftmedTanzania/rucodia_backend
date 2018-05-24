@@ -8,6 +8,7 @@ use App\Level;
 use App\Location;
 use App\Ward;
 use App\Transaction;
+use App\Sms;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -284,7 +285,20 @@ class UserController extends Controller
      */
     public function sms(Request $request)
     {
-        // Storage::put('sms.txt', $request);
-        return $request;
+
+        $data = $request->input('input.urn');
+        $sms = new Sms;
+        $sms->uuid = (string) Str::uuid();
+        $sms->urn = $request->input('input.urn');
+        $sms->text = $request->input('input.text');
+        $sms->save();
+        return response()->json([
+            'action' => 'sms',
+            'status' => 'OK',
+            'entity' => $sms->uuid,
+            'type' => 'sms',
+            'user' => Config::get('apiuser')
+        ], 200);
+        
     }
 }

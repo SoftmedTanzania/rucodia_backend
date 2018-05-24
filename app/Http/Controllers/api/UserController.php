@@ -329,7 +329,8 @@ class UserController extends Controller
             return response()->json([
                     'urn' => $sms->urn,
                     'text'=> implode(', ', $result)
-                ], 200);
+                ], 200)
+                ->header('Authorization', 'Token ff3c9c1b920aa755f9dbcb6f83bab52c1fa27689');
         }
         else {
             return response()->json([

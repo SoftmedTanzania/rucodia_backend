@@ -41,7 +41,7 @@ class ProductController extends Controller
         $unit = Unit::where('id', $request['unit_id'])->first();
         $product = new Product;
         $product->uuid = (string) Str::uuid();
-        $product->name = $request['firstname'];
+        $product->name = $request['name'];
         $product->price = $request['price'];
         $product->description = $request['description'];
         $product->created_by = Config::get('apiuser');

@@ -262,6 +262,7 @@ class UserController extends Controller
                     CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount * price END) as signed) AS product_revenue,
                     CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * -price WHEN 2 THEN amount * price END) as signed) AS product_profit
                     '))
+            ->orderBy('created_at', 'DESC')
             ->groupBy('product_id')
             ->get();
 
@@ -271,8 +272,10 @@ class UserController extends Controller
                 'entity' => $user->uuid,
                 'type' => 'user',
                 'products' => $products,
+                'price' => User::where('id', $user->id)->with('transactions')->groupBy('product_id'),
                 'user' => Config::get('apiuser')
             ], 200);
+            return $products;
     }
 
     /**

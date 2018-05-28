@@ -105,4 +105,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Transaction');
     }
+
+    public function latest_transactions()
+{
+    return $this->hasMany('App\Transaction')
+        ->latest();
+    }
 }

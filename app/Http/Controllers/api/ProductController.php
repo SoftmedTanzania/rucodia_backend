@@ -37,8 +37,8 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         // Get all the details for Product creation
-        $subcategory = Subcategory::where('name', $request['subcategory'])->first();
-        $unit = Unit::where('name', $request['unit'])->first();
+        $subcategory = Subcategory::where('id', $request['subcategory_id'])->first();
+        $unit = Unit::where('id', $request['unit_id'])->first();
         $product = new Product;
         $product->uuid = (string) Str::uuid();
         $product->name = $request['firstname'];
@@ -97,10 +97,10 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         // Update the resource with the addressed ID
-        $subcategory = Subcategory::where('name', $request['subcategory'])->first();
+        $subcategory = Subcategory::where('id', $request['subcategory_id'])->first();
         $subcategory_uuid = DB::table('product_subcategory')->where('product_id', $id)->value('uuid');
         $subcategory_id = DB::table('product_subcategory')->where('product_id', $id)->value('id');
-        $unit = Unit::where('name', $request['unit'])->first();
+        $unit = Unit::where('id', $request['unit_id'])->first();
         $unit_uuid = DB::table('product_unit')->where('product_id', $id)->value('uuid');
         $unit_id = DB::table('product_unit')->where('product_id', $id)->value('id');
 

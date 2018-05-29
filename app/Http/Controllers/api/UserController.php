@@ -9,6 +9,7 @@ use App\Location;
 use App\Ward;
 use App\Transaction;
 use App\Sms;
+use App\District;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -16,6 +17,8 @@ use Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 
 class UserController extends Controller
 {
@@ -298,6 +301,7 @@ class UserController extends Controller
         $text_array = explode(' ', $sms->text);
         if (str_word_count($sms->text) == 3) {
             $district = $text_array[2];
+            $district = District::where('name', $district)->first();
             $product = $text_array[1];
             $agrodealers = DB::select(DB::raw ("
                 select distinct users.firstname as name, MAX(transactions.price) as price from transactions 
@@ -309,18 +313,18 @@ class UserController extends Controller
                 inner join user_ward on user_ward.user_id = users.id 
                 inner join wards on wards.id = user_ward.ward_id
                 inner join districts on wards.district_id = districts.id
-                where districts.name like 'Kasulu Mji'
+                where districts.id = ".$district->id."
                 group by users.firstname;
             "));
             // return response()->json([
-            //     'district' => $district,
+            //     'district' => $district->name,
             //     'product' => $product,
             //     'action' => 'sms',
             //     'status' => 'OK',
             //     'entity' => $sms->uuid,
             //     'type' => 'sms',
             //     'text' => $agrodealers,
-            //     'user' => Config::get('apiuser')
+            //     'user' => Config::get('apiuser'),
             // ], 200);
             $agrodealers = json_decode(json_encode($agrodealers), true);
             $result = array();
@@ -329,16 +333,34 @@ class UserController extends Controller
             $result[] = $val['name'].':'.$val['price'];
             }
 
+            $uri = "https://api.textit.in/api/v2/broadcasts.json";
+            $urn = $sms->urn;
+            $text = implode(', ', $result);            
+            $client = new Client(); //GuzzleHttp\Client
+            $response = $client->request(
+                'POST',
+                'https://api.textit.in/api/v2/broadcasts.json',
+                [
+                'headers' => [
+                    'Authorization' => 'Token ff3c9c1b920aa755f9dbcb6f83bab52c1fa27689',
+                    'Accept'     => 'application/json',
+                    ],
+
+                'json' => [
+                    'urns' => [$urn],
+                    'text' => $text
+                    ]
+                ]);
             return response()->json([
-                    'urn' => $sms->urn,
-                    'text'=> implode(', ', $result)
-                ], 200)
-                ->header('Authorization', 'Token ff3c9c1b920aa755f9dbcb6f83bab52c1fa27689');
+                'response' => $response
+            ], 200);
+            
         }
+
         else {
             return response()->json([
-                'error' => 'SMS haiko sawa, tafadhali tuma sms kama hii, BEI BIDHAA WILAYA mfano, BEI MAHINDI KASULU'
-            ]);
+                'error' => 'kuna error mahali'
+            ], 500);
         }
         
     }

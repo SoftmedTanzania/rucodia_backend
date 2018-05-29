@@ -52,6 +52,7 @@ class ProductController extends Controller
             'action' => 'create',
             'status' => 'OK',
             'entity' => $product->uuid,
+            'id' => $product->id,
             'type' => 'product',
             'user' => Config::get('apiuser')
         ], 201);

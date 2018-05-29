@@ -1,10 +1,19 @@
 @extends('layouts.admin')
 @section('content')
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <div class="row">
     <div class="col-lg-12 col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">Add a new user</h4>
+                <h4 class="title">Update User Details</h4>
             </div>
             <div class="content">
                 <form action="{{ url('users') }}/{{ $user->id }}" role="form" method="POST">
@@ -87,7 +96,7 @@
                             <div class="form-group">
                                 <label for="district">District</label>
                                 <select id="district" name="district" class="form-control border-input">
-                                    <option value="{ $user->district['id'] }}">{ $user->district['name'] }}</option>
+                                    <option value="{ $user->district['id'] }}">{{ $user->district['name'] }}</option>
                                     @foreach($districts as $district)
                                         <option value="{{ $district->id }}">{{ $district->name }}</option>
                                     @endforeach
@@ -98,7 +107,7 @@
                         <div class="form-group">
                                 <label for="ward">Ward</label>
                                 <select id="ward" name="ward" class="form-control border-input">
-                                    <option value="{ $user->ward['id'] }}">{ $user->ward['name'] }}</option>
+                                    <option value="{ $user->ward['id'] }}">{{ $user->ward['name'] }}</option>
                                     @foreach($wards as $ward)
                                         <option value="{{ $ward->id }}">{{ $ward->name }}</option>
                                     @endforeach

@@ -149,8 +149,24 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
-    }
+        $regions = Region::all();
+        $districts = District::all();
+        $wards = Ward::all();
+        $levels = Level::all();
+        $locations = Location::all();
+        $page = 'User';
+
+        // Get the details for a specific user
+        $user = User::find($id)->first();
+        return view('users/edit')
+            ->with('user', $user)
+            ->with('regions', $regions)
+            ->with('districts', $districts)
+            ->with('wards', $wards)
+            ->with('levels', $levels)
+            ->with('locations', $locations)
+            ->with('page', $page);
+}
 
     /**
      * Update the specified resource in storage.

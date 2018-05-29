@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
         $kasulu_location = Location::where('id', 1)->first();
 	    $kasuluRural_location  = Location::where('id', 1)->first();
         $kibondo_location = Location::where('id', 2)->first();
-        $kigomaRural_location = Location::where('id', 3)->first();
+        $kigomaRural_location = Location::where('id', 4)->first();
         
         
         

@@ -10,6 +10,8 @@ use App\Ward;
 use App\Transaction;
 use App\Sms;
 use App\District;
+use App\Product;
+use App\Subcategory;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -303,6 +305,7 @@ class UserController extends Controller
             $district = $text_array[2];
             $district = District::where('name', $district)->first();
             $product = $text_array[1];
+            $product = Subcategory::where('name', $product)->first();
             $agrodealers = DB::select(DB::raw ("
                 select distinct users.firstname as name, MAX(transactions.price) as price from transactions 
                 inner join users on users.id = transactions.user_id 
@@ -314,18 +317,10 @@ class UserController extends Controller
                 inner join wards on wards.id = user_ward.ward_id
                 inner join districts on wards.district_id = districts.id
                 where districts.id = ".$district->id."
+                AND subcategories.id = ".$product->id."
                 group by users.firstname;
             "));
-            // return response()->json([
-            //     'district' => $district->name,
-            //     'product' => $product,
-            //     'action' => 'sms',
-            //     'status' => 'OK',
-            //     'entity' => $sms->uuid,
-            //     'type' => 'sms',
-            //     'text' => $agrodealers,
-            //     'user' => Config::get('apiuser'),
-            // ], 200);
+
             $agrodealers = json_decode(json_encode($agrodealers), true);
             $result = array();
             foreach($agrodealers as $key=> $val)
@@ -335,7 +330,7 @@ class UserController extends Controller
 
             $uri = "https://api.textit.in/api/v2/broadcasts.json";
             $urn = $sms->urn;
-            $text = implode(', ', $result);            
+            $text = $product->name." > ". implode(', ', $result);            
             $client = new Client(); //GuzzleHttp\Client
             $response = $client->request(
                 'POST',
@@ -352,8 +347,13 @@ class UserController extends Controller
                     ]
                 ]);
             return response()->json([
-                'response' => $response
-            ], 200);
+                'agrodealers' => $agrodealers,
+                'district' => $district,
+                'product' => $product,
+                'sender' => $urn,
+                'text' => $text,
+                'user' => Config::get('apiuser')
+                ], 200);
             
         }
 

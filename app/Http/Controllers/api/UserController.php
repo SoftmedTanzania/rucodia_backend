@@ -258,14 +258,16 @@ class UserController extends Controller
             ->addSelect(
                 DB::raw('
                     product_id,
-                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount END) as signed) AS product_bought,
-                    CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount END) as signed) AS product_sold,
-                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount WHEN 2 THEN -amount END) AS SIGNED) AS product_balance,
+                    CASE transactiontype_id WHEN 1 THEN price ELSE 0 END AS buying_price,
+                    CASE transactiontype_id WHEN 2 THEN price ELSE 0 END AS selling_price,
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount ELSE 0 END) as signed) AS product_bought,
+                    CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount ELSE 0 END) as signed) AS product_sold,
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount WHEN 2 THEN -amount ELSE 0 END) AS SIGNED) AS product_balance,
                     COUNT(CASE transactiontype_id WHEN 1 THEN id END) AS product_purchases,
                     COUNT(CASE transactiontype_id WHEN 2 THEN id END) AS product_sales,
-                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * price END) as signed) AS product_expenditure,
-                    CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount * price END) as signed) AS product_revenue,
-                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * -price WHEN 2 THEN amount * price END) as signed) AS product_profit
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * price ELSE 0 END) as signed) AS product_expenditure,
+                    CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount * price ELSE 0 END) as signed) AS product_revenue,
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * -price WHEN 2 THEN amount * price ELSE 0 END) as signed) AS product_profit
                     '))
             ->orderBy('created_at', 'DESC')
             ->groupBy('product_id')
@@ -277,10 +279,9 @@ class UserController extends Controller
                 'entity' => $user->uuid,
                 'type' => 'user',
                 'products' => $products,
-                'price' => User::where('id', $user->id)->with('transactions')->groupBy('product_id'),
+                'price' => User::where('id', $user->id)->with('transactions')->get($user->transaction()->id),
                 'user' => Config::get('apiuser')
             ], 200);
-            return $products;
     }
 
     /**
@@ -363,5 +364,40 @@ class UserController extends Controller
             ], 500);
         }
         
+    }
+
+    /**
+     * Show User Balances for a specific product
+     * 
+     * Specific product balance details for each user.
+     * 
+     * @param  int  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function productUsers($product)
+    {
+        $product = Product::find($product);
+        $users = DB::select(DB::raw("
+            SELECT
+            transactions.user_id AS user_id, 
+            users.firstname AS user_name, 
+            levels.id AS level_id, 
+            levels.name AS level_name, 
+            CAST(SUM(CASE transactions.transactiontype_id WHEN 1 THEN transactions.amount WHEN 2 THEN -transactions.amount END)
+            AS SIGNED) AS product_balance FROM transactions 
+            INNER JOIN users on transactions.user_id=users.id 
+            INNER JOIN level_user on level_user.user_id=users.id 
+            INNER JOIN levels on levels.id=level_user.level_id 
+            WHERE transactions.product_id=".$product->id." GROUP BY transactions.user_id
+        "));
+        
+        return response()->json([
+            'action' => 'product_users',
+            'status' => 'OK',
+            'entity' => $product->uuid,
+            'type' => 'product',
+            'users' => $users,
+            'user' => Config::get('apiuser')
+        ], 200);
     }
 }

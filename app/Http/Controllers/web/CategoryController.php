@@ -102,7 +102,7 @@ class CategoryController extends Controller
     {
         // Get the details for a specific category
         $page = 'User';
-        $category = Category::find($id)->first();
+        $category = Category::find($id);
         return view('categories/edit')
             ->with('category', $category)
             ->with('page', $page);

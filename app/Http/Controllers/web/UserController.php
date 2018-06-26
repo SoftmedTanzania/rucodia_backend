@@ -158,7 +158,7 @@ class UserController extends Controller
         $page = 'User';
 
         // Get the details for a specific user
-        $user = User::find($id)->first();
+        $user = User::find($id);
         return view('users/edit')
             ->with('user', $user)
             ->with('regions', $regions)

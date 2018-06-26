@@ -258,8 +258,6 @@ class UserController extends Controller
             ->addSelect(
                 DB::raw('
                     product_id,
-                    CASE transactiontype_id WHEN 1 THEN price ELSE 0 END AS buying_price,
-                    CASE transactiontype_id WHEN 2 THEN price ELSE 0 END AS selling_price,
                     CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount ELSE 0 END) as signed) AS product_bought,
                     CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount ELSE 0 END) as signed) AS product_sold,
                     CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount WHEN 2 THEN -amount ELSE 0 END) AS SIGNED) AS product_balance,
@@ -272,6 +270,16 @@ class UserController extends Controller
             ->orderBy('created_at', 'DESC')
             ->groupBy('product_id')
             ->get();
+        
+        $prices = Transaction::where('user_id', $user->id)
+                ->addSelect(DB::raw('
+                    product_id,
+                    CASE transactiontype_id WHEN 1 THEN price ELSE 0 END AS buying_price,
+                    CASE transactiontype_id WHEN 2 THEN price ELSE 0 END AS selling_price
+                '))
+                ->orderBy('created_at', 'DESC')
+                ->groupBy('transactiontype_id', 'product_id')
+                ->get();
 
             return response()->json([
                 'action' => 'user_products',
@@ -279,7 +287,7 @@ class UserController extends Controller
                 'entity' => $user->uuid,
                 'type' => 'user',
                 'products' => $products,
-                'price' => User::where('id', $user->id)->with('transactions')->get($user->transaction()->id),
+                'prices' => $prices,
                 'user' => Config::get('apiuser')
             ], 200);
     }
@@ -384,11 +392,18 @@ class UserController extends Controller
             levels.id AS level_id, 
             levels.name AS level_name, 
             CAST(SUM(CASE transactions.transactiontype_id WHEN 1 THEN transactions.amount WHEN 2 THEN -transactions.amount END)
-            AS SIGNED) AS product_balance FROM transactions 
+            AS SIGNED) AS product_balance FROM transactions
             INNER JOIN users on transactions.user_id=users.id 
             INNER JOIN level_user on level_user.user_id=users.id 
-            INNER JOIN levels on levels.id=level_user.level_id 
+            INNER JOIN levels on levels.id=level_user.level_id  
             WHERE transactions.product_id=".$product->id." GROUP BY transactions.user_id
+        "));
+
+        $prices = DB::select(DB::raw("
+            SELECT user_id, product_id, price, 
+            case when transactiontype_id=1 then price end as buying_price,
+            case when transactiontype_id=2 then price end as selling_price,
+            from transactions where product_id=".$product->id." GROUP BY user_id
         "));
         
         return response()->json([

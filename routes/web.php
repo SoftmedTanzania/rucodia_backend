@@ -30,7 +30,7 @@ Route::group(
             // Route::Resource('levels', 'LevelController');
             // Route::Resource('locations', 'LocationController');
             // Route::Resource('units', 'UnitController');
-            // Route::Resource('categories', 'CategoryController');
+            Route::Resource('categories', 'CategoryController');
             // Route::Resource('subcategories', 'SubcategoryController');
             // Route::Resource('products', 'ProductController');
             // Route::Resource('orders', 'OrderController');

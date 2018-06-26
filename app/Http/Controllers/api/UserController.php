@@ -265,7 +265,7 @@ class UserController extends Controller
                     COUNT(CASE transactiontype_id WHEN 2 THEN id END) AS product_sales,
                     CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * price ELSE 0 END) as signed) AS product_expenditure,
                     CAST(SUM(CASE transactiontype_id WHEN 2 THEN amount * price ELSE 0 END) as signed) AS product_revenue,
-                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * -price WHEN 2 THEN amount * price ELSE 0 END) as signed) AS product_profit
+                    CAST(SUM(CASE transactiontype_id WHEN 1 THEN amount * -price WHEN 2 THEN amount * price ELSE 0 END) as signed) AS product_profit                   
                     '))
             ->orderBy('created_at', 'DESC')
             ->groupBy('product_id')
@@ -273,11 +273,11 @@ class UserController extends Controller
         
         $prices = Transaction::where('user_id', $user->id)
                 ->addSelect(DB::raw('
-                    product_id,
+                    product_id, MAX(id) AS id,
                     CASE transactiontype_id WHEN 1 THEN price ELSE 0 END AS buying_price,
                     CASE transactiontype_id WHEN 2 THEN price ELSE 0 END AS selling_price
                 '))
-                ->orderBy('created_at', 'DESC')
+                ->orderBy('id', 'DESC')
                 ->groupBy('transactiontype_id', 'product_id')
                 ->get();
 

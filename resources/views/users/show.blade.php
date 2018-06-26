@@ -100,14 +100,21 @@
                             </li>
                             <li>
                                 <div class="row">
-                                    <div class="col-xs-9">
-                                        &nbsp;
-                                        <br />
-                                        <span class="text-danger"><small>&nbsp;</small></span>
+                                    <div class="col-sm-4">
+                                        <div class="text-center">
+                                            <a href="{{url('users')}}/{{$user->id}}/edit" type="submit" class="btn btn-success btn-fill btn-wd">Update User</a href="{{ url('/user/$user->id/edit') }}">
+                                        </div>
                                     </div>
-
-                                    <div class="text-center">
-                                        <a href="{{url('users')}}/{{$user->id}}/edit" type="submit" class="btn btn-success btn-fill btn-wd">Update User</a href="{{ url('/user/$user->id/edit') }}">
+                                    <div class="col-sm-4">&nbsp;</div>
+                                    <div class="col-sm-4">
+                                        <div class="text-center">
+                                            <form action="{{ url('users') }}/{{ $user->id }}" role="form" method="POST">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                                <!-- <a type="submit" class="btn btn-danger btn-fill btn-wd">Delete User</a> -->
+                                                <button type="submit" class="btn btn-danger btn-fill btn-wd">Delete User</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </li>

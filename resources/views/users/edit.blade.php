@@ -18,6 +18,7 @@
             <div class="content">
                 <form action="{{ url('users') }}/{{ $user->id }}" role="form" method="POST">
                 {{ csrf_field() }}
+                {{ method_field('PATCH') }}
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -54,8 +55,8 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="role">User Role</label>
-                                <select name="role" id="role" class="form-control border-input">
+                                <label for="level">User Role</label>
+                                <select name="level" id="level" class="form-control border-input">
                                     <option value="{{ $user->levelID }}" autofocus>{{ $user->level }}</option>
                                     @foreach($levels as $level)
                                         <option value="{{ $level->id }}">{{ ucfirst($level->name) }}</option>
@@ -85,7 +86,6 @@
                             <div class="form-group">
                                 <label for="region">Region</label>
                                 <select id="region" name="region" class="form-control border-input">
-                                    <option value="{{ $user->region['id'] }}" autofocus>{{ $user->region['name'] }}</option>
                                     @foreach($regions as $region)
                                         <option value="{{ $region->id }}">{{ $region->name }}</option>
                                     @endforeach
@@ -96,7 +96,6 @@
                             <div class="form-group">
                                 <label for="district">District</label>
                                 <select id="district" name="district" class="form-control border-input">
-                                    <option value="{ $user->district['id'] }}">{{ $user->district['name'] }}</option>
                                     @foreach($districts as $district)
                                         <option value="{{ $district->id }}">{{ $district->name }}</option>
                                     @endforeach
@@ -107,7 +106,6 @@
                         <div class="form-group">
                                 <label for="ward">Ward</label>
                                 <select id="ward" name="ward" class="form-control border-input">
-                                    <option value="{ $user->ward['id'] }}">{{ $user->ward['name'] }}</option>
                                     @foreach($wards as $ward)
                                         <option value="{{ $ward->id }}">{{ $ward->name }}</option>
                                     @endforeach

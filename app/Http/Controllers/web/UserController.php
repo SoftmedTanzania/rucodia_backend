@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Config;
 
 class UserController extends Controller
 {
@@ -177,7 +178,39 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        // Update the resource with the addressed ID
+        $level = Level::where('id', $request['level'])->first();
+        $level_uuid = DB::table('level_user')->where('user_id', $id)->value('uuid');
+        $level_id = DB::table('level_user')->where('user_id', $id)->value('id');
+        $location = Location::where('id', $request['location'])->first();
+        $location_uuid = DB::table('location_user')->where('user_id', $id)->value('uuid');
+        $location_id = DB::table('location_user')->where('user_id', $id)->value('id');
+        $ward = Ward::where('id', $request['ward'])->first();
+        $ward_uuid = DB::table('user_ward')->where('user_id', $id)->value('uuid');
+        $ward_id = DB::table('user_ward')->where('user_id', $id)->value('id');
+
+        $user = User::find($id);
+        $user->firstname = $request['firstname'];
+        $user->middlename = $request['middlename'];
+        $user->surname = $request['surname'];
+        $user->email = $request['email'];
+        $user->username = $request['username'];
+        $user->password = Hash::make($request['password']);
+        $user->updated_by = Config::get('apiuser');
+        $user->levels()->sync($level->id);
+        $user->levels()->updateExistingPivot($level->id, array('uuid' => $level_uuid, 'id' => $level_id));
+        // $user->locations()->sync($location->id);
+        // $user->locations()->updateExistingPivot($location->id, array('uuid' => $location_uuid, 'id' => $location_id));
+        $user->wards()->sync($ward->id);
+        $user->wards()->updateExistingPivot($ward->id, array('uuid' => $ward_uuid, 'id' => $ward_id));
+        $user->save();
+
+        $users = User::paginate(10);
+        $page = 'User';
+        return view('users/index')
+            ->with('users', $users)
+            ->with('page', $page);
     }
 
     /**
@@ -188,6 +221,14 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Delete a specific User by ID (Soft-Deletes)
+        $user = User::find($id);
+        $user->update(['deleted_by' => Config::get('apiuser')]);
+        $user->delete();
+        $users = User::paginate(10);
+        $page = 'User';
+        return view('users/index')
+            ->with('users', $users)
+            ->with('page', $page);
     }
 }

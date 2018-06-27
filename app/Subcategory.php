@@ -28,11 +28,20 @@ class Subcategory extends Model
             ->withPivot('uuid');
     }
 
-    public function category()
+    public function categories()
     {
         return $this
             ->belongsToMany('App\Category')
             ->withTimestamps()
             ->withPivot('uuid');
+    }
+
+    /*
+    * Get the user that owns this category
+    */
+    public function user()
+    {
+        return $this
+        ->belongsTo('App\User', 'id', 'created_by');
     }
 }

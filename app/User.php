@@ -107,8 +107,12 @@ class User extends Authenticatable
     }
 
     public function latest_transactions()
-{
-    return $this->hasMany('App\Transaction')
-        ->latest();
+    {
+        return $this->hasMany('App\Transaction')->latest();
+    }
+        
+    public function subcategories()
+    {
+        return $this->hasMany('App\Subcategory');
     }
 }

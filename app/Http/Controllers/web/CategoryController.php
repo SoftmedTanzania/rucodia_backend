@@ -101,7 +101,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         // Get the details for a specific category
-        $page = 'User';
+        $page = 'Category';
         $category = Category::find($id);
         return view('categories/edit')
             ->with('category', $category)
@@ -139,7 +139,7 @@ class CategoryController extends Controller
     {
         // Delete a specific User by ID (Soft-Deletes)
         $category = Category::find($id);
-        $category->update(['deleted_by' => Config::get('apiuser')]);
+        $category->update(['deleted_by' => Auth::user()->id]);
         $category->delete();
         $categories = Category::all();
         $page = 'Category';

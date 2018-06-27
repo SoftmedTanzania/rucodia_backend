@@ -80,7 +80,25 @@ class SubcategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $subcategory = Subcategory::find($id);
+        // Check if subcategory is not in the DB
+        if ($subcategory === null) {
+            return response()->json([
+                'action' => 'show',
+                'status' => 'FAIL',
+                'entity' => NULL,
+                'type' => 'subcategory',
+                'user' => Config::get('apiuser')
+            ], 404);
+        }
+        else {
+        // List the details of a specific subcategory
+        $subcategory = Subcategory::find($id);
+        $page = 'Subcategory';
+        return view('subcategories/show')
+            ->with('subcategory', $subcategory)
+            ->with('page', $page);
+        }
     }
 
     /**
@@ -91,7 +109,14 @@ class SubcategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Get the details for a specific category
+        $page = 'Subcategory';
+        $subcategory = Subcategory::find($id);
+        $categories = Category::all();
+        return view('subcategories/edit')
+            ->with('page', $page)
+            ->with('categories', $categories)
+            ->with('subcategory', $subcategory);
     }
 
     /**
@@ -103,7 +128,16 @@ class SubcategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Update the resource with the addressed ID
+        $subcategory = Subcategory::find($id);
+        $subcategory->name = $request['name'];
+        $subcategory->description = $request['description'];
+        $subcategory->save();
+        $subcategories = Subcategory::all();
+        $page = 'Subcategory';
+        return view('subcategories/index')
+            ->with('subcategories', $subcategories)
+            ->with('page', $page);
     }
 
     /**
@@ -114,6 +148,15 @@ class SubcategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Delete a specific User by ID (Soft-Deletes)
+        $subcategory = Subcategory::find($id);
+        $subcategory->update(['deleted_by' => Auth::user()->id]);
+        $subcategory->categories()->detach();
+        $subcategory->delete();
+        $subcategories = Subcategory::all();
+        $page = 'Subcategory';
+        return view('subcategories/index')
+            ->with('subcategories', $subcategories)
+            ->with('page', $page);
     }
 }

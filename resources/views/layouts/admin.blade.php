@@ -77,7 +77,7 @@
                         <p>Subcategories</p>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="{{ url('products') }}">
                         <i class="ti-pencil-alt2"></i>
                         <p>Products</p>
@@ -88,7 +88,7 @@
                         <i class="ti-map"></i>
                         <p>Work Areas</p>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="{{ url('#') }}">
                         <i class="ti-bell"></i>

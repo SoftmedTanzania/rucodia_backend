@@ -13,7 +13,7 @@
                             <div class="col-xs-7">
                                 <div class="numbers">
                                     <p>Transactions</p>
-                                    23TX
+                                    {{$totalTransactions}} TX
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                             <div class="col-xs-7">
                                 <div class="numbers">
                                     <p>Total Sales</p>
-                                    1,345,000
+                                    {{$totalSales}}
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                             <div class="col-xs-7">
                                 <div class="numbers">
                                     <p>Products</p>
-                                    23
+                                    {{$totalProducts}}
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                             <div class="col-xs-7">
                                 <div class="numbers">
                                     <p>Users</p>
-                                    +45
+                                    {{$totalUsers}}
                                 </div>
                             </div>
                         </div>

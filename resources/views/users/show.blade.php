@@ -14,7 +14,7 @@
                     </h4>
                 </div>
                 <p class="description text-center">
-                    <strong>Email:</strong> {{ $user->email }} <br>
+                    <strong>Phone:</strong> {{ $user->phone }} <br>
                     <strong>Level:</strong> @foreach ($user->levels as $level) {{ $level->name }} @endforeach
                 </p>
             </div>

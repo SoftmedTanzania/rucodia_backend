@@ -19,18 +19,18 @@ class LocationsTableSeeder extends Seeder
         // First sample location
         DB::table('locations')->insert([
             'uuid' => (string) Str::uuid(),
-            'latitude' => -4.573916,
-            'longitude' => 30.096946,
-            'name' => 'Kasulu Agrovets',
+            'latitude' => -4.859657,
+            'longitude' => 29.625055,
+            'name' => 'Sebastian Agrovets',
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 
         // Second sample location
         DB::table('locations')->insert([
             'uuid' => (string) Str::uuid(),
-            'latitude' => -4.518000,
-            'longitude' => 30.045000,
-            'name' => 'Nyuki Traders',
+            'latitude' => -4.818000,
+            'longitude' => 29.625000,
+            'name' => 'Kibirizi Traders',
             'created_at' => date('Y-m-d H:i:s'),
             ]);
         

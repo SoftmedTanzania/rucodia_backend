@@ -90,7 +90,7 @@ class UserController extends Controller
             'firstname' => 'required|max:50',
             'middlename' => 'required|max:50',
             'surname' => 'required|max:50',
-            'email' => 'required|unique:users|email',
+            'phone' => 'required|unique:users|numeric|min:10',
             'username' => 'required|unique:users|min:4',
             'password' => 'required|min:6|confirmed',
             'password_confirmation' => 'required',
@@ -106,7 +106,7 @@ class UserController extends Controller
         $user->firstname = $request->firstname;
         $user->middlename = $request->middlename;
         $user->surname = $request->surname;
-        $user->email = $request->email;
+        $user->phone = $request->phone;
         $user->username = $request->username;
         $user->password = Hash::make($request->password);
         $user->save();
@@ -194,7 +194,7 @@ class UserController extends Controller
         $user->firstname = $request['firstname'];
         $user->middlename = $request['middlename'];
         $user->surname = $request['surname'];
-        $user->email = $request['email'];
+        $user->phone = $request['phone'];
         $user->username = $request['username'];
         $user->password = Hash::make($request['password']);
         $user->updated_by = Config::get('apiuser');

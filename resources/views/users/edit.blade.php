@@ -43,8 +43,8 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">E-mail address</label>
-                                <input type="email" class="form-control border-input" placeholder="Email" id="email" name="email" value="{{ $user->email }}">
+                                <label for="phone">Mobile Phone</label>
+                                <input type="phone" class="form-control border-input" placeholder="phone" id="phone" name="phone" value="{{ $user->phone }}">
                             </div>
                         </div>
                         <div class="col-md-4">

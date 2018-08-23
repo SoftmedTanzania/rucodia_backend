@@ -13,7 +13,7 @@
                     <thead>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Email</th>
+                        <th>Phone</th>
                         <th>Username</th>
                         <th>Ward</th>
                         <th>Level</th>
@@ -24,7 +24,7 @@
                             <tr>
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->firstname }} {{ $user->middlename }} {{ $user->surname }}</td>
-                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->phone }}</td>
                                 <td>{{ $user->username }}</td>
                                 
                                 <td>

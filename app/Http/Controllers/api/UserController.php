@@ -68,7 +68,7 @@ class UserController extends Controller
         $user->firstname = $request['firstname'];
         $user->middlename = $request['middlename'];
         $user->surname = $request['surname'];
-        $user->email = $request['email'];
+        $user->phone = $request['phone'];
         $user->username = $request['username'];
         $user->password = Hash::make($request['password']);
         $user->created_by = Config::get('apiuser');
@@ -139,7 +139,7 @@ class UserController extends Controller
         $user->firstname = $request['firstname'];
         $user->middlename = $request['middlename'];
         $user->surname = $request['surname'];
-        $user->email = $request['email'];
+        $user->phone = $request['phone'];
         $user->username = $request['username'];
         $user->password = Hash::make($request['password']);
         $user->updated_by = Config::get('apiuser');

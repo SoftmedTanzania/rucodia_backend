@@ -15,38 +15,34 @@ class LevelsTableSeeder extends Seeder
         // First sample level
         DB::table('levels')->insert([
             'uuid' => (string) Str::uuid(),
-            'name' => 'Admin',
+            'name' => 'Administrator',
             'description' => 'Seeded system administrator level',
-            // 'created_by' =>0
             'created_at' => date('Y-m-d H:i:s'),
         ]);
 
         // Second sample level
         DB::table('levels')->insert([
             'uuid' => (string) Str::uuid(),
-            'name' => 'Supplier',
-            'description' => 'Seeded supplier level',
-            // 'created_by' =>0
+            'name' => 'Hub-Agrodealer',
+            'description' => 'An agrodealer with more than 10 agrodealer clients.',
             'created_at' => date('Y-m-d H:i:s'),
-            ]);
+        ]);
         
         // Third sample level
         DB::table('levels')->insert([
             'uuid' => (string) Str::uuid(),
             'name' => 'Agrodealer',
-            'description' => 'Seeded agrodealer level',
-            // 'created_by' =>0
+            'description' => 'An agrodealer who buys from hub-agrodealer and other agrodealers. Sells to resellers.',
             'created_at' => date('Y-m-d H:i:s'),
-            ]);
+        ]);
 
         // Fourth sample level
         DB::table('levels')->insert([
             'uuid' => (string) Str::uuid(),
-            'name' => 'Farmer',
-            'description' => 'Seeded farmer level',
-            // 'created_by' =>0
+            'name' => 'Reseller',
+            'description' => 'A reseller buys from agrodealers in the hub and outta hub.',
             'created_at' => date('Y-m-d H:i:s'),
-            ]);
+        ]);
 
     }
 }

@@ -57,7 +57,7 @@ class LocationsTableSeeder extends Seeder
             'uuid' => (string) Str::uuid(),
             'latitude' => -4.825467,
             'longitude' => 29.651003,
-            'name' => 'Mkulima Shop',
+            'name' => 'Mkulima Annex Shop',
             'created_at' => date('Y-m-d H:i:s'),
             ]);
     }

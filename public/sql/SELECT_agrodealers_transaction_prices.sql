@@ -7,5 +7,5 @@ inner join subcategories on product_subcategory.subcategory_id = subcategories.i
 inner join user_ward on user_ward.user_id = users.id 
 inner join wards on wards.id = user_ward.ward_id
 inner join districts on wards.district_id = districts.id
-where districts.name like 'Kasulu Mji'
+where districts.name like 'Kigoma Mjini'
 group by users.firstname;

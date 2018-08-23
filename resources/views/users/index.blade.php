@@ -13,6 +13,7 @@
                     <thead>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Store Name</th>
                         <th>Phone</th>
                         <th>Username</th>
                         <th>Ward</th>
@@ -24,9 +25,13 @@
                             <tr>
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->firstname }} {{ $user->middlename }} {{ $user->surname }}</td>
+                                <td>
+                                    @foreach($user->locations as $location)
+                                        {{ $location->name }}
+                                    @endforeach
+                                </td>
                                 <td>{{ $user->phone }}</td>
                                 <td>{{ $user->username }}</td>
-                                
                                 <td>
                                     @foreach($user->wards as $ward)
                                         {{ $ward->name }}

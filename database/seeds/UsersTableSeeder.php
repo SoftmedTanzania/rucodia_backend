@@ -21,10 +21,10 @@ class UsersTableSeeder extends Seeder
         $agrodealer_level = Level::where('name', 'agrodealer')->first();
         $reseller_level = Level::where('name', 'reseller')->first();
         
-	    $hubagrodealer_location  = Location::where('id', 1)->first();
-        $agrodealer_location = Location::where('id', 2)->first();
-        $reseller_location = Location::where('id', 3)->first();
-        $reseller2_location = Location::where('id', 4)->first();
+	    $hubagrodealer_location  = Location::where('id', 2)->first();
+        $agrodealer_location = Location::where('id', 3)->first();
+        $reseller_location = Location::where('id', 4)->first();
+        $reseller2_location = Location::where('id', 5)->first();
         
         // Create the first sample user named admin
         $user = new User();

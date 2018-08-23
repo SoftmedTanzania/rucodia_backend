@@ -4,18 +4,21 @@
     <div class="col-lg-4 col-md-5">
         <div class="card card-user">
             <div class="image">
-                <img src="{{ url('assets/img/background/user_bg.jpg') }}" alt="..."/>
+                <!-- <img src="{{ url('assets/img/background/user_bg.jpg') }}" alt="..."/> -->
+                <img alt="location map" src='{{ $map }}'>
             </div>
             <div class="content">
                 <div class="author">
-                    <img class="avatar border-white" src="{{ url('assets/img/faces/face-0.jpg') }}" alt="..."/>
+                    &nbsp;<br><br><br><br>
+                    <!-- <img class="avatar border-white" src="{{ url('assets/img/faces/face-0.jpg') }}" alt="..."/> -->
                     <h4 class="title">{{ $user->firstname }} {{ $user->surname }}<br />
                         <a href="#"><small>{{ '@'.$user->username }}</small></a>
                     </h4>
                 </div>
                 <p class="description text-center">
-                    <strong>Phone:</strong> {{ $user->phone }} <br>
-                    <strong>Level:</strong> @foreach ($user->levels as $level) {{ $level->name }} @endforeach
+                    <strong>Region:</strong> @foreach($user->wards as $ward){{ $ward->district->region->name }}@endforeach<br>
+                    <strong>District:</strong> @foreach($user->wards as $ward){{ $ward->district->name }}@endforeach<br>
+                    <strong>Ward:</strong>@foreach($user->wards as $ward) {{ $ward->name }} @endforeach
                 </p>
             </div>
             <hr>
@@ -45,9 +48,9 @@
                             <li>
                                 <div class="row">
                                     <div class="col-xs-9">
-                                        {{ $user->firstname }} {{ $user->middlename }} {{ $user->surname }}
+                                        {{ $user->firstname }}
                                         <br />
-                                        <span class="text-muted"><small>Full Name</small></span>
+                                        <span class="text-muted"><small>First Name</small></span>
                                     </div>
 
                                     <div class="col-xs-3 text-right">
@@ -58,11 +61,9 @@
                             <li>
                                 <div class="row">
                                     <div class="col-xs-9">
-                                        @foreach($user->wards as $ward)
-                                                {{ $ward->district->region->name }}
-                                        @endforeach
+                                        {{ $user->middlename }}
                                         <br />
-                                        <span class="text-success"><small>Region</small></span>
+                                        <span class="text-muted"><small>Middle Name</small></span>
                                     </div>
 
                                     <div class="col-xs-3 text-right">
@@ -73,11 +74,9 @@
                             <li>
                                 <div class="row">
                                     <div class="col-xs-9">
-                                        @foreach($user->wards as $ward)
-                                            {{ $ward->district->name }}
-                                        @endforeach
+                                        {{ $user->surname }}
                                         <br />
-                                        <span class="text-danger"><small>District</small></span>
+                                        <span class="text-muted"><small>Last Name</small></span>
                                     </div>
 
                                     <div class="col-xs-3 text-right">
@@ -88,9 +87,22 @@
                             <li>
                                 <div class="row">
                                     <div class="col-xs-9">
-                                        @foreach($user->wards as $ward) {{ $ward->name }} @endforeach
+                                        {{ $user->phone }}
                                         <br />
-                                        <span class="text-danger"><small>Ward</small></span>
+                                        <span class="text-muted"><small>Mobile Phone</small></span>
+                                    </div>
+
+                                    <div class="col-xs-3 text-right">
+                                        <btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-asterisk"></i></btn>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        @foreach ($user->locations as $location) {{ $location->name }} @endforeach
+                                        <br />
+                                        <span class="text-muted"><small>Business Name</small></span>
                                     </div>
 
                                     <div class="col-xs-3 text-right">

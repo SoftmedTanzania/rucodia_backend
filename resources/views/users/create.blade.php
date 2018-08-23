@@ -13,7 +13,7 @@
     <div class="col-lg-12 col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">Add a new user</h4>
+                <h4 class="title">Add a new user  |  <a href="{{ url('excel/import/users') }}">import excel file</a></h4>
             </div>
             <div class="content">
                 <form action="{{ url('users') }}" role="form" method="POST">
@@ -115,20 +115,20 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Location</label>
-                                <input type="text" class="form-control border-input" placeholder="e.g Office" id="name" name="name" disabled>
+                                <label>Store Name</label>
+                                <input type="text" class="form-control border-input" placeholder="e.g Office" id="location" name="location">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Latitude</label>
-                                <input type="text" class="form-control border-input" placeholder="e.g -2.1290" id="latitude" name="latitude" disabled>
+                                <label>GPS Latitude</label>
+                                <input type="text" class="form-control border-input" placeholder="e.g -2.1290" id="latitude" name="latitude">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Longitude</label>
-                                <input type="text" class="form-control border-input" placeholder="e.g 30.15543" id="longitude" name="longitude" disabled>
+                                <label>GPS Longitude</label>
+                                <input type="text" class="form-control border-input" placeholder="e.g 30.15543" id="longitude" name="longitude">
                             </div>
                         </div>
                     </div>

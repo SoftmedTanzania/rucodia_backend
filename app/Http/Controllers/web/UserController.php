@@ -14,6 +14,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -101,6 +102,7 @@ class UserController extends Controller
 
         $level = Level::where('id', $request->level)->first();
         $ward = Ward::where('id', $request->ward)->first();
+        $location = Location::where('id', $request->location)->first();
         $user = new User;
         $user->uuid = (string) Str::uuid();
         $user->firstname = $request->firstname;
@@ -109,9 +111,33 @@ class UserController extends Controller
         $user->phone = $request->phone;
         $user->username = $request->username;
         $user->password = Hash::make($request->password);
+        $user->created_by = Auth::id();
         $user->save();
-        $user->levels()->attach($level->id, array('level_id' => $level->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
-        $user->wards()->attach($ward->id, array('ward_id' => $ward->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
+        $location = new Location;
+        $location->uuid = (string) Str::uuid();
+        $location->name = $request->location;
+        $location->latitude = $request->latitude;
+        $location->longitude = $request->longitude;
+        $location->created_by = Auth::id();
+        $location->save();
+        $user->levels()->attach($level->id, array(
+            'level_id' => $level->id,
+            'user_id' => $user->id,
+            'uuid' => (string) Str::uuid(),
+            'created_by' => Auth::id()
+        ));
+        $user->wards()->attach($ward->id, array(
+            'ward_id' => $ward->id,
+            'user_id' => $user->id,
+            'uuid' => (string) Str::uuid(),
+            'created_by' => Auth::id()
+        ));
+        $user->locations()->attach($location->id, array(
+            'location_id' => $location->id,
+            'user_id' => $user->id,
+            'uuid' => (string) Str::uuid(),
+            'created_by' => Auth::id()
+        ));
 
         $users = User::paginate(10);
         $page = 'User';
@@ -130,7 +156,22 @@ class UserController extends Controller
     {
         //Select a specific user and show details and form
         $user = User::find($id);
-        $page = 'User';
+        $ward = User::find($id)->wards()->first();
+        $district = strtok($ward->district->name, " ");
+        $region = $ward->district->region->name;
+        $location = User::find($id)->locations()->first();
+        if (!empty($location->id)) {
+            $center = "center=".$ward->name.",".$district.",".$region.",TZ&";
+            $coordinates = (string) $location->latitude.",". (string) $location->longitude;
+            $label = substr($location->name, 0, 1);
+            $parameters = "zoom=13&size=400x140&maptype=roadmap&markers=color:red|label:".$label."|";
+            $key = "&key=".env("GOOGLE_API_KEY");
+            $map = "https://maps.googleapis.com/maps/api/staticmap?".$center.$parameters.$coordinates.$key;
+        }
+        else {
+            $map = "assets/img/background/user_bg.jpg";
+        }
+        $page = "User";
         $revenue = DB::table('transactions')
                         ->selectRaw('SUM(price * amount) AS price')
                         ->where('user_id', $id)
@@ -139,6 +180,7 @@ class UserController extends Controller
         return view('users/show')
             ->with('user', $user)
             ->with('revenue', $revenue)
+            ->with('map', $map)
             ->with('page', $page);
     }
 

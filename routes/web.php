@@ -32,5 +32,6 @@ Route::group(
             Route::get('/users/districts/{id}', 'UserController@ajaxdistricts');
             Route::get('/users/wards/{id}', 'UserController@ajaxwards');
             Route::get('/excel/import/users', 'UserController@excelImportUsers')->name('excelImportUsers');
+            Route::post('excel/import/mass', 'UserController@massImportUsers')->name('massImportUsers');
 
     });

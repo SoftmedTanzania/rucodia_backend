@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
+use Validator;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -239,7 +242,7 @@ class UserController extends Controller
         $user->phone = $request['phone'];
         $user->username = $request['username'];
         $user->password = Hash::make($request['password']);
-        $user->updated_by = Config::get('apiuser');
+        $user->updated_by = Auth::id();
         $user->levels()->sync($level->id);
         $user->levels()->updateExistingPivot($level->id, array('uuid' => $level_uuid, 'id' => $level_id));
         // $user->locations()->sync($location->id);
@@ -265,7 +268,7 @@ class UserController extends Controller
     {
         // Delete a specific User by ID (Soft-Deletes)
         $user = User::find($id);
-        $user->update(['deleted_by' => Config::get('apiuser')]);
+        $user->update(['deleted_by' => Auth::id()]);
         $user->delete();
         $users = User::paginate(10);
         $page = 'User';
@@ -273,4 +276,62 @@ class UserController extends Controller
             ->with('users', $users)
             ->with('page', $page);
     }
+
+    /**
+     * Load file importation form for loading an excel sheet
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function excelImportUsers()
+    {
+        $page = 'File Import';
+        return view('users/excel')
+            ->with('page', $page);
+    }
+
+    /**
+     * Adding users amass using an excel file or csv
+     * 
+     * @param file $spreadsheet
+     * @return \Illuminate\Http\Response
+     */
+    public function massImportUsers(Request $request)
+    {
+        // Validate the xlsx file
+        $validator = Validator::make($request->all(), [
+            'spreadsheet' => 'required',
+        ]);
+        // If the validation fails fall back to the previous page with errors flashed.
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        }
+        // For a valid file checkif it has payload then insert data to the DB
+        if($request->hasFile('spreadsheet')){
+            $path = $request->file('spreadsheet')->getRealPath();
+            $data = \Excel::load($path)->get();
+            if($data->count()){
+                foreach ($data as $key => $value) {
+                    $arr[] = [
+                        'uuid' => Str::uuid(),
+                        'firstname' => $value->firstname,
+                        'middlename' => $value->middlename,
+                        'surname' => $value->surname,
+                        'phone' => $value->phone,
+                        'username' => $value->username,
+                        'password' => Hash::make($value->password),
+                        'created_by' => Auth::id(),
+                    ];
+                }
+                if(!empty($arr)){
+                    DB::table('users')->insert($arr);
+                    $page = 'User';
+                    $users = User::paginate(10);
+                    return view('users/index')
+                        ->with('users', $users)
+                        ->with('page', $page);
+                }
+            }
+        }
+            return redirect()->back()->withErrors($validator);
+        } 
 }

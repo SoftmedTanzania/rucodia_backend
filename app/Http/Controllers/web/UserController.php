@@ -326,12 +326,10 @@ class UserController extends Controller
                     DB::table('users')->insert($arr);
                     $page = 'User';
                     $users = User::paginate(10);
-                    return view('users/index')
-                        ->with('users', $users)
-                        ->with('page', $page);
+                    return redirect()->route('users.index');
                 }
             }
         }
-            return redirect()->back()->withErrors($validator);
-        } 
+        return redirect()->back()->withErrors($validator);
+    } 
 }

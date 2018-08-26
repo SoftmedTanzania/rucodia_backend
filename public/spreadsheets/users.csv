@@ -1,8 +1,8 @@
-firstname,middlename,surname,phone,username,password
-Ali,Omari,Mwinyi,755437887,amwinyi,amwinyi
-Athumani,Juma,Nonga,754012345,anonga,anonga
-Adam,Musa,Daudi,755437888,adaudi,adaudi
-Bundi,Baraka,Bundi,755437889,bbundi,bbundi
-Margareth,Kawawa,Waziri,755437880,mwaziri,mwaziri
-Amina,Samaki,Mollel,754098098,amollel,amollel
-Wema,Isack,Sepetu,765434343,wsepetu,wsepetu
+firstname,middlename,surname,phone,username,password,level,business_name,latitude,longitude,region,district,ward
+Ali,Omari,Mwinyi,755437887,amwinyi,amwinyi,Hub-agrodealer,Mwinyi Traders,-4.869005,29.648337,Kigoma,Kigoma Mjini,Gungu
+Athumani,Juma,Nonga,754012345,anonga,anonga,Agrodealer,Nonga Traders,-4.872377,29.649013,Kigoma,Kigoma Mjini,Gungu
+Adam,Musa,Daudi,755437888,adaudi,adaudi,Hub-agrodealer,Daudi Traders,-4.873781,29.649221,Kigoma,Kigoma Mjini,Gungu
+Bundi,Baraka,Bundi,755437889,bbundi,bbundi,Agrodealer,Bundi Traders,-4.874001,29.649601,Kigoma,Kigoma Mjini,Gungu
+Margareth,Kawawa,Waziri,755437880,mwaziri,mwaziri,Reseller,Waziri Traders,-4.875001,29.649941,Kigoma,Kigoma Mjini,Gungu
+Amina,Samaki,Mollel,754098098,amollel,amollel,Reseller,Mollel Traders,-1.330705,31.809021,Kagera,Bukoba Mjini,Kashai
+Wema,Isack,Sepetu,765434343,wsepetu,wsepetu,Reseller,Sepetu Traders,-1.353445,31.797271,Kagera,Bukoba Mjini,Kitendaguro

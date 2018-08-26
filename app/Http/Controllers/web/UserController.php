@@ -167,9 +167,9 @@ class UserController extends Controller
             $center = "center=".$ward->name.",".$district.",".$region.",TZ&";
             $coordinates = (string) $location->latitude.",". (string) $location->longitude;
             $label = substr($location->name, 0, 1);
-            $parameters = "zoom=13&size=400x140&maptype=roadmap&markers=color:red|label:".$label."|";
+            $parameters = "zoom=12&size=400x160&maptype=roadmap&markers=color:red|label:".$label."|";
             $key = "&key=".env("GOOGLE_API_KEY");
-            $map = "https://maps.googleapis.com/maps/api/staticmap?".$center.$parameters.$coordinates.$key;
+            $map = "https://maps.googleapis.com/maps/api/staticmap?".$parameters.$coordinates.$key;
         }
         else {
             $map = "assets/img/background/user_bg.jpg";
@@ -311,23 +311,48 @@ class UserController extends Controller
             $data = \Excel::load($path)->get();
             if($data->count()){
                 foreach ($data as $key => $value) {
-                    $arr[] = [
-                        'uuid' => Str::uuid(),
-                        'firstname' => $value->firstname,
-                        'middlename' => $value->middlename,
-                        'surname' => $value->surname,
-                        'phone' => $value->phone,
-                        'username' => $value->username,
-                        'password' => Hash::make($value->password),
-                        'created_by' => Auth::id(),
-                    ];
+                    $level = Level::where('name', $value->level)->first();
+                    $ward = Ward::where('name', $value->ward)->first();
+                    $location = Location::where('name', $value->business_name)->first();
+                    $user = new User;
+                    $user->uuid =(string) Str::uuid();
+                    $user->firstname = $value->firstname;
+                    $user->middlename = $value->middlename;
+                    $user->surname = $value->surname;
+                    $user->phone = $value->phone;
+                    $user->username = $value->username;
+                    $user->password = Hash::make($value->password);
+                    $user->created_by = Auth::id();
+                    $user->save();
+                    $location = new Location;
+                    $location->uuid = (string) Str::uuid();
+                    $location->name = $value->business_name;
+                    $location->latitude = $value->latitude;
+                    $location->longitude = $value->longitude;
+                    $location->created_by = Auth::id();
+                    $location->save();
+                    $user->levels()->sync($level->id, array(
+                        'level_id' => $level->id,
+                        'user_id' => $user->id,
+                        'uuid' => (string) Str::uuid(),
+                        'created_by' => Auth::id()
+                    ));
+                    $user->wards()->sync($ward->id, array(
+                        'ward_id' => $ward->id,
+                        'user_id' => $user->id,
+                        'uuid' => (string) Str::uuid(),
+                        'created_by' => Auth::id()
+                    ));
+                    $user->locations()->sync($location->id, array(
+                        'location_id' => $location->id,
+                        'user_id' => $user->id,
+                        'uuid' => (string) Str::uuid(),
+                        'created_by' => Auth::id()
+                    ));
                 }
-                if(!empty($arr)){
-                    DB::table('users')->insert($arr);
-                    $page = 'User';
-                    $users = User::paginate(10);
-                    return redirect()->route('users.index');
-                }
+                $page = 'User';
+                $users = User::paginate(10);
+                return redirect()->route('users.index');
             }
         }
         return redirect()->back()->withErrors($validator);

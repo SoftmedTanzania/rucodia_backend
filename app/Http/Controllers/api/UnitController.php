@@ -122,6 +122,7 @@ class UnitController extends Controller
         $unit = Unit::find($unit)->first();
         $unit->update(['deleted_by' => Config::get('apiuser')]);
         $unit->delete();
+        // Fire the JSON response
         return response()->json([
             'action' => 'delete',
             'status' => 'OK',

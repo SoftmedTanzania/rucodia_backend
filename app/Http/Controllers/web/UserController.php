@@ -309,6 +309,7 @@ class UserController extends Controller
         if($request->hasFile('spreadsheet')){
             $path = $request->file('spreadsheet')->getRealPath();
             $data = \Excel::load($path)->get();
+            // Loop through each entry in the excel file
             if($data->count()){
                 foreach ($data as $key => $value) {
                     $level = Level::where('name', $value->level)->first();

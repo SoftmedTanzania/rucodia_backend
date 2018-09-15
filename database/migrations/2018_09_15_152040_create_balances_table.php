@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductUnitTable extends Migration
+class CreateBalancesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateProductUnitTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_unit', function (Blueprint $table) {
+        Schema::create('balances', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('uuid');
-            $table->integer('unit_id')->unsigned();
-            $table->foreign('unit_id')->references('id')->on('units');
+            $table->integer('balance');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('created_by')->nullable($value = true)->default(0);
@@ -35,6 +35,6 @@ class CreateProductUnitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_unit');
+        Schema::dropIfExists('balances');
     }
 }

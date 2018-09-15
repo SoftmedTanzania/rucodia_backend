@@ -26,7 +26,7 @@ class CreateOrdersTable extends Migration
             $table->integer('dealer_id')->unsigned();
             $table->foreign('dealer_id')->references('id')->on('users');
             $table->integer('supplier_id')->nullable();
-            $table->integer('created_by')->nullable($value = true)->default(0);;
+            $table->integer('created_by')->nullable($value = true)->default(0);
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();

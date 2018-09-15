@@ -332,19 +332,19 @@ class UserController extends Controller
                     $location->longitude = $value->longitude;
                     $location->created_by = Auth::id();
                     $location->save();
-                    $user->levels()->sync($level->id, array(
+                    $user->levels()->attach($level->id, array(
                         'level_id' => $level->id,
                         'user_id' => $user->id,
                         'uuid' => (string) Str::uuid(),
                         'created_by' => Auth::id()
                     ));
-                    $user->wards()->sync($ward->id, array(
+                    $user->wards()->attach($ward->id, array(
                         'ward_id' => $ward->id,
                         'user_id' => $user->id,
                         'uuid' => (string) Str::uuid(),
                         'created_by' => Auth::id()
                     ));
-                    $user->locations()->sync($location->id, array(
+                    $user->locations()->attach($location->id, array(
                         'location_id' => $location->id,
                         'user_id' => $user->id,
                         'uuid' => (string) Str::uuid(),

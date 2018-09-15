@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
         $agrodealer_level = Level::where('name', 'agrodealer')->first();
         $reseller_level = Level::where('name', 'reseller')->first();
         
+        $administrator_location = Location::where('id', 1)->first();
 	    $hubagrodealer_location  = Location::where('id', 2)->first();
         $agrodealer_location = Location::where('id', 3)->first();
         $reseller_location = Location::where('id', 4)->first();
@@ -39,7 +40,7 @@ class UsersTableSeeder extends Seeder
         $user->created_at = date('Y-m-d H:i:s');
         $user->save();
         $user->levels()->attach($administrator_level, array('uuid' => (string) Str::uuid()));
-        // $user->locations()->attach($default_location, array('uuid' => (string) Str::uuid()));
+        $user->locations()->attach($administrator_location, array('uuid' => (string) Str::uuid()));
         
         // Create the second sample user named kizito
         $user = new User();
@@ -90,7 +91,7 @@ class UsersTableSeeder extends Seeder
         $user = new User();
         $user->uuid = (string) Str::uuid();
         $user->firstname = 'Dauda';
-        $user->middlename = 'Reseller';
+        $user->middlename = 'Namamba';
         $user->surname = 'Waziri';
         $user->phone = '0755'.mt_rand(100000, 999999);
         $user->username = 'reseller2';

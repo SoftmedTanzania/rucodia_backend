@@ -26,7 +26,7 @@ class CreateTransactionsTable extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('status_id')->unsigned();
             $table->foreign('status_id')->references('id')->on('statuses');
-            $table->integer('created_by')->nullable($value = true)->default(0);;
+            $table->integer('created_by')->nullable($value = true)->default(0);
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();

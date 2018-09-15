@@ -18,7 +18,7 @@ class CreateSmsTable extends Migration
             $table->string('uuid');
             $table->string('urn');
             $table->string('text');
-            $table->integer('created_by')->nullable($value = true)->default(0);;
+            $table->integer('created_by')->nullable($value = true)->default(0);
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();

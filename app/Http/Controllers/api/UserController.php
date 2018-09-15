@@ -12,6 +12,7 @@ use App\Sms;
 use App\District;
 use App\Product;
 use App\Subcategory;
+use App\Balance;
 use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -365,7 +366,6 @@ class UserController extends Controller
                 ], 200);
             
         }
-
         else {
             return response()->json([
                 'error' => 'kuna error mahali'
@@ -385,33 +385,24 @@ class UserController extends Controller
     public function productUsers($product)
     {
         $product = Product::find($product);
-        $users = DB::select(DB::raw("
-            SELECT
-            transactions.user_id AS user_id, 
-            users.firstname AS user_name, 
-            levels.id AS level_id, 
-            levels.name AS level_name, 
-            CAST(SUM(CASE transactions.transactiontype_id WHEN 1 THEN transactions.amount WHEN 2 THEN -transactions.amount END)
-            AS SIGNED) AS product_balance FROM transactions
-            INNER JOIN users on transactions.user_id=users.id 
-            INNER JOIN level_user on level_user.user_id=users.id 
-            INNER JOIN levels on levels.id=level_user.level_id  
-            WHERE transactions.product_id=".$product->id." GROUP BY transactions.user_id
-        "));
-
-        $prices = DB::select(DB::raw("
-            SELECT user_id, product_id, price, 
-            case when transactiontype_id=1 then price end as buying_price,
-            case when transactiontype_id=2 then price end as selling_price,
-            from transactions where product_id=".$product->id." GROUP BY user_id
-        "));
-        
+        $balances = Balance::where('product_id', $product->id)
+            ->get(['user_id', 'count']);
+        $buying_prices = Transaction::where('product_id', $product->id)
+            ->where('transactiontype_id', 1)
+            ->groupBy('user_id')
+            ->get(['user_id', 'price']);
+        $selling_prices = Transaction::where('product_id', $product->id)
+            ->where('transactiontype_id', 2)
+            ->groupBy('user_id')
+            ->get(['user_id', 'price']);     
         return response()->json([
             'action' => 'product_users',
             'status' => 'OK',
             'entity' => $product->uuid,
             'type' => 'product',
-            'users' => $users,
+            'balances' => $balances,
+            'buying_prices' => $buying_prices,
+            'selling_prices' => $selling_prices,
             'user' => Config::get('apiuser')
         ], 200);
     }

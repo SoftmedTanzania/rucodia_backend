@@ -12,7 +12,7 @@ class Balance extends Model
      * @return mixed
      */
     protected $fillable = [
-        'uuid', 'buying_price', 'selling_price', 'count', 'user_id', 'transaction_id', 'product_id',
+        'uuid', 'count', 'user_id', 'product_id',
     ];
 
 }

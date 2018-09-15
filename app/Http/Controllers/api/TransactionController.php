@@ -32,7 +32,8 @@ class TransactionController extends Controller
     /**
      * Add Transaction
      * 
-     * Store a newly created resource in storage.
+     * Store a newly created resource in transaction storage.
+     * Update the count of the specific product for a specific user in Balances
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -49,6 +50,42 @@ class TransactionController extends Controller
         $transaction->status_id = $request['status_id'];
         $transaction->created_by = Config::get('apiuser');
         $transaction->save();
+
+        $balance = Balance::where('user_id', $request['user_id'])->where('product_id', $request['product_id'])->first();
+        if ($request['transactiontype_id'] == 1) {
+            if(empty($balance)){
+                $balance = new Balance;
+                $balance->uuid = (string) Str::uuid();
+                $balance->count = $request['amount'];
+                $balance->user_id = $request['user_id'];
+                $balance->product_id = $request['product_id'];
+                $balance->created_by = Config::get('apiuser');
+                $balance->save();
+            }
+            else{
+                $balance->count = $balance->count + $request['amount'];
+                $balance->save();
+            }
+        }
+        elseif ($request['transactiontype_id'] == 2) {
+            if(empty($balance)){
+                $balance = new Balance;
+                $balance->uuid = (string) Str::uuid();
+                $balance->count = -($request['amount']);
+                $balance->user_id = $request['user_id'];
+                $balance->product_id = $request['product_id'];
+                $balance->created_by = Config::get('apiuser');
+                $balance->save();
+            }
+            else{
+                $balance->count = $balance->count - $request['amount'];
+                $balance->save();
+            }
+        }
+        else{
+            return response()->json(['error' => 'Unknown transaction type'], 404);
+        }
+
         return response()->json([
             'action' => 'create',
             'status' => 'OK',

@@ -267,27 +267,5 @@ class SmsController extends Controller
             write_message_to_file("message ".$message_results."\n\n");
         }
     }
-    
-    // Execute functions above
-    if($_SERVER['REQUEST_METHOD'] === 'POST')
-    {
-        if(isset($_GET['task']) AND $_GET['task'] === 'result'){
-            get_sms_delivery_report();
-        }
-        else if( isset($_GET['task']) && $_GET['task'] === 'sent')
-        {
-            get_sent_message_uuids();
-        }
-        else
-        {
-            get_message();
-        }
-    }
-    else
-    {
-        send_task();
-        send_messages_uuids_for_sms_delivery_report();
-    }
-
 
 }

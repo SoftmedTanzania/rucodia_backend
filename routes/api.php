@@ -52,3 +52,12 @@ Route::group(
             Route::get('products/{product}/users', 'UserController@productUsers')->name('product.users');
             Route::get('receive&sender={sender}&message={message}', 'UserController@receive');
     });
+
+Route::group(
+    array(
+        'namespace' => 'api',
+        'prefix' => 'v2'),
+        function () {
+            Route::post('sms', 'UserController@sms')->name('sms.store');
+            Route::get('receive&sender={sender}&message={message}', 'UserController@receive')->name('sms.receive');
+    });

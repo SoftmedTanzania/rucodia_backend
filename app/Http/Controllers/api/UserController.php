@@ -294,7 +294,7 @@ class UserController extends Controller
     }
 
     /**
-     * Add User
+     * Receive SMS
      * 
      * Store a newly created user resource in storage.
      *
@@ -407,15 +407,22 @@ class UserController extends Controller
         ], 200);
     }
 
+    /**
+     * Get SMS from SMS Relay
+     * 
+     * Respond to a user with relevant SMS content.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function receive(Request $request)
     {
-        # code...
-        Storage::disk('local')->put('file.txt', 'Contents');
-        // Storage::put('sms.text', $request);
-        // $myFile = "test.txt";
-        // $fh = fopen($myFile, 'a') or die("can't open file");
-        // @fwrite($fh, $message);
-        // @fclose($fh);
+        # put contents on a text file
+        Storage::append('sms.txt', $request);
+        return response()->json([
+            'entity' => 'SMS',
+            'user' => Config::get('apiuser')
+            ], 200);
     }
     
 }

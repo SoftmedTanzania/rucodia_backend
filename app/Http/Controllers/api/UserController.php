@@ -74,9 +74,24 @@ class UserController extends Controller
         $user->password = Hash::make($request['password']);
         $user->created_by = Config::get('apiuser');
         $user->save();
-        $user->levels()->attach($level->id, array('level_id' => $level->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
-        $user->locations()->attach($location->id, array('location_id' => $location->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
-        $user->wards()->attach($ward->id, array('ward_id' => $ward->id, 'user_id' => $user->id, 'uuid' => (string) Str::uuid()));
+        $user->levels()
+            ->attach($level->id, array(
+                'level_id' => $level->id, 
+                'user_id' => $user->id, 
+                'uuid' => (string) Str::uuid()
+            ));
+        $user->locations()
+            ->attach($location->id, array(
+                'location_id' => $location->id, 
+                'user_id' => $user->id, 
+                'uuid' => (string) Str::uuid()
+            ));
+        $user->wards()
+            ->attach($ward->id, array(
+                'ward_id' => $ward->id, 
+                'user_id' => $user->id, 
+                'uuid' => (string) Str::uuid()
+            ));
         return response()->json([
             'action' => 'create',
             'status' => 'OK',
@@ -417,12 +432,59 @@ class UserController extends Controller
      */
     public function receive(Request $request)
     {
-        # put contents on a text file
-        Storage::append('sms.txt', $request);
+        $sender = $request->sender;
+        $message = str_replace('+', ' ', $request->message);
+        
+        $sms = new Sms;
+        $sms->uuid = (string) Str::uuid();
+        $sms->urn = $sender;
+        $sms->text = strtolower($message);
+        $sms->save();
+
+        Storage::append('sms.txt', date('YmdHis').' Sender: '.$sender.' '.'Message: '.str_replace('+', ' ', $message));
+
+        $text_array = explode(' ', $message);
+        if (str_word_count($message) == 3) {
+            $district = $text_array[2];
+            $district = District::where('name', $district)->first();
+            $product = $text_array[1];
+            $product = Subcategory::where('name', $product)->first();
+            $agrodealers = DB::select(DB::raw ("
+                select distinct users.firstname as name, MAX(transactions.price) as price from transactions 
+                inner join users on users.id = transactions.user_id 
+                inner join products on products.id = transactions.product_id 
+                inner join transactiontypes on transactiontypes.id = 1 
+                inner join product_subcategory on product_subcategory.product_id = products.id
+                inner join subcategories on product_subcategory.subcategory_id = subcategories.id
+                inner join user_ward on user_ward.user_id = users.id 
+                inner join wards on wards.id = user_ward.ward_id
+                inner join districts on wards.district_id = districts.id
+                where districts.id = ".$district->id."
+                AND subcategories.id = ".$product->id."
+                group by users.firstname;
+            "));
+
+            $agrodealers = json_decode(json_encode($agrodealers), true);
+            $result = array();
+            foreach($agrodealers as $key=> $val)
+            {
+            $result[] = $val['name'].':'.$val['price'];
+            }
+
+            $text = $product->name." > ". implode(', ', $result);
+
         return response()->json([
+            'text' => $text,
+            'sender' => $sender,
             'entity' => 'SMS',
             'user' => Config::get('apiuser')
             ], 200);
+        }
+        else {
+            return response()->json([
+                'error' => 'kuna error mahali'
+            ], 500);
+        }      
     }
     
 }

@@ -50,5 +50,5 @@ Route::group(
             Route::get('users/{user}/transactions', 'TransactionController@userTransactions');
             Route::post('sms', 'UserController@sms')->name('sms.store');
             Route::get('products/{product}/users', 'UserController@productUsers')->name('product.users');
-            Route::post('receive', 'UserController@receive');
+            Route::get('receive&sender={sender}&message={message}', 'UserController@receive');
     });

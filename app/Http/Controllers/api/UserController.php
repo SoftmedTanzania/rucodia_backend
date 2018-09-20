@@ -441,9 +441,7 @@ class UserController extends Controller
                 $sms->uuid = (string) Str::uuid();
                 $sms->urn = $from;
                 $sms->text = strtolower($message);
-                $sms->save();
-                if(!empty($from)) { $saved = TRUE; } else { $status = FALSE; }
-        
+                $sms->save();        
                 Storage::append('sms.txt', date('YmdHis').' From: '.$from.' '.'Message: '.str_replace('+', ' ', $message));
         
                 return response()->json([

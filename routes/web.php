@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 Route::get('/api/v1/docs', 'HomeController@apidocs')->name('apidocs');
+Route::get('api/v1/receive', 'HomeController@index')->name('sms.receive');
 
 Route::group(
     array(
@@ -33,5 +34,4 @@ Route::group(
             Route::get('/users/wards/{id}', 'UserController@ajaxwards');
             Route::get('/excel/import/users', 'UserController@excelImportUsers')->name('excelImportUsers');
             Route::post('excel/import/mass', 'UserController@massImportUsers')->name('massImportUsers');
-
     });

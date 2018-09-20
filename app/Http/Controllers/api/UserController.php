@@ -432,22 +432,43 @@ class UserController extends Controller
      */
     public function receive(Request $request)
     {
-        $sender = $request->sender;
+        $from = $request->from;
         $message = str_replace('+', ' ', $request->message);
+
+        if (empty(!$from)) {
+            if(empty(!$message)){
+                $sms = new Sms;
+                $sms->uuid = (string) Str::uuid();
+                $sms->urn = $from;
+                $sms->text = strtolower($message);
+                $sms->save();
+                if(!empty($from)) { $saved = TRUE; } else { $status = FALSE; }
         
-        $sms = new Sms;
-        $sms->uuid = (string) Str::uuid();
-        $sms->urn = $sender;
-        $sms->text = strtolower($message);
-        // $sms->save();
+                Storage::append('sms.txt', date('YmdHis').' From: '.$from.' '.'Message: '.str_replace('+', ' ', $message));
+        
+                return response()->json([
+                    'from' => $from,
+                    'entity' => 'SMS',
+                    'message' => $message,
+                    'saved' => TRUE
+                    ], 200);
+            }
+            else {
+                return response()->json([
+                    'error' => 'EMPTY sms received',
+                    'entity' => 'SMS',
+                    'saved' => FALSE
+                    ], 500);
+            }
+        }
+        else {
+            return response()->json([
+                'error' => 'EMPTY from field',
+                'entity' => 'SMS',
+                'saved' => FALSE
+                ], 500);
+        }
 
-        // Storage::append('sms.txt', date('YmdHis').' Sender: '.$sender.' '.'Message: '.str_replace('+', ' ', $message));
-
-        return response()->json([
-            'sender' => $sender,
-            'entity' => 'SMS',
-            'user' => Config::get('apiuser')
-            ], 200);     
     }
     
 }

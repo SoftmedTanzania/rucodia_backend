@@ -59,5 +59,5 @@ Route::group(
         'prefix' => 'v2'),
         function () {
             Route::post('sms', 'UserController@sms')->name('sms.store');
-            Route::get('receive', 'UserController@receive')->name('sms.receive');
+            Route::post('receive', 'UserController@receive')->name('sms.receive');
     });

@@ -21,6 +21,8 @@ class CreateBalancesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
+            $table->integer('buying_price');
+            $table->integer('selling_price')->nullable();
             $table->integer('created_by')->nullable($value = true)->default(0);
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();

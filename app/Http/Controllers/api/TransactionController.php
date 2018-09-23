@@ -40,45 +40,57 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        $transaction = new Transaction;
-        $transaction->uuid = (string) Str::uuid();
-        $transaction->amount = $request['amount'];
-        $transaction->price = $request['price'];
-        $transaction->transactiontype_id = $request['transactiontype_id'];
-        $transaction->user_id = $request['user_id'];
-        $transaction->product_id = $request['product_id'];
-        $transaction->status_id = $request['status_id'];
-        $transaction->created_by = Config::get('apiuser');
-        $transaction->save();
-
         $balance = Balance::where('user_id', $request['user_id'])->where('product_id', $request['product_id'])->first();
         if ($request['transactiontype_id'] == 1) {
+            $transaction = new Transaction;
+            $transaction->uuid = (string) Str::uuid();
+            $transaction->amount = $request['amount'];
+            $transaction->price = $request['buying_price'];
+            $transaction->transactiontype_id = $request['transactiontype_id'];
+            $transaction->user_id = $request['user_id'];
+            $transaction->product_id = $request['product_id'];
+            $transaction->status_id = $request['status_id'];
+            $transaction->created_by = Config::get('apiuser');
+            $transaction->save();
+
             if(empty($balance)){
                 $balance = new Balance;
                 $balance->uuid = (string) Str::uuid();
                 $balance->count = $request['amount'];
                 $balance->user_id = $request['user_id'];
                 $balance->product_id = $request['product_id'];
+                $balance->buying_price = $request['buying_price'];
+                $balance->selling_price = $request['selling_price'];
                 $balance->created_by = Config::get('apiuser');
                 $balance->save();
             }
             else{
                 $balance->count = $balance->count + $request['amount'];
+                $balance->buying_price =  $request['price'];
                 $balance->save();
             }
         }
         elseif ($request['transactiontype_id'] == 2) {
+            $transaction = new Transaction;
+            $transaction->uuid = (string) Str::uuid();
+            $transaction->amount = $request['amount'];
+            $transaction->price = $request['selling_price'];
+            $transaction->transactiontype_id = $request['transactiontype_id'];
+            $transaction->user_id = $request['user_id'];
+            $transaction->product_id = $request['product_id'];
+            $transaction->status_id = $request['status_id'];
+            $transaction->created_by = Config::get('apiuser');
+            $transaction->save();
+            
             if(empty($balance)){
-                $balance = new Balance;
-                $balance->uuid = (string) Str::uuid();
-                $balance->count = -($request['amount']);
-                $balance->user_id = $request['user_id'];
-                $balance->product_id = $request['product_id'];
-                $balance->created_by = Config::get('apiuser');
-                $balance->save();
+                return response()->json(['error' => 'This user does not have this product'], 400);
+            }
+            elseif ($request['amount'] > $balance->count) {
+                return response()->json(['error' => 'This user has has less than the requested amount.', 'balance' => $balance->count], 400);
             }
             else{
                 $balance->count = $balance->count - $request['amount'];
+                $balance->selling_price = $request['selling_price'];
                 $balance->save();
             }
         }

@@ -400,26 +400,27 @@ class UserController extends Controller
     public function productUsers($product)
     {
         $product = Product::find($product);
-        $balances = Balance::where('product_id', $product->id)
-            ->get(['user_id', 'count']);
-        $buying_prices = Transaction::where('product_id', $product->id)
-            ->where('transactiontype_id', 1)
-            ->groupBy('user_id')
-            ->get(['user_id', 'price']);
-        $selling_prices = Transaction::where('product_id', $product->id)
-            ->where('transactiontype_id', 2)
-            ->groupBy('user_id')
-            ->get(['user_id', 'price']);     
-        return response()->json([
-            'action' => 'product_users',
-            'status' => 'OK',
-            'entity' => $product->uuid,
-            'type' => 'product',
-            'balances' => $balances,
-            'buying_prices' => $buying_prices,
-            'selling_prices' => $selling_prices,
-            'user' => Config::get('apiuser')
-        ], 200);
+        if (empty(!$product)) {
+            $balances = Balance::where('product_id', $product->id)->get(['user_id', 'count', 'buying_price', 'selling_price']);
+            return response()->json([
+                'action' => 'product_users',
+                'status' => 'OK',
+                'entity' => $product->uuid,
+                'type' => 'product',
+                'balances' => $balances,
+                'user' => Config::get('apiuser')
+            ], 200);
+        }
+        else {
+            return response()->json([
+                'action' => 'product_users',
+                'status' => 'OK',
+                'entity' => $product,
+                'type' => 'product',
+                'error' => 'The product is has not been bought by anyone yet!',
+                'user' => Config::get('apiuser')
+            ], 500);
+        }
     }
 
     /**
@@ -444,11 +445,66 @@ class UserController extends Controller
                     $sms->text = strtolower($message);
                     $sms->save();
                     Storage::append('sms.txt', date('Y-m-d H:i:s').' From: '.$from.' '.'Message: '.str_replace('+', ' ', $message));
+
+
+                    $text_array = explode(' ', $sms->text);
+                        if (str_word_count($sms->text) == 2) {
+                            $ward = $text_array[1];
+                            $ward = Ward::where('name', $ward)->first();
+                            $subcategory = $text_array[0];
+                            $subcategory = Subcategory::where('name', $subcategory)->first();
+                        }
+                        else {
+                            return response()->json([
+                                'error' => 'Meseji ina makosa, meseji inatakiwa kuwa na maneno mawili tu, BIDHAA na KATA. Kwa mfano: MAHINDI GUNGU'
+                            ], 500);
+                        }
+
+                    $sellers = DB::select(DB::raw("
+                        SELECT
+                            users.id AS User,
+                            locations.name AS Location,
+                            wards.name AS Ward,
+                            products.name AS Product,
+                            balances.selling_price AS Selling_price,
+                            users.phone AS Phone
+                        FROM balances
+                            INNER JOIN location_user ON balances.user_id=location_user.user_id
+                            INNER JOIN locations ON location_user.location_id=locations.id
+                            INNER JOIN products ON balances.product_id=products.id
+                            INNER JOIN product_subcategory ON products.id=product_subcategory.product_id
+                            INNER JOIN subcategories ON product_subcategory.subcategory_id=subcategories.id
+                            INNER JOIN user_ward ON user_ward.user_id=balances.user_id
+                            INNER JOIN wards ON user_ward.ward_id=wards.id
+                            INNER JOIN districts on wards.district_id=districts.id
+                            INNER JOIN users ON balances.user_id = users.id
+                        WHERE districts.id=".$ward->district['id']." 
+                        AND subcategories.id=". $subcategory->id
+                    ));
+                    $sellers = json_decode(json_encode($sellers), true);
+                    $result = array();
+                    foreach($sellers as $key=> $val)
+                    {
+                    $result[] = $val['Location'].'('.$val['Ward'].'): '.$val['Selling_price'];
+                    }
+
+                    $client = new Client(); //GuzzleHttp\Client
+                    $user = 'rucodia';
+                    $key = '6880249a760f3f3dfa92d36aa7c9a30b04991aa14a5222d94b01549f11f33f68';
+                    $message = $subcategory->name."- ". implode(', ', $result);
+                    $response = $client->request(
+                        'GET', 'https://api.africastalking.com/restless/send?username=rucodia&Apikey='.$key.'&to='.$from.'&message='.$message
+                    );
+
             
                     return response()->json([
                         'from' => $from,
                         'entity' => 'SMS',
                         'message' => $message,
+                        'ward' => $ward->id,
+                        'district' => $ward->district['name'],
+                        'subcategory' => $subcategory->name,
+                        'sellers' => $sellers,
                         'saved' => TRUE
                         ], 200);
                 }

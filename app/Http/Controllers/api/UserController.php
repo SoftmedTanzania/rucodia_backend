@@ -434,26 +434,35 @@ class UserController extends Controller
     {
         $from = $request->from;
         $message = str_replace('+', ' ', $request->message);
-
-        if (empty(!$from)) {
-            if(empty(!$message)){
-                $sms = new Sms;
-                $sms->uuid = (string) Str::uuid();
-                $sms->urn = $from;
-                $sms->text = strtolower($message);
-                $sms->save();        
-                Storage::append('sms.txt', date('YmdHis').' From: '.$from.' '.'Message: '.str_replace('+', ' ', $message));
-        
-                return response()->json([
-                    'from' => $from,
-                    'entity' => 'SMS',
-                    'message' => $message,
-                    'saved' => TRUE
-                    ], 200);
+        $secret = $request->secret;
+        if ($secret == 'wowefwoij45394n') {
+            if (empty(!$from)) {
+                if(empty(!$message)){
+                    $sms = new Sms;
+                    $sms->uuid = (string) Str::uuid();
+                    $sms->urn = $from;
+                    $sms->text = strtolower($message);
+                    $sms->save();
+                    Storage::append('sms.txt', date('Y-m-d H:i:s').' From: '.$from.' '.'Message: '.str_replace('+', ' ', $message));
+            
+                    return response()->json([
+                        'from' => $from,
+                        'entity' => 'SMS',
+                        'message' => $message,
+                        'saved' => TRUE
+                        ], 200);
+                }
+                else {
+                    return response()->json([
+                        'error' => 'EMPTY sms received',
+                        'entity' => 'SMS',
+                        'saved' => FALSE
+                        ], 500);
+                }
             }
             else {
                 return response()->json([
-                    'error' => 'EMPTY sms received',
+                    'error' => 'EMPTY from field',
                     'entity' => 'SMS',
                     'saved' => FALSE
                     ], 500);
@@ -461,12 +470,11 @@ class UserController extends Controller
         }
         else {
             return response()->json([
-                'error' => 'EMPTY from field',
+                'error' => 'You are not authorized from sending messages to this server',
                 'entity' => 'SMS',
                 'saved' => FALSE
                 ], 500);
         }
-
     }
     
 }

@@ -28,7 +28,7 @@ INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Ka
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Katoma", 2, NOW());
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Katoro", 2, NOW());
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Kemondo", 2, NOW());
-INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Kibirizi", 2, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Kibilizi", 2, NOW());
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Kikomero", 2, NOW());
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Kishanje", 2, NOW());
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Kishogo", 2, NOW());

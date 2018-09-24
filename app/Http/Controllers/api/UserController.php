@@ -478,7 +478,8 @@ class UserController extends Controller
                             INNER JOIN wards ON user_ward.ward_id=wards.id
                             INNER JOIN districts on wards.district_id=districts.id
                             INNER JOIN users ON balances.user_id = users.id
-                        WHERE districts.id=".$ward->district['id']." 
+                        WHERE districts.id=".$ward->district['id']."
+                        -- WHERE wards.id=".$ward->id." 
                         AND subcategories.id=". $subcategory->id
                     ));
                     $sellers = json_decode(json_encode($sellers), true);

@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
+use App\User;
 
 class TransactionController extends Controller
 {
@@ -71,17 +72,6 @@ class TransactionController extends Controller
             }
         }
         elseif ($request['transactiontype_id'] == 2) {
-            $transaction = new Transaction;
-            $transaction->uuid = (string) Str::uuid();
-            $transaction->amount = $request['amount'];
-            $transaction->price = $request['selling_price'];
-            $transaction->transactiontype_id = $request['transactiontype_id'];
-            $transaction->user_id = $request['user_id'];
-            $transaction->product_id = $request['product_id'];
-            $transaction->status_id = $request['status_id'];
-            $transaction->created_by = Config::get('apiuser');
-            $transaction->save();
-            
             if(empty($balance)){
                 return response()->json(['error' => 'This user does not have this product'], 400);
             }
@@ -89,6 +79,17 @@ class TransactionController extends Controller
                 return response()->json(['error' => 'This user has has less than the requested amount.', 'balance' => $balance->count], 400);
             }
             else{
+                $transaction = new Transaction;
+                $transaction->uuid = (string) Str::uuid();
+                $transaction->amount = $request['amount'];
+                $transaction->price = $request['selling_price'];
+                $transaction->transactiontype_id = $request['transactiontype_id'];
+                $transaction->user_id = $request['user_id'];
+                $transaction->product_id = $request['product_id'];
+                $transaction->status_id = $request['status_id'];
+                $transaction->created_by = Config::get('apiuser');
+                $transaction->save();
+
                 $balance->count = $balance->count - $request['amount'];
                 $balance->selling_price = $request['selling_price'];
                 $balance->save();
@@ -108,7 +109,7 @@ class TransactionController extends Controller
     }
 
     /**
-     * Show Transaction
+     * Show a single Transaction by using its ID
      * 
      * Display the specified resource.
      *

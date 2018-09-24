@@ -17,6 +17,7 @@ toc_footers:
 
 Welcome to the generated API reference.
 [Get Postman Collection](http://localhost/rucodia/docs/collection.json)
+
 <!-- END_INFO -->
 
 #general
@@ -54,380 +55,480 @@ $.ajax(settings).done(function (response) {
 [
     {
         "id": 1,
-        "uuid": "18e2162b-e2da-4d32-b32c-3b998213e29a",
-        "firstname": "System",
-        "middlename": "Initial",
-        "surname": "Admin",
-        "email": "b4oJKDb8Ll@gmail.com",
-        "username": "admin",
+        "uuid": "27b5b8aa-4f13-4310-8d84-fe33476777dd",
+        "firstname": "Default",
+        "middlename": "System",
+        "surname": "Administrator",
+        "phone": "0755556100",
+        "username": "administrator",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-16 21:49:08",
-        "updated_at": "2018-05-16 21:49:08",
+        "created_at": "2018-09-24 13:15:46",
+        "updated_at": "2018-09-24 13:15:46",
         "deleted_at": null,
         "levels": [
             {
                 "id": 1,
-                "uuid": "c669ac18-5dbe-4287-8361-8d703112ae65",
-                "name": "Admin",
+                "uuid": "03b8424f-2c8b-49b9-b94b-afefea58c24a",
+                "name": "Administrator",
                 "description": "Seeded system administrator level",
+                "buys_from": "0, 0, 0, 0, 0",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:07",
+                "created_at": "2018-09-24 13:15:45",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 1,
                     "level_id": 1,
-                    "created_at": "2018-05-16 21:49:08",
-                    "updated_at": "2018-05-16 21:49:08",
-                    "uuid": "5705776a-2e34-494d-9c55-f2d4f0531c3f"
+                    "created_at": "2018-09-24 13:15:46",
+                    "updated_at": "2018-09-24 13:15:46",
+                    "uuid": "16c39ee9-2564-4ca2-b59d-637f212fde6f"
                 }
             }
         ],
         "locations": [
             {
-                "id": 3,
-                "uuid": "f72b30ec-83af-4f99-aa89-d1a7026fde72",
-                "name": "Kasuku Store",
-                "latitude": "-3.583117",
-                "longitude": "30.724251",
+                "id": 1,
+                "uuid": "4c26e7fd-2689-4446-9cd4-cbe4cea0368c",
+                "name": "Sebastian Agrovets",
+                "latitude": "-4.859657",
+                "longitude": "29.625055",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:08",
+                "created_at": "2018-09-24 13:15:45",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 1,
-                    "location_id": 3,
-                    "created_at": "2018-05-16 21:49:08",
-                    "updated_at": "2018-05-16 21:49:08",
-                    "uuid": "0ab7ad98-3b21-40e9-b1dd-d9c0266d9e4f"
+                    "location_id": 1,
+                    "created_at": "2018-09-24 13:15:46",
+                    "updated_at": "2018-09-24 13:15:46",
+                    "uuid": "a1e8dc36-bbef-4942-9f67-6a6da4c7bc6a"
                 }
             }
         ],
         "wards": [
             {
-                "id": 3,
-                "uuid": "f9380ae1-5952-11e8-8615-d4258bf8ac27",
-                "name": "Kabindi",
-                "district_id": 1,
+                "id": 262,
+                "uuid": "ee0d6453-bfe2-11e8-8e80-d4258bf8ac27",
+                "name": "Kibirizi",
+                "district_id": 14,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-17 00:49:13",
+                "created_at": "2018-09-24 13:16:03",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 1,
-                    "ward_id": 3
+                    "ward_id": 262,
+                    "created_at": "2018-09-24 13:16:04",
+                    "updated_at": null,
+                    "uuid": "eee6bd0b-bfe2-11e8-8e80-d4258bf8ac27"
                 }
             }
         ]
     },
     {
         "id": 2,
-        "uuid": "77d82057-b571-48bb-9497-6e8996a45469",
-        "firstname": "Kizito",
-        "middlename": "Stanslaus",
-        "surname": "Mrema",
-        "email": "kizomanizo@gmail.com",
-        "username": "kizito",
+        "uuid": "ec791ca3-7a56-4c38-bbff-77cb076946c5",
+        "firstname": "Original",
+        "middlename": "Input",
+        "surname": "Manufacturer",
+        "phone": "0755893982",
+        "username": "manufacturer",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-16 21:49:09",
-        "updated_at": "2018-05-16 21:49:09",
+        "created_at": "2018-09-24 13:15:46",
+        "updated_at": "2018-09-24 13:15:46",
         "deleted_at": null,
         "levels": [
             {
-                "id": 1,
-                "uuid": "c669ac18-5dbe-4287-8361-8d703112ae65",
-                "name": "Admin",
-                "description": "Seeded system administrator level",
+                "id": 2,
+                "uuid": "514cbf50-7edb-4c9c-80e6-936348838784",
+                "name": "Manufacturer",
+                "description": "Producing company.",
+                "buys_from": "0, 0, 0, 0, 0",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:07",
+                "created_at": "2018-09-24 13:15:45",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 2,
-                    "level_id": 1,
-                    "created_at": "2018-05-16 21:49:09",
-                    "updated_at": "2018-05-16 21:49:09",
-                    "uuid": "701df28b-74a2-4ea9-ad2f-710413d84ba4"
+                    "level_id": 2,
+                    "created_at": "2018-09-24 13:15:46",
+                    "updated_at": "2018-09-24 13:15:46",
+                    "uuid": "12363e5c-7421-42fa-b9aa-a38fded8933c"
                 }
             }
         ],
         "locations": [
             {
-                "id": 3,
-                "uuid": "f72b30ec-83af-4f99-aa89-d1a7026fde72",
-                "name": "Kasuku Store",
-                "latitude": "-3.583117",
-                "longitude": "30.724251",
+                "id": 2,
+                "uuid": "3825d9ae-2315-4a33-986d-f5a5fe0e6a0c",
+                "name": "Suba Agrovets",
+                "latitude": "-4.859547",
+                "longitude": "29.625105",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:08",
+                "created_at": "2018-09-24 13:15:46",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 2,
-                    "location_id": 3,
-                    "created_at": "2018-05-16 21:49:09",
-                    "updated_at": "2018-05-16 21:49:09",
-                    "uuid": "feebfe9f-54ab-4a52-91ac-5ef4bb586e1a"
+                    "location_id": 2,
+                    "created_at": "2018-09-24 13:15:46",
+                    "updated_at": "2018-09-24 13:15:46",
+                    "uuid": "a590071a-7a2f-4951-91a5-6ac9baed7d29"
                 }
             }
         ],
         "wards": [
             {
-                "id": 3,
-                "uuid": "f9380ae1-5952-11e8-8615-d4258bf8ac27",
-                "name": "Kabindi",
-                "district_id": 1,
+                "id": 262,
+                "uuid": "ee0d6453-bfe2-11e8-8e80-d4258bf8ac27",
+                "name": "Kibirizi",
+                "district_id": 14,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-17 00:49:13",
+                "created_at": "2018-09-24 13:16:03",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 2,
-                    "ward_id": 3
+                    "ward_id": 262,
+                    "created_at": "2018-09-24 13:16:04",
+                    "updated_at": null,
+                    "uuid": "eef0a72f-bfe2-11e8-8e80-d4258bf8ac27"
                 }
             }
         ]
     },
     {
         "id": 3,
-        "uuid": "79f1c7c1-d997-4976-a6cc-1786c66075fb",
-        "firstname": "Supplier",
-        "middlename": "Initial",
-        "surname": "User",
-        "email": "M5xPDTkz7H@gmail.com",
-        "username": "supplier",
+        "uuid": "ca993ea0-cc22-4ae3-aa40-e6b470bd067b",
+        "firstname": "Sebastian",
+        "middlename": "Petro",
+        "surname": "Hamba",
+        "phone": "0754123456",
+        "username": "hubagrodealer",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-16 21:49:09",
-        "updated_at": "2018-05-16 21:49:09",
+        "created_at": "2018-09-24 13:15:47",
+        "updated_at": "2018-09-24 13:15:47",
         "deleted_at": null,
         "levels": [
             {
-                "id": 2,
-                "uuid": "841a7dcc-31ae-4a0d-88c0-e42c3abcec39",
-                "name": "Supplier",
-                "description": "Seeded supplier level",
+                "id": 3,
+                "uuid": "bc011590-87bf-4d9f-ac05-2cef6de29f42",
+                "name": "Hub-Agrodealer",
+                "description": "An agrodealer with more than 10 agrodealer clients.",
+                "buys_from": "0, 2, 3, 0, 0",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:07",
+                "created_at": "2018-09-24 13:15:45",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 3,
-                    "level_id": 2,
-                    "created_at": "2018-05-16 21:49:09",
-                    "updated_at": "2018-05-16 21:49:09",
-                    "uuid": "723a746f-68c3-4924-93c5-2c3da7c32423"
+                    "level_id": 3,
+                    "created_at": "2018-09-24 13:15:47",
+                    "updated_at": "2018-09-24 13:15:47",
+                    "uuid": "668aecfc-8a0d-4bf1-9894-8a3a6a50e624"
                 }
             }
         ],
         "locations": [
             {
-                "id": 1,
-                "uuid": "442ede18-7338-4039-98da-7820480e5864",
-                "name": "Kasulu Agrovets",
-                "latitude": "-4.573916",
-                "longitude": "30.096946",
+                "id": 3,
+                "uuid": "b8c93a2b-c2cd-41be-a6cc-3482fb38e7f4",
+                "name": "Kigondo Traders",
+                "latitude": "-4.592884",
+                "longitude": "30.180055",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:07",
+                "created_at": "2018-09-24 13:15:46",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 3,
-                    "location_id": 1,
-                    "created_at": "2018-05-16 21:49:09",
-                    "updated_at": "2018-05-16 21:49:09",
-                    "uuid": "dff4f747-0b9e-4c37-aabf-ee835d5e796d"
+                    "location_id": 3,
+                    "created_at": "2018-09-24 13:15:47",
+                    "updated_at": "2018-09-24 13:15:47",
+                    "uuid": "8fac59c4-1e53-466c-8138-917054891c06"
                 }
             }
         ],
         "wards": [
             {
-                "id": 3,
-                "uuid": "f9380ae1-5952-11e8-8615-d4258bf8ac27",
-                "name": "Kabindi",
-                "district_id": 1,
+                "id": 207,
+                "uuid": "ecb201bf-bfe2-11e8-8e80-d4258bf8ac27",
+                "name": "Kigondo",
+                "district_id": 11,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-17 00:49:13",
+                "created_at": "2018-09-24 13:16:00",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 3,
-                    "ward_id": 3
+                    "ward_id": 207,
+                    "created_at": "2018-09-24 13:16:04",
+                    "updated_at": null,
+                    "uuid": "eef78ed1-bfe2-11e8-8e80-d4258bf8ac27"
                 }
             }
         ]
     },
     {
         "id": 4,
-        "uuid": "7d85581a-7ade-4467-8713-043703a058d1",
-        "firstname": "Dealer",
-        "middlename": "Initial",
-        "surname": "Dealer",
-        "email": "hbkn756wFR@gmail.com",
-        "username": "dealer",
+        "uuid": "a96586e7-4d18-4e15-b492-ebc5d034226b",
+        "firstname": "Ali",
+        "middlename": "Agrodealer",
+        "surname": "Zungu",
+        "phone": "0755836195",
+        "username": "agrodealer",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-16 21:49:09",
-        "updated_at": "2018-05-16 21:49:09",
+        "created_at": "2018-09-24 13:15:47",
+        "updated_at": "2018-09-24 13:15:47",
         "deleted_at": null,
         "levels": [
             {
-                "id": 3,
-                "uuid": "152c9539-4f2f-417a-a356-7ea8372409ff",
+                "id": 4,
+                "uuid": "b5a0e910-218d-41fe-b05f-38d5341573fa",
                 "name": "Agrodealer",
-                "description": "Seeded agrodealer level",
+                "description": "An agrodealer who buys from hub-agrodealer and other agrodealers. Sells to resellers.",
+                "buys_from": "0, 2, 3, 4, 0",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:07",
+                "created_at": "2018-09-24 13:15:45",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 4,
-                    "level_id": 3,
-                    "created_at": "2018-05-16 21:49:09",
-                    "updated_at": "2018-05-16 21:49:09",
-                    "uuid": "2cd01361-7ed8-455c-8378-49e71ad88ca6"
+                    "level_id": 4,
+                    "created_at": "2018-09-24 13:15:47",
+                    "updated_at": "2018-09-24 13:15:47",
+                    "uuid": "05f11bc7-f3f0-4710-a154-b8e67950da51"
                 }
             }
         ],
         "locations": [
             {
-                "id": 2,
-                "uuid": "7793ce8f-1b77-4892-85d4-322bd4664835",
-                "name": "Nyuki Traders",
-                "latitude": "-4.518",
-                "longitude": "30.045",
+                "id": 4,
+                "uuid": "4b0aa415-115f-4452-a019-ce3a81e66a57",
+                "name": "Bangwe Agro",
+                "latitude": "-4.887088",
+                "longitude": "29.620836",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:08",
+                "created_at": "2018-09-24 13:15:46",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 4,
-                    "location_id": 2,
-                    "created_at": "2018-05-16 21:49:09",
-                    "updated_at": "2018-05-16 21:49:09",
-                    "uuid": "6239d7ea-0a21-401d-a9de-696fbc30d094"
+                    "location_id": 4,
+                    "created_at": "2018-09-24 13:15:47",
+                    "updated_at": "2018-09-24 13:15:47",
+                    "uuid": "7900727a-960f-4481-9fdf-052ada5699ee"
                 }
             }
         ],
         "wards": [
             {
-                "id": 1,
-                "uuid": "f91c8db5-5952-11e8-8615-d4258bf8ac27",
-                "name": "Biharamulo Mjini",
-                "district_id": 1,
+                "id": 253,
+                "uuid": "edd3c165-bfe2-11e8-8e80-d4258bf8ac27",
+                "name": "Bangwe",
+                "district_id": 14,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-17 00:49:13",
+                "created_at": "2018-09-24 13:16:02",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 4,
-                    "ward_id": 1
+                    "ward_id": 253,
+                    "created_at": "2018-09-24 13:16:04",
+                    "updated_at": null,
+                    "uuid": "ef0860af-bfe2-11e8-8e80-d4258bf8ac27"
                 }
             }
         ]
     },
     {
         "id": 5,
-        "uuid": "b00c4b10-82f8-4ef6-95e6-780cfd09163f",
-        "firstname": "Farmer",
-        "middlename": "Initial",
-        "surname": "Farmer",
-        "email": "UNtwhfptrC@gmail.com",
-        "username": "farmer",
+        "uuid": "309358bc-681f-4f06-82ad-5efba6877ddb",
+        "firstname": "Christine",
+        "middlename": "Reseller",
+        "surname": "Gamba",
+        "phone": "0755768808",
+        "username": "reseller",
         "created_by": 0,
         "updated_by": null,
         "deleted_by": null,
-        "created_at": "2018-05-16 21:49:10",
-        "updated_at": "2018-05-16 21:49:10",
+        "created_at": "2018-09-24 13:15:47",
+        "updated_at": "2018-09-24 13:15:47",
         "deleted_at": null,
         "levels": [
             {
-                "id": 4,
-                "uuid": "59bb6df0-4ef2-4cfc-9747-370d6d03f02b",
-                "name": "Farmer",
-                "description": "Seeded farmer level",
+                "id": 5,
+                "uuid": "58e6f11b-f847-4c9a-b96d-d95b2c3d7f53",
+                "name": "Reseller",
+                "description": "A reseller buys from agrodealers in the hub and outta hub.",
+                "buys_from": "0, 0, 3, 4, 5",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:07",
+                "created_at": "2018-09-24 13:15:45",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 5,
-                    "level_id": 4,
-                    "created_at": "2018-05-16 21:49:10",
-                    "updated_at": "2018-05-16 21:49:10",
-                    "uuid": "7cf6139e-9a16-4903-9e3c-5d4b28fb7e16"
+                    "level_id": 5,
+                    "created_at": "2018-09-24 13:15:47",
+                    "updated_at": "2018-09-24 13:15:47",
+                    "uuid": "ae30d327-6a51-4bb3-808d-0418d511e63d"
                 }
             }
         ],
         "locations": [
             {
-                "id": 1,
-                "uuid": "442ede18-7338-4039-98da-7820480e5864",
-                "name": "Kasulu Agrovets",
-                "latitude": "-4.573916",
-                "longitude": "30.096946",
+                "id": 5,
+                "uuid": "729ec9f5-e58f-4ca2-891e-97d97d13d515",
+                "name": "Wagungu Shop",
+                "latitude": "-4.858592",
+                "longitude": "29.639505",
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-16 21:49:07",
+                "created_at": "2018-09-24 13:15:46",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 5,
-                    "location_id": 1,
-                    "created_at": "2018-05-16 21:49:10",
-                    "updated_at": "2018-05-16 21:49:10",
-                    "uuid": "8c3ad5dd-210e-4c04-bfe0-f16ea22c2282"
+                    "location_id": 5,
+                    "created_at": "2018-09-24 13:15:47",
+                    "updated_at": "2018-09-24 13:15:47",
+                    "uuid": "91d18a9d-7bcd-413b-9f88-38f2fa456fdb"
                 }
             }
         ],
         "wards": [
             {
-                "id": 1,
-                "uuid": "f91c8db5-5952-11e8-8615-d4258bf8ac27",
-                "name": "Biharamulo Mjini",
-                "district_id": 1,
+                "id": 257,
+                "uuid": "edf2717c-bfe2-11e8-8e80-d4258bf8ac27",
+                "name": "Gungu",
+                "district_id": 14,
                 "created_by": 0,
                 "updated_by": null,
                 "deleted_by": null,
-                "created_at": "2018-05-17 00:49:13",
+                "created_at": "2018-09-24 13:16:03",
                 "updated_at": null,
                 "deleted_at": null,
                 "pivot": {
                     "user_id": 5,
-                    "ward_id": 1
+                    "ward_id": 257,
+                    "created_at": "2018-09-24 13:16:04",
+                    "updated_at": null,
+                    "uuid": "ef1127b5-bfe2-11e8-8e80-d4258bf8ac27"
+                }
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "uuid": "29b5d14c-344a-4fcc-8484-d286eda7df39",
+        "firstname": "Dauda",
+        "middlename": "Namamba",
+        "surname": "Waziri",
+        "phone": "0755278326",
+        "username": "reseller2",
+        "created_by": 0,
+        "updated_by": null,
+        "deleted_by": null,
+        "created_at": "2018-09-24 13:15:47",
+        "updated_at": "2018-09-24 13:15:47",
+        "deleted_at": null,
+        "levels": [
+            {
+                "id": 5,
+                "uuid": "58e6f11b-f847-4c9a-b96d-d95b2c3d7f53",
+                "name": "Reseller",
+                "description": "A reseller buys from agrodealers in the hub and outta hub.",
+                "buys_from": "0, 0, 3, 4, 5",
+                "created_by": 0,
+                "updated_by": null,
+                "deleted_by": null,
+                "created_at": "2018-09-24 13:15:45",
+                "updated_at": null,
+                "deleted_at": null,
+                "pivot": {
+                    "user_id": 6,
+                    "level_id": 5,
+                    "created_at": "2018-09-24 13:15:47",
+                    "updated_at": "2018-09-24 13:15:47",
+                    "uuid": "896aaad0-dcac-437a-a843-ffa43c00a43b"
+                }
+            }
+        ],
+        "locations": [
+            {
+                "id": 6,
+                "uuid": "cce25aed-6388-407b-972e-96281bfeab0e",
+                "name": "Gungu Annex",
+                "latitude": "-4.861908",
+                "longitude": "29.646421",
+                "created_by": 0,
+                "updated_by": null,
+                "deleted_by": null,
+                "created_at": "2018-09-24 13:15:46",
+                "updated_at": null,
+                "deleted_at": null,
+                "pivot": {
+                    "user_id": 6,
+                    "location_id": 6,
+                    "created_at": "2018-09-24 13:15:48",
+                    "updated_at": "2018-09-24 13:15:48",
+                    "uuid": "61cc8627-02f9-4c44-9630-1a2f192be916"
+                }
+            }
+        ],
+        "wards": [
+            {
+                "id": 257,
+                "uuid": "edf2717c-bfe2-11e8-8e80-d4258bf8ac27",
+                "name": "Gungu",
+                "district_id": 14,
+                "created_by": 0,
+                "updated_by": null,
+                "deleted_by": null,
+                "created_at": "2018-09-24 13:16:03",
+                "updated_at": null,
+                "deleted_at": null,
+                "pivot": {
+                    "user_id": 6,
+                    "ward_id": 257,
+                    "created_at": "2018-09-24 13:16:04",
+                    "updated_at": null,
+                    "uuid": "ef1d818a-bfe2-11e8-8e80-d4258bf8ac27"
                 }
             }
         ]
@@ -545,7 +646,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -566,7 +667,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -587,7 +688,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -601,7 +702,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -657,7 +758,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -671,14 +772,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -692,14 +793,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -720,7 +821,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -741,7 +842,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -755,7 +856,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -849,7 +950,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -1054,7 +1155,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -1075,7 +1176,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -1096,7 +1197,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -1110,7 +1211,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -1166,7 +1267,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -1180,14 +1281,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -1201,14 +1302,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -1229,7 +1330,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -1250,7 +1351,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -1264,7 +1365,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -1358,7 +1459,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -1526,7 +1627,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -1547,7 +1648,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -1568,7 +1669,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -1582,7 +1683,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -1638,7 +1739,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -1652,14 +1753,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -1673,14 +1774,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -1701,7 +1802,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -1722,7 +1823,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -1736,7 +1837,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -1830,7 +1931,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -2034,7 +2135,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -2055,7 +2156,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -2076,7 +2177,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -2090,7 +2191,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -2146,7 +2247,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -2160,14 +2261,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -2181,14 +2282,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -2209,7 +2310,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -2230,7 +2331,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -2244,7 +2345,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -2338,7 +2439,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -2505,7 +2606,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -2526,7 +2627,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -2547,7 +2648,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -2561,7 +2662,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -2617,7 +2718,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -2631,14 +2732,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -2652,14 +2753,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -2680,7 +2781,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -2701,7 +2802,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -2715,7 +2816,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -2809,7 +2910,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -3014,7 +3115,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -3035,7 +3136,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -3056,7 +3157,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -3070,7 +3171,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -3126,7 +3227,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -3140,14 +3241,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -3161,14 +3262,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -3189,7 +3290,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -3210,7 +3311,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -3224,7 +3325,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -3318,7 +3419,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -3486,7 +3587,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -3507,7 +3608,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -3528,7 +3629,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -3542,7 +3643,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -3598,7 +3699,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -3612,14 +3713,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -3633,14 +3734,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -3661,7 +3762,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -3682,7 +3783,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -3696,7 +3797,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -3790,7 +3891,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -3995,7 +4096,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -4016,7 +4117,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -4037,7 +4138,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -4051,7 +4152,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -4107,7 +4208,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -4121,14 +4222,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -4142,14 +4243,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -4170,7 +4271,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -4191,7 +4292,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -4205,7 +4306,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -4299,7 +4400,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -4467,7 +4568,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -4488,7 +4589,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -4509,7 +4610,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -4523,7 +4624,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -4579,7 +4680,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -4593,14 +4694,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -4614,14 +4715,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -4642,7 +4743,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -4663,7 +4764,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -4677,7 +4778,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -4771,7 +4872,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -4976,7 +5077,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -4997,7 +5098,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -5018,7 +5119,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -5032,7 +5133,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -5088,7 +5189,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -5102,14 +5203,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -5123,14 +5224,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -5151,7 +5252,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -5172,7 +5273,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -5186,7 +5287,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -5280,7 +5381,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -5448,7 +5549,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -5469,7 +5570,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -5490,7 +5591,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -5504,7 +5605,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -5560,7 +5661,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -5574,14 +5675,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -5595,14 +5696,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -5623,7 +5724,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -5644,7 +5745,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -5658,7 +5759,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -5752,7 +5853,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -5957,7 +6058,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -5978,7 +6079,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -5999,7 +6100,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -6013,7 +6114,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -6069,7 +6170,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -6083,14 +6184,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -6104,14 +6205,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -6132,7 +6233,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -6153,7 +6254,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -6167,7 +6268,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -6261,7 +6362,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -6429,7 +6530,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -6450,7 +6551,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -6471,7 +6572,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -6485,7 +6586,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -6541,7 +6642,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -6555,14 +6656,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -6576,14 +6677,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -6604,7 +6705,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -6625,7 +6726,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -6639,7 +6740,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -6733,7 +6834,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -6938,7 +7039,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -6959,7 +7060,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -6980,7 +7081,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -6994,7 +7095,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -7050,7 +7151,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -7064,14 +7165,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -7085,14 +7186,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -7113,7 +7214,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -7134,7 +7235,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -7148,7 +7249,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -7242,7 +7343,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -7410,7 +7511,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -7431,7 +7532,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -7452,7 +7553,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -7466,7 +7567,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -7522,7 +7623,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -7536,14 +7637,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -7557,14 +7658,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -7585,7 +7686,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -7606,7 +7707,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -7620,7 +7721,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -7714,7 +7815,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -7919,7 +8020,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -7940,7 +8041,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -7961,7 +8062,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -7975,7 +8076,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -8031,7 +8132,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -8045,14 +8146,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -8066,14 +8167,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -8094,7 +8195,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -8115,7 +8216,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -8129,7 +8230,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -8223,7 +8324,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -8391,7 +8492,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -8412,7 +8513,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -8433,7 +8534,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -8447,7 +8548,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -8503,7 +8604,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -8517,14 +8618,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -8538,14 +8639,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -8566,7 +8667,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -8587,7 +8688,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -8601,7 +8702,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -8695,7 +8796,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -8900,7 +9001,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -8921,7 +9022,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -8942,7 +9043,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -8956,7 +9057,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -9012,7 +9113,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -9026,14 +9127,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -9047,14 +9148,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -9075,7 +9176,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -9096,7 +9197,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -9110,7 +9211,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -9204,7 +9305,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -9372,7 +9473,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -9393,7 +9494,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -9414,7 +9515,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -9428,7 +9529,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -9484,7 +9585,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -9498,14 +9599,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -9519,14 +9620,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -9547,7 +9648,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -9568,7 +9669,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -9582,7 +9683,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -9676,7 +9777,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -9881,7 +9982,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -9902,7 +10003,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -9923,7 +10024,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -9937,7 +10038,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -9993,7 +10094,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -10007,14 +10108,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -10028,14 +10129,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -10056,7 +10157,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -10077,7 +10178,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -10091,7 +10192,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -10185,7 +10286,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -10353,7 +10454,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -10374,7 +10475,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -10395,7 +10496,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -10409,7 +10510,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -10465,7 +10566,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -10479,14 +10580,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -10500,14 +10601,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -10528,7 +10629,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -10549,7 +10650,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -10563,7 +10664,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -10657,7 +10758,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -10862,7 +10963,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -10883,7 +10984,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -10904,7 +11005,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -10918,7 +11019,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -10974,7 +11075,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -10988,14 +11089,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -11009,14 +11110,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -11037,7 +11138,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -11058,7 +11159,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -11072,7 +11173,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -11166,7 +11267,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -11235,7 +11336,8 @@ $.ajax(settings).done(function (response) {
 <!-- START_739dd7a62441def2c98078f39bb39e8f -->
 ## Add Transaction
 
-Store a newly created resource in storage.
+Store a newly created resource in transaction storage.
+Update the count of the specific product for a specific user in Balances
 
 > Example request:
 
@@ -11268,7 +11370,7 @@ $.ajax(settings).done(function (response) {
 <!-- END_739dd7a62441def2c98078f39bb39e8f -->
 
 <!-- START_4e255dfcafd0bfd8378692fb241663d4 -->
-## Show Transaction
+## Show a single Transaction by using its ID
 
 Display the specified resource.
 
@@ -11334,7 +11436,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -11355,7 +11457,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -11376,7 +11478,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -11390,7 +11492,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -11446,7 +11548,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -11460,14 +11562,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -11481,14 +11583,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -11509,7 +11611,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -11530,7 +11632,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -11544,7 +11646,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -11638,7 +11740,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -11843,7 +11945,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "App\\Http\\Middleware\\AuthenticateOnceWithBasicAuth",
             "type": "->"
@@ -11864,7 +11966,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
@@ -11885,7 +11987,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -11899,7 +12001,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -11955,7 +12057,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -11969,14 +12071,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -11990,14 +12092,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -12018,7 +12120,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -12039,7 +12141,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -12053,7 +12155,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -12147,7 +12249,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -12290,7 +12392,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -12304,7 +12406,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -12360,7 +12462,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -12374,14 +12476,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -12395,14 +12497,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -12423,7 +12525,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -12444,7 +12546,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -12458,7 +12560,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -12552,7 +12654,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -12730,7 +12832,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -12744,7 +12846,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -12800,7 +12902,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -12814,14 +12916,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -12835,14 +12937,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -12863,7 +12965,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -12884,7 +12986,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -12898,7 +13000,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -12992,7 +13094,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -13104,7 +13206,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -13118,7 +13220,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -13174,7 +13276,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -13188,14 +13290,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -13209,14 +13311,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -13237,7 +13339,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -13258,7 +13360,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -13272,7 +13374,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -13366,7 +13468,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -13477,7 +13579,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -13491,7 +13593,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -13547,7 +13649,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -13561,14 +13663,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -13582,14 +13684,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -13610,7 +13712,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -13631,7 +13733,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -13645,7 +13747,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -13739,7 +13841,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -13849,7 +13951,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
@@ -13863,7 +13965,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -13919,7 +14021,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -13933,14 +14035,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -13954,14 +14056,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -13982,7 +14084,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -14003,7 +14105,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -14017,7 +14119,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -14111,7 +14213,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -14258,7 +14360,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
@@ -14272,14 +14374,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -14293,14 +14395,14 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 30,
+            "line": 31,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
@@ -14321,7 +14423,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
@@ -14342,7 +14444,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 149,
+            "line": 151,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
             "type": "->"
@@ -14356,7 +14458,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 102,
+            "line": 104,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
@@ -14450,7 +14552,7 @@ $.ajax(settings).done(function (response) {
         },
         {
             "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 252,
+            "line": 251,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
@@ -14515,6 +14617,1503 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_fdb4907a6da218135e82b394a7b30abf -->
+
+<!-- START_b36a309b74110fa2ebbfa9adb1849869 -->
+## Show Product Balances
+
+Specific user product details such as Totals, Cash, Balances and Profit.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/rucodia/api/v1/users/{user}/products" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/rucodia/api/v1/users/{user}/products",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Too Many Attempts.",
+    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+    "line": 122,
+    "trace": [
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 52,
+            "function": "buildException",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 661,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 636,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 602,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 591,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 51,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 116,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 98,
+            "function": "callRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 58,
+            "function": "getRouteResponse",
+            "class": "Mpociot\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 261,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 83,
+            "function": "processLaravelRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 564,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 251,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 865,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 241,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 143,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/v1/users/{user}/products`
+
+`HEAD api/v1/users/{user}/products`
+
+
+<!-- END_b36a309b74110fa2ebbfa9adb1849869 -->
+
+<!-- START_fb8abf664186616849f74ef8bccb8865 -->
+## User&#039;s Transactions
+
+JSON List of specific user's transactions.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/rucodia/api/v1/users/{user}/transactions" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/rucodia/api/v1/users/{user}/transactions",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Too Many Attempts.",
+    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+    "line": 122,
+    "trace": [
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 52,
+            "function": "buildException",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 661,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 636,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 602,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 591,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 51,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 116,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 98,
+            "function": "callRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 58,
+            "function": "getRouteResponse",
+            "class": "Mpociot\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 261,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 83,
+            "function": "processLaravelRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 564,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 251,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 865,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 241,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 143,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/v1/users/{user}/transactions`
+
+`HEAD api/v1/users/{user}/transactions`
+
+
+<!-- END_fb8abf664186616849f74ef8bccb8865 -->
+
+<!-- START_f521d9b27f52ddaf7b824da0fe75b1bc -->
+## Receive SMS
+
+Store a newly created user resource in storage.
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost/rucodia/api/v1/sms" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/rucodia/api/v1/sms",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/sms`
+
+
+<!-- END_f521d9b27f52ddaf7b824da0fe75b1bc -->
+
+<!-- START_c0d5f2593ca9c245cece59e3c4d2b239 -->
+## Show balances of a specific product that each user holds
+The balances only show the users that the logged in user can buy from.
+
+Specific product balance details for each user.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/rucodia/api/v1/products/{product}/users" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/rucodia/api/v1/products/{product}/users",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Too Many Attempts.",
+    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+    "line": 122,
+    "trace": [
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 52,
+            "function": "buildException",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 661,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 636,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 602,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 591,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 51,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 116,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 98,
+            "function": "callRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 58,
+            "function": "getRouteResponse",
+            "class": "Mpociot\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 261,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 83,
+            "function": "processLaravelRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 564,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 251,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 865,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 241,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 143,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/v1/products/{product}/users`
+
+`HEAD api/v1/products/{product}/users`
+
+
+<!-- END_c0d5f2593ca9c245cece59e3c4d2b239 -->
+
+<!-- START_a528b97fb431de1e035d8245ee44521b -->
+## Get SMS from a user
+
+Respond to a user with relevant SMS content.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/rucodia/api/v1/receive&amp;sender={sender}&amp;message={message}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/rucodia/api/v1/receive&amp;sender={sender}&amp;message={message}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteCollection.php",
+    "line": 179,
+    "trace": [
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 613,
+            "function": "match",
+            "class": "Illuminate\\Routing\\RouteCollection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 602,
+            "function": "findRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 591,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 51,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 116,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 98,
+            "function": "callRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 58,
+            "function": "getRouteResponse",
+            "class": "Mpociot\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 261,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\mpociot\\laravel-apidoc-generator\\src\\Mpociot\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 83,
+            "function": "processLaravelRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 564,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 251,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 865,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 241,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\symfony\\console\\Application.php",
+            "line": 143,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\htdocs\\rucodia\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/v1/receive&amp;sender={sender}&amp;message={message}`
+
+`HEAD api/v1/receive&amp;sender={sender}&amp;message={message}`
+
+
+<!-- END_a528b97fb431de1e035d8245ee44521b -->
 
 <!-- START_af71f3ac56b72b8bff80f06a0accec74 -->
 ## Show API Documentation page application dashboard.

@@ -390,7 +390,8 @@ class UserController extends Controller
     }
 
     /**
-     * Show User Balances for a specific product
+     * Show balances of a specific product that each user holds
+     * The balances only show the users that the logged in user can buy from.
      * 
      * Specific product balance details for each user.
      * 
@@ -400,8 +401,17 @@ class UserController extends Controller
     public function productUsers($product)
     {
         $product = Product::find($product);
+        $user = User::where('id', Config::get('apiuser'))->first();
+        $buys_from = $user->levels[0]->buys_from;
         if (empty(!$product)) {
-            $balances = Balance::where('product_id', $product->id)->get(['user_id', 'count', 'buying_price', 'selling_price']);
+            $balances = DB::select(DB::raw("
+                SELECT balances.user_id, balances.count, balances.buying_price, balances.selling_price, levels.buys_from
+                FROM balances
+                INNER JOIN level_user ON balances.user_id = level_user.user_id
+                INNER JOIN levels ON level_user.level_id = levels.id
+                WHERE balances.user_id IN ($buys_from)
+            "));
+            
             return response()->json([
                 'action' => 'product_users',
                 'status' => 'OK',

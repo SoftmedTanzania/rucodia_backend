@@ -409,7 +409,9 @@ class UserController extends Controller
                 FROM balances
                 INNER JOIN level_user ON balances.user_id = level_user.user_id
                 INNER JOIN levels ON level_user.level_id = levels.id
-                WHERE balances.user_id IN ($buys_from)
+                INNER JOIN products ON balances.product_id = products.id
+                WHERE products.id = $product->id
+                AND levels.id IN ($buys_from)
             "));
             
             return response()->json([

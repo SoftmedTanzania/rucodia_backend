@@ -294,3 +294,13 @@ INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Si
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Simbo", 16, NOW());
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Sunuka", 16, NOW());
 INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Uvinza", 16, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Kaloleni", 17, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Unga Limited", 17, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Songea Mjini", 18, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Unknown", 14, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Airport", 14, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Nyarubanda", 15, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Herembe", 16, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Murubona", 11, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Nyarubanda", 14, NOW());
+INSERT INTO wards (uuid, wards.name, district_id, created_at) VALUES(UUID(), "Murubona", 11, NOW());

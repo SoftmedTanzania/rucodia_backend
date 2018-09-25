@@ -14,3 +14,5 @@ INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(1
 INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(14, UUID(), 'Kigoma Mjini', 2, NOW());
 INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(15, UUID(), 'Kigoma Vijijini', 2, NOW());
 INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(16, UUID(), 'Uvinza', 2, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(17, UUID(), 'Arusha', 3, NOW());
+INSERT INTO districts (id, uuid, districts.name, region_id, created_at) VALUES(18, UUID(), 'Songea', 4, NOW());

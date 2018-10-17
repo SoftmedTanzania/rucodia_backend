@@ -1,6 +1,6 @@
 INSERT INTO transactions (id, uuid, price, amount, user_id, transactiontype_id, product_id, status_id, created_by, created_at) VALUES  (1, UUID(), 0, 99999999, 38, 1, 1, 1, 0, NOW());
 INSERT INTO transactions (id, uuid, price, amount, user_id, transactiontype_id, product_id, status_id, created_by, created_at) VALUES  (2, UUID(), 0, 99999999, 38, 1, 2, 1, 0, NOW());
-INSERT INTO transactions (id, uuid, price, amount, user_id, transactiontype_id, product_id, status_id, created_by, created_at) VALUES  (3, UUID(), 0, 99999999, 38, 1, 88, 1, 0, NOW());
+INSERT INTO transactions (id, uuid, price, amount, user_id, transactiontype_id, product_id, status_id, created_by, created_at) VALUES  (3, UUID(), 0, 99999999, 38, 1, 3, 1, 0, NOW());
 INSERT INTO transactions (id, uuid, price, amount, user_id, transactiontype_id, product_id, status_id, created_by, created_at) VALUES  (4, UUID(), 0, 99999999, 38, 1, 4, 1, 0, NOW());
 INSERT INTO transactions (id, uuid, price, amount, user_id, transactiontype_id, product_id, status_id, created_by, created_at) VALUES  (5, UUID(), 0, 99999999, 38, 1, 5, 1, 0, NOW());
 INSERT INTO transactions (id, uuid, price, amount, user_id, transactiontype_id, product_id, status_id, created_by, created_at) VALUES  (6, UUID(), 0, 99999999, 38, 1, 6, 1, 0, NOW());

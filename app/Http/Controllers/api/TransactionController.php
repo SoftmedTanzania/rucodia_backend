@@ -26,7 +26,11 @@ class TransactionController extends Controller
     {
         // List all the users in a collection
         TransactionResource::WithoutWrapping();
-        return TransactionResource::collection(Transaction::with('transactiontype')->with('user')->with('product')->with('status')->get());
+        return TransactionResource::collection(Transaction::with('transactiontype')
+            ->with('user')
+            ->with('product')
+            ->with('status')
+            ->get());
     }
 
 
@@ -50,7 +54,7 @@ class TransactionController extends Controller
             $transaction->transactiontype_id = $request['transactiontype_id'];
             $transaction->user_id = $request['user_id'];
             $transaction->product_id = $request['product_id'];
-            $transaction->status_id = $request['status_id'];
+            $transaction->status_id = 1;
             $transaction->created_by = Config::get('apiuser');
             $transaction->save();
 
@@ -86,7 +90,7 @@ class TransactionController extends Controller
                 $transaction->transactiontype_id = $request['transactiontype_id'];
                 $transaction->user_id = $request['user_id'];
                 $transaction->product_id = $request['product_id'];
-                $transaction->status_id = $request['status_id'];
+                $transaction->status_id = 1;
                 $transaction->created_by = Config::get('apiuser');
                 $transaction->save();
 
@@ -137,7 +141,7 @@ class TransactionController extends Controller
     {
         $transaction = Transaction::find($id);
 
-        $transaction->status_id = $request['status_id'];
+        $transaction->status_id = 1;
         $transaction->updated_by = Config::get('apiuser');
         $transaction->save();
         return response()->json([

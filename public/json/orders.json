@@ -1,0 +1,33 @@
+[
+    {
+        "ordered" : 1000,
+        "batch" : 1001001,
+        "product_id" : 1,
+        "dealer_id" : 29,
+        "supplier_id" : 38
+    },
+
+    {
+        "ordered" : 2000,
+        "batch" : 1001001,
+        "product_id" : 2,
+        "dealer_id" : 29,
+        "supplier_id" : 38
+    },
+
+    {
+        "ordered" : 100,
+        "batch" : 1001002,
+        "product_id" : 1,
+        "dealer_id" : 2,
+        "supplier_id" : 29
+    },
+
+    {
+        "ordered" : 150,
+        "batch" : 1001002,
+        "product_id" : 2,
+        "dealer_id" : 2,
+        "supplier_id" : 29
+    }
+]

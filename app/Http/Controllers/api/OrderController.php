@@ -56,6 +56,7 @@ class OrderController extends Controller
             'type' => 'order',
             'user' => Config::get('apiuser')
         ], 201);
+        // return $order;
     }
 
     /**
@@ -76,7 +77,7 @@ class OrderController extends Controller
                 'status' => 'FAIL',
                 'entity' => NULL,
                 'type' => 'order',
-            'user' => Config::get('apiuser')
+                'user' => Config::get('apiuser')
             ], 404);
         }
         else {
@@ -135,5 +136,35 @@ class OrderController extends Controller
             'type' => 'order',
             'user' => Config::get('apiuser')
         ], 200);
+    }
+
+    /**
+     * List Single User's Received Orders
+     * 
+     * Display a listing of received resource for a secific user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function receivedOrders()
+    {
+        // List all the received Orders for a specific user
+        OrderResource::WithoutWrapping();
+        return OrderResource::collection(Order::where('supplier_id', Config::get('apiuser'))->where('status_id', 1)
+        ->get(['id', 'uuid', 'ordered', 'delivered', 'batch', 'status_id', 'product_id', 'dealer_id',  ]));
+    }
+
+    /**
+     * List Single User's placed Orders
+     * 
+     * Display a listing of placed resource for a secific user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function placedOrders()
+    {
+        // List all the placed Orders for a specific user
+        OrderResource::WithoutWrapping();
+        return OrderResource::collection(Order::where('dealer_id', Config::get('apiuser'))->where('status_id', 1)
+        ->get(['id', 'uuid', 'ordered', 'delivered', 'batch', 'status_id', 'product_id', 'supplier_id',  ]));
     }
 }

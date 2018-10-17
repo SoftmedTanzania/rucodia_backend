@@ -405,11 +405,13 @@ class UserController extends Controller
         $buys_from = $user->levels[0]->buys_from;
         if (empty(!$product)) {
             $balances = DB::select(DB::raw("
-                SELECT balances.user_id, balances.count, balances.buying_price, balances.selling_price, levels.buys_from
+                SELECT locations.name, balances.user_id, balances.count, balances.buying_price, balances.selling_price
                 FROM balances
                 INNER JOIN level_user ON balances.user_id = level_user.user_id
                 INNER JOIN levels ON level_user.level_id = levels.id
                 INNER JOIN products ON balances.product_id = products.id
+                INNER JOIN location_user ON balances.user_id = location_user.user_id
+                INNER JOIN locations ON location_user.location_id = locations.id
                 WHERE products.id = $product->id
                 AND levels.id IN ($buys_from)
             "));
@@ -426,7 +428,7 @@ class UserController extends Controller
         else {
             return response()->json([
                 'action' => 'product_users',
-                'status' => 'OK',
+                'status' => 'EMPTY',
                 'entity' => $product,
                 'type' => 'product',
                 'error' => 'The product is has not been bought by anyone yet!',

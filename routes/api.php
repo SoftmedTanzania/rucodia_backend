@@ -42,15 +42,24 @@ Route::group(
             Route::apiResource('transactions', 'TransactionController');
             Route::apiResource('transactiontypes', 'TransactiontypeController');
             Route::get('auth', 'UserController@auth');
+
+            // Geographical divisions
             Route::get('regions/{region}/districts', 'RegionController@regionDistricts');
             Route::get('regions/{region}/districts/wards', 'RegionController@regionDistrictsWards');
             Route::get('districts/{district}/wards', 'DistrictController@districtWards');
+
             Route::get('user/{user_id}/product/{product_id}/balance', 'UserController@userBalance');
             Route::get('users/{user}/products', 'UserController@userBalances');
             Route::get('users/{user}/transactions', 'TransactionController@userTransactions');
-            Route::post('sms', 'UserController@sms')->name('sms.store');
             Route::get('products/{product}/users', 'UserController@productUsers')->name('product.users');
+            
+            // Sms receiving from SMSsync and Transmission via RapidPro
+            Route::post('sms', 'UserController@sms')->name('sms.store');
             Route::get('receive&sender={sender}&message={message}', 'UserController@receive');
+
+            // Orders and their control
+            Route::get('ordersreceived', 'OrderController@receivedOrders');
+            Route::get('ordersplaced', 'OrderController@placedOrders');
     });
 
 Route::group(

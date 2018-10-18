@@ -150,7 +150,7 @@ class OrderController extends Controller
         // List all the received Orders for a specific user
         OrderResource::WithoutWrapping();
         return OrderResource::collection(Order::where('supplier_id', Config::get('apiuser'))->where('status_id', 1)
-            ->with('dealer.locations')
+            ->with('dealer.locations:locations.name')
             ->get(['id', 'uuid', 'ordered', 'delivered', 'batch', 'status_id', 'product_id', 'dealer_id',  ]));
     }
 
@@ -166,7 +166,7 @@ class OrderController extends Controller
         // List all the placed Orders for a specific user
         OrderResource::WithoutWrapping();
         return OrderResource::collection(Order::where('dealer_id', Config::get('apiuser'))->where('status_id', 1)
-            ->with('supplier.locations')
+            ->with('supplier.locations:locations.name')
             ->get(['id', 'uuid', 'ordered', 'delivered', 'batch', 'status_id', 'product_id', 'supplier_id']));
     }
 }

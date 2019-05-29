@@ -56,7 +56,6 @@ class OrderController extends Controller
             'type' => 'order',
             'user' => Config::get('apiuser')
         ], 201);
-        // return $order;
     }
 
     /**

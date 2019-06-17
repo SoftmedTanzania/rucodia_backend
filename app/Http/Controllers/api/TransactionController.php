@@ -50,7 +50,7 @@ class TransactionController extends Controller
             $transaction = new Transaction;
             $transaction->uuid = (string) Str::uuid();
             $transaction->amount = $request['amount'];
-            $transaction->price = $request['buying_price'];
+            $transaction->price = $request['price'];
             $transaction->transactiontype_id = $request['transactiontype_id'];
             $transaction->user_id = $request['user_id'];
             $transaction->product_id = $request['product_id'];
@@ -64,8 +64,8 @@ class TransactionController extends Controller
                 $balance->count = $request['amount'];
                 $balance->user_id = $request['user_id'];
                 $balance->product_id = $request['product_id'];
-                $balance->buying_price = $request['buying_price'];
-                $balance->selling_price = $request['selling_price'];
+                $balance->buying_price = $request['price'];
+                $balance->selling_price = $request['price'];
                 $balance->created_by = Config::get('apiuser');
                 $balance->save();
             }
@@ -86,7 +86,7 @@ class TransactionController extends Controller
                 $transaction = new Transaction;
                 $transaction->uuid = (string) Str::uuid();
                 $transaction->amount = $request['amount'];
-                $transaction->price = $request['selling_price'];
+                $transaction->price = $request['price'];
                 $transaction->transactiontype_id = $request['transactiontype_id'];
                 $transaction->user_id = $request['user_id'];
                 $transaction->product_id = $request['product_id'];
@@ -95,7 +95,7 @@ class TransactionController extends Controller
                 $transaction->save();
 
                 $balance->count = $balance->count - $request['amount'];
-                $balance->selling_price = $request['selling_price'];
+                $balance->selling_price = $request['price'];
                 $balance->save();
             }
         }

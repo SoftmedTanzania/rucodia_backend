@@ -356,13 +356,13 @@ class UserController extends Controller
             $uri = "https://api.textit.in/api/v2/broadcasts.json";
             $urn = $sms->urn;
             $text = $product->name." > ". implode(', ', $result);            
-            $client = new Client(); //GuzzleHttp\Client
+            $client = new Client();
             $response = $client->request(
                 'POST',
                 'https://api.textit.in/api/v2/broadcasts.json',
                 [
                 'headers' => [
-                    'Authorization' => 'Token 71eb3d24d9efba5c7969185ad44be11925ef7463',
+                    'Authorization' => 'Token '.env("TEXTIN_TOKEN"),
                     'Accept'     => 'application/json',
                     ],
 
@@ -504,11 +504,11 @@ class UserController extends Controller
                     }
 
                     $client = new Client(); //GuzzleHttp\Client
-                    $user = 'rucodia';
-                    $key = '6880249a760f3f3dfa92d36aa7c9a30b04991aa14a5222d94b01549f11f33f68';
+                    $user = env("SMS_USER");
+                    $key = env("SMS_KEY");
                     $message = $subcategory->name."- ". implode(', ', $result);
                     $response = $client->request(
-                        'GET', 'https://api.africastalking.com/restless/send?username=rucodia&Apikey='.$key.'&to='.$from.'&message='.$message
+                        'GET', 'https://api.africastalking.com/restless/send?username='.$user.'&Apikey='.$key.'&to='.$from.'&message='.$message
                     );
 
             
